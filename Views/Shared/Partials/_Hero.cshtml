@@ -1,0 +1,138 @@
+@model MamiaSeedsOil.Web.ViewModels.HeroViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
+
+@{
+    var headingParts = Model.Heading.Split(Model.HighlightText, StringSplitOptions.None);
+    var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
+    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? certificatePlaceholder = null;
+    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? awardsPlaceholder = null;
+    placeholders?.TryGetValue("certificates", out certificatePlaceholder);
+    placeholders?.TryGetValue("awards", out awardsPlaceholder);
+}
+
+<section class="hero" aria-label="@T["HeroIntroductionAria"]">
+    <div class="hero-grid">
+        <div>
+            <span class="eyebrow" data-hero="1">@Model.Eyebrow</span>
+            <h1 data-hero="2">@headingParts[0]<em>@Model.HighlightText</em>@(headingParts.Length > 1 ? headingParts[1] : string.Empty)</h1>
+            <p class="lede" data-hero="3">@Model.Description</p>
+            <div class="hero-ctas" data-hero="4">
+                <a class="btn-primary ripple-host" href="@Model.PrimaryButtonUrl">@Model.PrimaryButtonText</a>
+                <a class="btn-ghost ripple-host" href="@Model.SecondaryButtonUrl">@Model.SecondaryButtonText</a>
+            </div>
+            <div class="hero-trust" aria-label="@T["HeroTrustIndicatorsAria"]" data-hero="5">
+                <span><strong>@T["HeroQualityLabel"]</strong> @(certificatePlaceholder?.Label ?? T["HeroCertificatesPlaceholder"])</span>
+                <span><strong>@T["HeroRecognitionLabel"]</strong> @(awardsPlaceholder?.Label ?? T["HeroAwardsPlaceholder"])</span>
+            </div>
+        </div>
+        <div class="hero-visual" data-hero="6" aria-label="Mamia Seeds Oil Limited company profile overview">
+            <div class="hero-info-panel" role="presentation">
+                <div class="hero-info-panel__header">
+                    <span class="hero-info-panel__eyebrow">Company Profile</span>
+                    <h2>Mamia Seeds Oil Limited</h2>
+                </div>
+
+                <div class="hero-info-panel__grid">
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 8.2 12 3l8 5.2v8.6L12 21l-8-4.2V8.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                                <path d="M12 7v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8.5 9.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Established</h3>
+                            <p>26 July 2005</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M5 7.2C5 5.43 6.43 4 8.2 4h7.6C17.57 4 19 5.43 19 7.2v9.6c0 1.77-1.43 3.2-3.2 3.2H8.2A3.2 3.2 0 0 1 5 16.8V7.2Z" stroke="currentColor" stroke-width="1.6" />
+                                <path d="M8 8h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 16h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kutungare Village<br />Airport Road<br />Makarfi<br />Kaduna State<br />Nigeria</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M6 6h12v12H6z" stroke="currentColor" stroke-width="1.6" />
+                                <path d="M8 10h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 14h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Business</h3>
+                            <p>Soybean Processing<br />Refined Soya Cooking Oil<br />Industrial Bulk Supply<br />Soybean By-products</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M7 5h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 5v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5" stroke="currentColor" stroke-width="1.6" />
+                                <path d="m9.5 12 1.5 1.5 3.5-3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Certifications</h3>
+                            <p>NAFDAC Certified<br />SON Certified</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                                <path d="M8 10.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 13.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Coverage</h3>
+                            <p>Supplying customers across Nigeria</p>
+                        </div>
+                    </article>
+
+                    <article class="hero-info-item">
+                        <div class="hero-info-item__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M6 5h12v10H6z" stroke="currentColor" stroke-width="1.6" />
+                                <path d="M8 8.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M8 12h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                                <path d="M7 19h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Manufacturing</h3>
+                            <p>Large-scale soybean processing facility<br />Modern production equipment<br />Quality assurance throughout production</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stat-strip" role="list" aria-label="@T["HeroCompanyHighlightsAria"]">
+        @foreach (var stat in Model.StatStrip)
+        {
+            <div role="listitem">
+                <div class="stat-num">@stat.Value</div>
+                <div class="stat-label">@stat.Label</div>
+            </div>
+        }
+    </div>
+    <a class="hero-scroll-cue" href="#history" aria-label="@T["HeroScrollStoryAria"]">
+        <span>@T["HeroScrollStory"]</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v12m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+    </a>
+</section>

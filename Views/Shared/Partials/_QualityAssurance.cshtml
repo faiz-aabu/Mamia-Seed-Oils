@@ -1,0 +1,21 @@
+@model MamiaSeedsOil.Web.ViewModels.QualityAssuranceViewModel
+
+<section class="surface-paper" id="quality" aria-labelledby="quality-title">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="eyebrow">@Model.Eyebrow</span>
+            <h2 id="quality-title">@Model.Title</h2>
+            <p>@Model.Description</p>
+        </div>
+        <div class="qa-timeline">
+            @foreach (var step in Model.Steps)
+            {
+                <article class="qa-step">
+                    <div class="qa-dot"></div>
+                    <h3>@step.Title</h3>
+                    <p>@step.Description</p>
+                </article>
+            }
+        </div>
+    </div>
+</section>

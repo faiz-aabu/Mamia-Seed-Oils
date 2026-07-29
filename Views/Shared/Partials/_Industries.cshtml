@@ -1,0 +1,21 @@
+@model MamiaSeedsOil.Web.ViewModels.IndustriesViewModel
+
+<section class="surface-cream" id="industries" aria-labelledby="industries-title">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="eyebrow">@Model.Eyebrow</span>
+            <h2 id="industries-title">@Model.Title</h2>
+            <p>@Model.Description</p>
+        </div>
+        <div class="cards-grid-4">
+            @foreach (var item in Model.Items)
+            {
+                <article class="industry-card">
+                    <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="4" width="14" height="16" rx="2" stroke="#8C5A2B" stroke-width="1.8" /><path d="M9 9h6M9 13h6" stroke="#8C5A2B" stroke-width="1.8" stroke-linecap="round" /></svg></div>
+                    <h3>@item.Title</h3>
+                    <p>@item.Description</p>
+                </article>
+            }
+        </div>
+    </div>
+</section>

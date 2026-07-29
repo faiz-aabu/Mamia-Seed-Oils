@@ -1,0 +1,46 @@
+@model MamiaSeedsOil.Web.ViewModels.AiAssistantWidgetViewModel
+
+@if (Model.Enabled)
+{
+    <div class="ai-widget" data-ai-widget data-chat-endpoint="@Model.ChatEndpoint" data-suggestions-endpoint="@Model.SuggestionsEndpoint" data-fallback-error-message="I am unable to answer right now. Please contact Mamia Seeds Oil Limited directly for further assistance.">
+        <button type="button" class="ai-fab ripple-host" aria-label="Open Mamia Assistant" data-ai-open>
+            <span class="ai-fab-icon">AI</span>
+        </button>
+
+        <section class="ai-panel" aria-live="polite" aria-label="@Model.DisplayName">
+            <header class="ai-panel-header">
+                <div>
+                    <strong>@Model.DisplayName</strong>
+                    <span>Business Assistant</span>
+                </div>
+                <div class="ai-header-actions">
+                    <button type="button" class="ai-control" aria-label="Minimize assistant" data-ai-minimize>_</button>
+                    <button type="button" class="ai-control" aria-label="Close assistant" data-ai-close>x</button>
+                </div>
+            </header>
+
+            <div class="ai-messages" data-ai-messages>
+                <article class="ai-message ai-message-assistant">
+                    <div class="ai-bubble">@Model.WelcomeMessage</div>
+                    <time class="ai-time">Now</time>
+                </article>
+            </div>
+
+            <div class="ai-suggestions" data-ai-suggestions>
+                @foreach (var suggestion in Model.SuggestedQuestions)
+                {
+                    <button type="button" class="ai-suggestion" data-ai-suggestion="@suggestion">@suggestion</button>
+                }
+            </div>
+
+            <form class="ai-input-wrap" data-ai-form>
+                <input type="text" maxlength="800" required placeholder="Ask about products, distribution, manufacturing process, certifications, or company information..." data-ai-input />
+                <button type="submit" class="ai-send ripple-host">Send</button>
+            </form>
+
+            <div class="ai-typing" data-ai-typing hidden>
+                <span></span><span></span><span></span>
+            </div>
+        </section>
+    </div>
+}

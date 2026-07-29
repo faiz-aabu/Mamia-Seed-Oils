@@ -1,0 +1,10 @@
+@model MamiaSeedsOil.Web.ViewModels.CtaViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
+
+<section class="cta-band" aria-label="@T["CtaDistributorAria"]">
+    <div class="wrap">
+        <h2>@Model.Title</h2>
+        <p>@Model.Description</p>
+        <a class="btn-ghost ripple-host" style="border-color:#231800; color:#231800;" href="@Model.PrimaryButtonUrl">@Model.PrimaryButtonText</a>
+    </div>
+</section>

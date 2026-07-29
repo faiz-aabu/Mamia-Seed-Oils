@@ -1,0 +1,151 @@
+@model IReadOnlyList<MamiaSeedsOil.Web.ViewModels.ProductViewModel>
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
+
+@{
+    string ResolveProductImagePath(string key)
+    {
+        var productKey = (key ?? string.Empty).Trim().ToLowerInvariant();
+        var candidates = productKey switch
+        {
+            "4l-bottle" => new[] { "/images/products/4l-bottle.png", "/images/products/4l-bottle-placeholder.svg" },
+            "10l-jerry-can" => new[] { "/images/products/10l-jerrycan.png", "/images/products/10l-jerry-can-placeholder.svg" },
+            "20l-jerry-can" => new[] { "/images/products/20l.jpeg", "/images/products/20l-jerry-can-placeholder.svg" },
+            "refined-soya-cooking-oil" => new[] { "/images/products/4l-bottle.png", "/images/products/1l-bottle-placeholder.svg" },
+            "4l-jerry-can" => new[] { "/images/products/4l-Jerrycan.png", "/images/products/4l-bottle.png", "/images/products/4l-bottle-placeholder.svg" },
+            "soybean-by-products" => new[] { "/images/products/soybean-Byproduct.png", "/images/products/soybean-byproducts-placeholder.svg" },
+            "industrial-bulk-supply" => new[] { "/images/products/industrial-bulk-placeholder.svg" },
+            _ => new[] { "/images/products/1l-bottle-placeholder.svg" }
+        };
+
+        foreach (var candidate in candidates)
+        {
+            var fullPath = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "wwwroot", candidate.TrimStart('/').Replace('/', System.IO.Path.DirectorySeparatorChar));
+            if (System.IO.File.Exists(fullPath))
+            {
+                return candidate;
+            }
+        }
+
+        return candidates.FirstOrDefault() ?? "/images/products/1l-bottle-placeholder.svg";
+    }
+
+    var requestedProducts = new[]
+    {
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "4l-bottle",
+            Name = "4L Bottle",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "4L",
+            Description = "A clean, retail-friendly bottle option for everyday use.",
+            Availability = "In stock",
+            Image = ResolveProductImagePath("4l-bottle")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "4l-jerry-can",
+            Name = "4L Jerry Can",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "4L",
+            Description = "A practical packaging option for household and commercial distribution.",
+            Availability = "In stock",
+            Image = ResolveProductImagePath("4l-jerry-can")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "10l-jerry-can",
+            Name = "10L Jerry Can",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "10L",
+            Description = "A larger format designed for convenience and value.",
+            Availability = "Available on request",
+            Image = ResolveProductImagePath("10l-jerry-can")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "20l-jerry-can",
+            Name = "20L Jerry Can",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "20L",
+            Description = "A practical format for larger-scale supply requirements.",
+            Availability = "Available on request",
+            Image = ResolveProductImagePath("20l-jerry-can")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "refined-soya-cooking-oil",
+            Name = "Refined Soya Cooking Oil",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "Refined Oil",
+            Description = "A refined cooking oil solution with a dependable supply chain.",
+            Availability = "In stock",
+            Image = ResolveProductImagePath("refined-soya-cooking-oil")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "industrial-bulk-supply",
+            Name = "Industrial Bulk Supply",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "Bulk Volume",
+            Description = "Scalable supply support for bulk industrial and commercial needs.",
+            Availability = "Available on request",
+            Image = ResolveProductImagePath("industrial-bulk-supply")
+        },
+        new MamiaSeedsOil.Web.ViewModels.ProductViewModel
+        {
+            Key = "soybean-by-products",
+            Name = "Soybean By-products",
+            Category = "Mamia Seeds Oil",
+            PackagingSize = "Bulk Supply",
+            Description = "A dependable supply line for feed and industrial applications.",
+            Availability = "Available on request",
+            Image = ResolveProductImagePath("soybean-by-products")
+        }
+    };
+
+    var displayedProducts = requestedProducts.ToList();
+}
+
+<section id="products" aria-labelledby="products-title">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="eyebrow">@T["ProductsEyebrow"]</span>
+            <h2 id="products-title">@T["ProductsTitle"]</h2>
+            <p>@T["ProductsDescription"]</p>
+        </div>
+        <div class="products-grid" role="list">
+            @foreach (var product in displayedProducts)
+            {
+                var productImagePath = string.IsNullOrWhiteSpace(product.Image)
+                    ? "/images/products/1l-bottle-placeholder.svg"
+                    : product.Image;
+                var productAltText = string.IsNullOrWhiteSpace(product.Name) ? "Mamia Seeds Oil product image" : $"{product.Name} product image";
+
+                <article class="product-card" aria-label="@product.Name" role="listitem">
+                    <div class="product-thumb">
+                        @await Html.PartialAsync("Partials/_ResponsiveImage", new MamiaSeedsOil.Web.ViewModels.ResponsiveImageViewModel
+                        {
+                            Src = productImagePath,
+                            Alt = productAltText,
+                            Width = 1200,
+                            Height = 900,
+                            CssClass = "media-frame product-media",
+                            PlaceholderKey = "productImages",
+                            UsePlaceholder = false
+                        })
+                    </div>
+                    <div class="product-body">
+                        <span class="product-tag">@(string.IsNullOrWhiteSpace(product.Category) ? "Mamia Seeds Oil" : product.Category)</span>
+                        <h3>@product.Name</h3>
+                        <p>@(string.IsNullOrWhiteSpace(product.Description) ? "Premium product offering from Mamia Seeds Oil." : product.Description)</p>
+                        <div class="product-meta">
+                            <span>Packaging: @(string.IsNullOrWhiteSpace(product.PackagingSize) ? "[To Be Updated]" : product.PackagingSize)</span>
+                            <span>Availability: @(string.IsNullOrWhiteSpace(product.Availability) ? "[To Be Updated]" : product.Availability)</span>
+                        </div>
+                        <a class="btn-primary product-card-cta" href="#contact">Request Details</a>
+                    </div>
+                </article>
+            }
+        </div>
+    </div>
+</section>
