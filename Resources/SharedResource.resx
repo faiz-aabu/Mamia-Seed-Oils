@@ -1,197 +1,630 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
-  <resheader name="version"><value>2.0</value></resheader>
-  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <data name="NavPrimary" xml:space="preserve"><value>Primary navigation</value></data>
-  <data name="BecomeDistributor" xml:space="preserve"><value>Become a Distributor</value></data>
-  <data name="Language" xml:space="preserve"><value>Language</value></data>
-  <data name="NavOpenMenu" xml:space="preserve"><value>Open menu</value></data>
-  <data name="NavCloseMenu" xml:space="preserve"><value>Close menu</value></data>
-  <data name="NavLanguageEnglish" xml:space="preserve"><value>English</value></data>
-  <data name="NavLanguageHausa" xml:space="preserve"><value>Hausa</value></data>
-  <data name="NavLanguageSelector" xml:space="preserve"><value>Language selector</value></data>
-  <data name="ProductsEyebrow" xml:space="preserve"><value>Products</value></data>
-  <data name="ProductsTitle" xml:space="preserve"><value>Industrial soybean products for business supply.</value></data>
-  <data name="ProductsDescription" xml:space="preserve"><value>Our product portfolio is led by premium soybean meal, supported by refined soya cooking oil and industrial supply programmes for long-term buyers.</value></data>
-  <data name="ProcessEyebrow" xml:space="preserve"><value>Manufacturing Process</value></data>
-  <data name="ProcessTitle" xml:space="preserve"><value>Controlled soybean processing for reliable output.</value></data>
-  <data name="ProcessDescription" xml:space="preserve"><value>Our manufacturing workflow is structured for quality assurance, production discipline, and dependable supply continuity.</value></data>
-  <data name="DistributionMapPlaceholderAria" xml:space="preserve"><value>Nigeria distribution map placeholder</value></data>
-  <data name="HeroScrollStory" xml:space="preserve"><value>Scroll</value></data>
-  <data name="HeroScrollStoryAria" xml:space="preserve"><value>Scroll to our story section</value></data>
-  <data name="ContactAddress" xml:space="preserve"><value>Address</value></data>
-  <data name="ContactPhoneWhatsapp" xml:space="preserve"><value>Phone / WhatsApp</value></data>
-  <data name="ContactEmail" xml:space="preserve"><value>Email</value></data>
-  <data name="ContactBusinessHours" xml:space="preserve"><value>Business Hours</value></data>
-  <data name="ContactFormAria" xml:space="preserve"><value>Contact form</value></data>
-  <data name="ContactFullName" xml:space="preserve"><value>Full name</value></data>
-  <data name="ContactCompany" xml:space="preserve"><value>Company / Organisation</value></data>
-  <data name="ContactEmailAddress" xml:space="preserve"><value>Email address</value></data>
-  <data name="ContactPhoneNumber" xml:space="preserve"><value>Phone number</value></data>
-  <data name="ContactRequirements" xml:space="preserve"><value>Tell us about your product requirement, estimated volume, and target supply schedule.</value></data>
-  <data name="ContactSendMessage" xml:space="preserve"><value>Contact</value></data>
-  <data name="ContactSubmitting" xml:space="preserve"><value>Submitting your enquiry...</value></data>
-  <data name="ContactSubmitFailed" xml:space="preserve"><value>Unable to submit enquiry right now.</value></data>
-  <data name="AiOpenAssistant" xml:space="preserve"><value>Open AI assistant</value></data>
-  <data name="AiBusinessAssistant" xml:space="preserve"><value>Business Assistant</value></data>
-  <data name="AiMinimizeAssistant" xml:space="preserve"><value>Minimize assistant</value></data>
-  <data name="AiCloseAssistant" xml:space="preserve"><value>Close assistant</value></data>
-  <data name="AiNow" xml:space="preserve"><value>Now</value></data>
-  <data name="AiInputPlaceholder" xml:space="preserve"><value>Ask about soybean meal supply, production, certifications, or distribution...</value></data>
-  <data name="AiSend" xml:space="preserve"><value>Send</value></data>
-  <data name="AiFallbackError" xml:space="preserve"><value>I am unable to answer right now. Please contact Mamia Seeds Oil Limited directly for more details.</value></data>
-  <data name="AiRestrictionResponse" xml:space="preserve"><value>I can only discuss Mamia Seeds Oil Limited information.</value></data>
-  <data name="AiUnavailableInfoResponse" xml:space="preserve"><value>This information is currently unavailable. Please contact Mamia Seeds Oil Limited directly for further assistance.</value></data>
-  <data name="AiKnownInfoPrefixHausa" xml:space="preserve"><value>Ga bayanin da ake da shi:</value></data>
-  <data name="Error403Title" xml:space="preserve"><value>Access restricted</value></data>
-  <data name="Error403Body" xml:space="preserve"><value>You do not have permission to view this resource.</value></data>
-  <data name="Error500Title" xml:space="preserve"><value>Server error</value></data>
-  <data name="Error500Body" xml:space="preserve"><value>Something went wrong. Please try again shortly.</value></data>
-  <data name="Error404Title" xml:space="preserve"><value>Page not found</value></data>
-  <data name="Error404Body" xml:space="preserve"><value>The page you requested could not be found.</value></data>
-  <data name="ErrorMaintenanceTitle" xml:space="preserve"><value>Maintenance mode</value></data>
-  <data name="ErrorMaintenanceBody" xml:space="preserve"><value>We are currently performing maintenance. Please check back soon.</value></data>
-  <data name="ErrorBackHome" xml:space="preserve"><value>Back to Home</value></data>
-  <data name="SkipToMainContent" xml:space="preserve"><value>Skip to main content</value></data>
-  <data name="HeroIntroductionAria" xml:space="preserve"><value>Introduction</value></data>
-  <data name="HeroTrustIndicatorsAria" xml:space="preserve"><value>Trust indicators</value></data>
-  <data name="HeroQualityLabel" xml:space="preserve"><value>Quality:</value></data>
-  <data name="HeroRecognitionLabel" xml:space="preserve"><value>Recognition:</value></data>
-  <data name="HeroCertificatesPlaceholder" xml:space="preserve"><value>Certificates Placeholder</value></data>
-  <data name="HeroAwardsPlaceholder" xml:space="preserve"><value>Awards Placeholder</value></data>
-  <data name="HeroCompanyHighlightsAria" xml:space="preserve"><value>Company highlights</value></data>
-  <data name="HistoryCorporateNarrativeAria" xml:space="preserve"><value>Corporate narrative placeholders</value></data>
-  <data name="TrustBarAria" xml:space="preserve"><value>Certifications and trust</value></data>
-  <data name="CtaDistributorAria" xml:space="preserve"><value>Distributor call to action</value></data>
-  <data name="FooterNewsletterAria" xml:space="preserve"><value>Newsletter signup placeholder</value></data>
-  <data name="FooterNewsletterEmailAria" xml:space="preserve"><value>Business email address</value></data>
-  <data name="FooterBackToTopAria" xml:space="preserve"><value>Back to top</value></data>
-  <data name="TestimonialsPartnerLogo" xml:space="preserve"><value>Partner Logo</value></data>
-  <data name="TestimonialsLogoPlaceholderTemplate" xml:space="preserve"><value>{0} logo placeholder</value></data>
-  <data name="InsightsImagePlaceholderTemplate" xml:space="preserve"><value>{0} insight image placeholder</value></data>
-  <data name="ContactCallCompanyAriaTemplate" xml:space="preserve"><value>Call {0}</value></data>
-  <data name="ContactEmailCompanyAriaTemplate" xml:space="preserve"><value>Email {0}</value></data>
-  <data name="Error404Eyebrow" xml:space="preserve"><value>Error 404</value></data>
-  <data name="Error500Eyebrow" xml:space="preserve"><value>Error 500</value></data>
-  <data name="ErrorMaintenanceEyebrow" xml:space="preserve"><value>Service Notice</value></data>
-  <data name="Error403Eyebrow" xml:space="preserve"><value>Error 403</value></data>
-  <data name="PrivacyTitle" xml:space="preserve"><value>Privacy Policy</value></data>
-  <data name="PrivacyBody" xml:space="preserve"><value>Use this page to detail your site's privacy policy.</value></data>
-  <data name="NavOurStory" xml:space="preserve"><value>Our Story</value></data>
-  <data name="NavProducts" xml:space="preserve"><value>Products</value></data>
-  <data name="NavProcess" xml:space="preserve"><value>Process</value></data>
-  <data name="NavGallery" xml:space="preserve"><value>Gallery</value></data>
-  <data name="NavContact" xml:space="preserve"><value>Contact</value></data>
-  <data name="HistoryIntroTemplate" xml:space="preserve"><value>{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soybean processing.</value></data>
-  <data name="HistoryParagraphOperationsTemplate" xml:space="preserve"><value>The company operates from {0}, where it processes soybeans into premium soybean meal for bulk industrial customers and refined soya cooking oil as a secondary line.</value></data>
-  <data name="GalleryEyebrow" xml:space="preserve"><value>Gallery</value></data>
-  <data name="GalleryTitle" xml:space="preserve"><value>Production and operations view.</value></data>
-  <data name="GalleryDescription" xml:space="preserve"><value>Placeholder visuals for processing lines, raw material handling, warehouse operations, and product movement.</value></data>
-  <data name="WhyChooseEyebrow" xml:space="preserve"><value>Why Choose Mamia</value></data>
-  <data name="WhyChooseTitle" xml:space="preserve"><value>Built for dependable quality and scale.</value></data>
-  <data name="WhyChooseDescription" xml:space="preserve"><value>From sourcing to final delivery, Mamia combines local agricultural strength with disciplined manufacturing standards.</value></data>
-  <data name="IndustriesEyebrow" xml:space="preserve"><value>Industries We Serve</value></data>
-  <data name="IndustriesTitle" xml:space="preserve"><value>Supplying core feed-industry sectors at scale.</value></data>
-  <data name="IndustriesDescription" xml:space="preserve"><value>Mamia's primary soybean meal supply serves poultry feed manufacturers, fish feed manufacturers, livestock feed producers, agricultural feed mills, and commercial animal feed companies.</value></data>
-  <data name="CompanyNumbersEyebrow" xml:space="preserve"><value>Company Numbers</value></data>
-  <data name="CompanyNumbersTitle" xml:space="preserve"><value>Scale backed by measurable performance.</value></data>
-  <data name="CompanyNumbersDescription" xml:space="preserve"><value>Our growth reflects sustained production strength, market trust, and operational discipline.</value></data>
-  <data name="QualityEyebrow" xml:space="preserve"><value>Quality Assurance</value></data>
-  <data name="QualityTitle" xml:space="preserve"><value>Process control at every stage.</value></data>
-  <data name="QualityDescription" xml:space="preserve"><value>Our quality team verifies each production stage to ensure the final oil remains clean, safe, and consistent.</value></data>
-  <data name="FaqEyebrow" xml:space="preserve"><value>Frequently Asked Questions</value></data>
-  <data name="FaqTitle" xml:space="preserve"><value>Answers for partners and bulk buyers.</value></data>
-  <data name="TestimonialsEyebrow" xml:space="preserve"><value>Testimonials</value></data>
-  <data name="TestimonialsTitle" xml:space="preserve"><value>What partners say about working with Mamia.</value></data>
-  <data name="InsightsEyebrow" xml:space="preserve"><value>News and Insights</value></data>
-  <data name="InsightsTitle" xml:space="preserve"><value>Knowledge from our production and sourcing teams.</value></data>
-  <data name="InsightsDescription" xml:space="preserve"><value>These articles are placeholders ready to be connected to your future blog or updates system.</value></data>
-  <data name="ValidationRequired" xml:space="preserve"><value>This field is required.</value></data>
-  <data name="ValidationStringLength" xml:space="preserve"><value>The field {0} must be a string with a maximum length of {1}.</value></data>
-  <data name="ValidationEmail" xml:space="preserve"><value>Please enter a valid email address.</value></data>
-  <data name="ValidationPhone" xml:space="preserve"><value>Please enter a valid phone number.</value></data>
-  <data name="ValidationNoHtml" xml:space="preserve"><value>HTML tags are not allowed.</value></data>
-  <data name="ValidationFailed" xml:space="preserve"><value>Validation failed.</value></data>
-  <data name="EmailDeliveryFailed" xml:space="preserve"><value>We could not send your enquiry at the moment. Please try again later.</value></data>
-  <data name="ContactSuccessMessage" xml:space="preserve"><value>Your enquiry has been received. Our team will contact you shortly.</value></data>
-  <data name="ContactDistributorSuccessMessage" xml:space="preserve"><value>Distributor enquiry received. Sales team will reach out with next steps.</value></data>
-  <data name="NavBrandHomeAriaTemplate" xml:space="preserve"><value>{0} home</value></data>
-  <data name="ResponsiveImagePlaceholderLabel" xml:space="preserve"><value>Image Placeholder</value></data>
-  <data name="ResponsiveImagePlaceholderSubLabel" xml:space="preserve"><value>Replace with branded media</value></data>
-  <data name="SharedErrorTitle" xml:space="preserve"><value>Error</value></data>
-  <data name="SharedErrorHeading" xml:space="preserve"><value>Error.</value></data>
-  <data name="SharedErrorBody" xml:space="preserve"><value>An error occurred while processing your request.</value></data>
-  <data name="SharedErrorRequestId" xml:space="preserve"><value>Request ID:</value></data>
-  <data name="SharedErrorDevelopmentMode" xml:space="preserve"><value>Development Mode</value></data>
-  <data name="SharedErrorDevelopmentBody1" xml:space="preserve"><value>Swapping to Development environment will display more detailed information about the error that occurred.</value></data>
-  <data name="SharedErrorDevelopmentBody2" xml:space="preserve"><value>The Development environment should not be enabled for deployed applications. It can result in displaying sensitive information from exceptions to end users. For local debugging, enable the Development environment by setting the ASPNETCORE_ENVIRONMENT environment variable to Development and restarting the app.</value></data>
-  <data name="SeoTitle" xml:space="preserve"><value>Mamia Seeds Oil Limited | Soybean Processing and Premium Soybean Meal Supply</value></data>
-  <data name="SeoDescription" xml:space="preserve"><value>Mamia Seeds Oil Limited is a leading soybean processing and agricultural manufacturing company with premium soybean meal as its flagship bulk-supply product and refined soya cooking oil as a secondary product.</value></data>
-  <data name="SeoKeywords" xml:space="preserve"><value>Mamia Seeds Oil, soybean processing, premium soybean meal, soybean cake, soybean shaft, feed manufacturers Nigeria, refined soya cooking oil, Kaduna</value></data>
-  <data name="FooterNewsletterSuccessFallback" xml:space="preserve"><value>Subscription received.</value></data>
-  <data name="PartnershipPartnerTypesAria" xml:space="preserve"><value>Partnership partner types</value></data>
-  <data name="PartnershipPillarsAria" xml:space="preserve"><value>Partnership value pillars</value></data>
-  <data name="PartnershipDocumentsAria" xml:space="preserve"><value>Partnership document requirements</value></data>
-  <data name="PartnershipFutureDocumentsTitle" xml:space="preserve"><value>Future Document Requirements</value></data>
-  <data name="PartnershipFutureDocumentsDescription" xml:space="preserve"><value>These requirements are placeholders and can be updated when your policy is finalized.</value></data>
-  <data name="PartnershipDocumentRequired" xml:space="preserve"><value>Required</value></data>
-  <data name="PartnershipDocumentOptional" xml:space="preserve"><value>Optional</value></data>
-  <data name="PartnershipWhatsAppAria" xml:space="preserve"><value>WhatsApp partnership contact</value></data>
-  <data name="PartnershipWhatsAppTitle" xml:space="preserve"><value>Start on WhatsApp</value></data>
-  <data name="PartnershipWhatsAppDescription" xml:space="preserve"><value>Need immediate conversation with our business team? Start from WhatsApp.</value></data>
-  <data name="PartnershipWhatsAppButton" xml:space="preserve"><value>Open WhatsApp</value></data>
-  <data name="PartnershipWhatsAppUnavailable" xml:space="preserve"><value>WhatsApp contact is currently unavailable.</value></data>
-  <data name="PartnershipFormAria" xml:space="preserve"><value>Partnership application form</value></data>
-  <data name="PartnershipStepsAria" xml:space="preserve"><value>Partnership application steps</value></data>
-  <data name="PartnershipStepBusinessInfo" xml:space="preserve"><value>Business Information</value></data>
-  <data name="PartnershipStepContactInfo" xml:space="preserve"><value>Contact Information</value></data>
-  <data name="PartnershipStepRequirements" xml:space="preserve"><value>Business Requirements</value></data>
-  <data name="PartnershipStepReview" xml:space="preserve"><value>Review</value></data>
-  <data name="PartnershipStepSubmit" xml:space="preserve"><value>Submit</value></data>
-  <data name="PartnershipFieldCompanyName" xml:space="preserve"><value>Company Name</value></data>
-  <data name="PartnershipFieldRegistrationNumber" xml:space="preserve"><value>Business Registration Number</value></data>
-  <data name="PartnershipFieldBusinessType" xml:space="preserve"><value>Business Type</value></data>
-  <data name="PartnershipFieldYearsInOperation" xml:space="preserve"><value>Years in Operation</value></data>
-  <data name="PartnershipFieldBusinessAddress" xml:space="preserve"><value>Business Address</value></data>
-  <data name="PartnershipFieldContactPerson" xml:space="preserve"><value>Contact Person</value></data>
-  <data name="PartnershipFieldPosition" xml:space="preserve"><value>Position</value></data>
-  <data name="PartnershipFieldPhone" xml:space="preserve"><value>Phone Number</value></data>
-  <data name="PartnershipFieldEmail" xml:space="preserve"><value>Email Address</value></data>
-  <data name="PartnershipFieldCountry" xml:space="preserve"><value>Country</value></data>
-  <data name="PartnershipFieldState" xml:space="preserve"><value>State / Region</value></data>
-  <data name="PartnershipFieldCity" xml:space="preserve"><value>City</value></data>
-  <data name="PartnershipFieldMonthlyEstimate" xml:space="preserve"><value>Monthly Purchase Estimate</value></data>
-  <data name="PartnershipFieldPreferredProducts" xml:space="preserve"><value>Preferred Products</value></data>
-  <data name="PartnershipFieldPreferredPackaging" xml:space="preserve"><value>Preferred Packaging</value></data>
-  <data name="PartnershipFieldAdditionalNotes" xml:space="preserve"><value>Additional Notes</value></data>
-  <data name="PartnershipSelectPlaceholder" xml:space="preserve"><value>Select an option</value></data>
-  <data name="PartnershipMultiSelectHelp" xml:space="preserve"><value>Use Ctrl (Windows) or Command (Mac) to choose multiple options.</value></data>
-  <data name="PartnershipAgreeTermsPrefix" xml:space="preserve"><value>I confirm that this information is accurate and I agree to the</value></data>
-  <data name="PartnershipAgreeTermsLink" xml:space="preserve"><value>partnership terms</value></data>
-  <data name="PartnershipSubmitDescription" xml:space="preserve"><value>Submit your application to our business team for review.</value></data>
-  <data name="PartnershipBack" xml:space="preserve"><value>Back</value></data>
-  <data name="PartnershipNext" xml:space="preserve"><value>Next</value></data>
-  <data name="PartnershipSubmit" xml:space="preserve"><value>Submit Application</value></data>
-  <data name="PartnershipReviewCompanyName" xml:space="preserve"><value>Company Name</value></data>
-  <data name="PartnershipReviewBusinessRegistrationNumber" xml:space="preserve"><value>Business Registration Number</value></data>
-  <data name="PartnershipReviewContactPerson" xml:space="preserve"><value>Contact Person</value></data>
-  <data name="PartnershipReviewPosition" xml:space="preserve"><value>Position</value></data>
-  <data name="PartnershipReviewPhoneNumber" xml:space="preserve"><value>Phone Number</value></data>
-  <data name="PartnershipReviewEmailAddress" xml:space="preserve"><value>Email Address</value></data>
-  <data name="PartnershipReviewBusinessAddress" xml:space="preserve"><value>Business Address</value></data>
-  <data name="PartnershipReviewCountry" xml:space="preserve"><value>Country</value></data>
-  <data name="PartnershipReviewState" xml:space="preserve"><value>State / Region</value></data>
-  <data name="PartnershipReviewCity" xml:space="preserve"><value>City</value></data>
-  <data name="PartnershipReviewBusinessType" xml:space="preserve"><value>Business Type</value></data>
-  <data name="PartnershipReviewYearsInOperation" xml:space="preserve"><value>Years in Operation</value></data>
-  <data name="PartnershipReviewMonthlyPurchaseEstimate" xml:space="preserve"><value>Monthly Purchase Estimate</value></data>
-  <data name="PartnershipReviewPreferredProducts" xml:space="preserve"><value>Preferred Products</value></data>
-  <data name="PartnershipReviewPreferredPackaging" xml:space="preserve"><value>Preferred Packaging</value></data>
-  <data name="PartnershipReviewAdditionalNotes" xml:space="preserve"><value>Additional Notes</value></data>
-  <data name="PartnershipReviewUnavailable" xml:space="preserve"><value>[To Be Updated]</value></data>
-  <data name="PartnershipSpamBlocked" xml:space="preserve"><value>Application blocked by security screening.</value></data>
-  <data name="PartnershipSubmitSuccess" xml:space="preserve"><value>Your partnership application has been received successfully.</value></data>
-  <data name="ValidationTermsRequired" xml:space="preserve"><value>You must agree to the partnership terms before submitting.</value></data>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NavPrimary" xml:space="preserve">
+    <value>Primary navigation</value>
+  </data>
+  <data name="BecomeDistributor" xml:space="preserve">
+    <value>Become a Distributor</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="NavOpenMenu" xml:space="preserve">
+    <value>Open menu</value>
+  </data>
+  <data name="NavCloseMenu" xml:space="preserve">
+    <value>Close menu</value>
+  </data>
+  <data name="NavLanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="NavLanguageHausa" xml:space="preserve">
+    <value>Hausa</value>
+  </data>
+  <data name="NavLanguageSelector" xml:space="preserve">
+    <value>Language selector</value>
+  </data>
+  <data name="ProductsEyebrow" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="ProductsTitle" xml:space="preserve">
+    <value>Industrial soybean products for business supply.</value>
+  </data>
+  <data name="ProductsDescription" xml:space="preserve">
+    <value>Our product portfolio is led by premium soybean meal, supported by refined soya cooking oil and industrial supply programmes for long-term buyers.</value>
+  </data>
+  <data name="ProcessEyebrow" xml:space="preserve">
+    <value>Manufacturing Process</value>
+  </data>
+  <data name="ProcessTitle" xml:space="preserve">
+    <value>Controlled soybean processing for reliable output.</value>
+  </data>
+  <data name="ProcessDescription" xml:space="preserve">
+    <value>Our manufacturing workflow is structured for quality assurance, production discipline, and dependable supply continuity.</value>
+  </data>
+  <data name="DistributionMapPlaceholderAria" xml:space="preserve">
+    <value>Nigeria distribution map placeholder</value>
+  </data>
+  <data name="HeroScrollStory" xml:space="preserve">
+    <value>Scroll</value>
+  </data>
+  <data name="HeroScrollStoryAria" xml:space="preserve">
+    <value>Scroll to our story section</value>
+  </data>
+  <data name="ContactAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="ContactPhoneWhatsapp" xml:space="preserve">
+    <value>Phone / WhatsApp</value>
+  </data>
+  <data name="ContactEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ContactBusinessHours" xml:space="preserve">
+    <value>Business Hours</value>
+  </data>
+  <data name="ContactFormAria" xml:space="preserve">
+    <value>Contact form</value>
+  </data>
+  <data name="ContactFullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="ContactCompany" xml:space="preserve">
+    <value>Company / Organisation</value>
+  </data>
+  <data name="ContactEmailAddress" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="ContactPhoneNumber" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="ContactRequirements" xml:space="preserve">
+    <value>Tell us about your product requirement, estimated volume, and target supply schedule.</value>
+  </data>
+  <data name="ContactSendMessage" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactSubmitting" xml:space="preserve">
+    <value>Submitting your enquiry...</value>
+  </data>
+  <data name="ContactSubmitFailed" xml:space="preserve">
+    <value>Unable to submit enquiry right now.</value>
+  </data>
+  <data name="AiOpenAssistant" xml:space="preserve">
+    <value>Open AI assistant</value>
+  </data>
+  <data name="AiBusinessAssistant" xml:space="preserve">
+    <value>Business Assistant</value>
+  </data>
+  <data name="AiMinimizeAssistant" xml:space="preserve">
+    <value>Minimize assistant</value>
+  </data>
+  <data name="AiCloseAssistant" xml:space="preserve">
+    <value>Close assistant</value>
+  </data>
+  <data name="AiNow" xml:space="preserve">
+    <value>Now</value>
+  </data>
+  <data name="AiInputPlaceholder" xml:space="preserve">
+    <value>Ask about soybean meal supply, production, certifications, or distribution...</value>
+  </data>
+  <data name="AiSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="AiFallbackError" xml:space="preserve">
+    <value>I am unable to answer right now. Please contact Mamia Seeds Oil Limited directly for more details.</value>
+  </data>
+  <data name="AiRestrictionResponse" xml:space="preserve">
+    <value>I can only discuss Mamia Seeds Oil Limited information.</value>
+  </data>
+  <data name="AiUnavailableInfoResponse" xml:space="preserve">
+    <value>This information is currently unavailable. Please contact Mamia Seeds Oil Limited directly for further assistance.</value>
+  </data>
+  <data name="AiKnownInfoPrefixHausa" xml:space="preserve">
+    <value>Ga bayanin da ake da shi:</value>
+  </data>
+  <data name="Error403Title" xml:space="preserve">
+    <value>Access restricted</value>
+  </data>
+  <data name="Error403Body" xml:space="preserve">
+    <value>You do not have permission to view this resource.</value>
+  </data>
+  <data name="Error500Title" xml:space="preserve">
+    <value>Server error</value>
+  </data>
+  <data name="Error500Body" xml:space="preserve">
+    <value>Something went wrong. Please try again shortly.</value>
+  </data>
+  <data name="Error404Title" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="Error404Body" xml:space="preserve">
+    <value>The page you requested could not be found.</value>
+  </data>
+  <data name="ErrorMaintenanceTitle" xml:space="preserve">
+    <value>Maintenance mode</value>
+  </data>
+  <data name="ErrorMaintenanceBody" xml:space="preserve">
+    <value>We are currently performing maintenance. Please check back soon.</value>
+  </data>
+  <data name="ErrorBackHome" xml:space="preserve">
+    <value>Back to Home</value>
+  </data>
+  <data name="SkipToMainContent" xml:space="preserve">
+    <value>Skip to main content</value>
+  </data>
+  <data name="HeroIntroductionAria" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="HeroTrustIndicatorsAria" xml:space="preserve">
+    <value>Trust indicators</value>
+  </data>
+  <data name="HeroQualityLabel" xml:space="preserve">
+    <value>Quality:</value>
+  </data>
+  <data name="HeroRecognitionLabel" xml:space="preserve">
+    <value>Recognition:</value>
+  </data>
+  <data name="HeroCertificatesPlaceholder" xml:space="preserve">
+    <value>Certificates Placeholder</value>
+  </data>
+  <data name="HeroAwardsPlaceholder" xml:space="preserve">
+    <value>Awards Placeholder</value>
+  </data>
+  <data name="HeroCompanyHighlightsAria" xml:space="preserve">
+    <value>Company highlights</value>
+  </data>
+  <data name="HistoryCorporateNarrativeAria" xml:space="preserve">
+    <value>Corporate narrative placeholders</value>
+  </data>
+  <data name="TrustBarAria" xml:space="preserve">
+    <value>Certifications and trust</value>
+  </data>
+  <data name="CtaDistributorAria" xml:space="preserve">
+    <value>Distributor call to action</value>
+  </data>
+  <data name="FooterNewsletterAria" xml:space="preserve">
+    <value>Newsletter signup placeholder</value>
+  </data>
+  <data name="FooterNewsletterEmailAria" xml:space="preserve">
+    <value>Business email address</value>
+  </data>
+  <data name="FooterBackToTopAria" xml:space="preserve">
+    <value>Back to top</value>
+  </data>
+  <data name="TestimonialsPartnerLogo" xml:space="preserve">
+    <value>Partner Logo</value>
+  </data>
+  <data name="TestimonialsLogoPlaceholderTemplate" xml:space="preserve">
+    <value>{0} logo placeholder</value>
+  </data>
+  <data name="InsightsImagePlaceholderTemplate" xml:space="preserve">
+    <value>{0} insight image placeholder</value>
+  </data>
+  <data name="ContactCallCompanyAriaTemplate" xml:space="preserve">
+    <value>Call {0}</value>
+  </data>
+  <data name="ContactEmailCompanyAriaTemplate" xml:space="preserve">
+    <value>Email {0}</value>
+  </data>
+  <data name="Error404Eyebrow" xml:space="preserve">
+    <value>Error 404</value>
+  </data>
+  <data name="Error500Eyebrow" xml:space="preserve">
+    <value>Error 500</value>
+  </data>
+  <data name="ErrorMaintenanceEyebrow" xml:space="preserve">
+    <value>Service Notice</value>
+  </data>
+  <data name="Error403Eyebrow" xml:space="preserve">
+    <value>Error 403</value>
+  </data>
+  <data name="PrivacyTitle" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="PrivacyBody" xml:space="preserve">
+    <value>Use this page to detail your site's privacy policy.</value>
+  </data>
+  <data name="NavOurStory" xml:space="preserve">
+    <value>Our Story</value>
+  </data>
+  <data name="NavProducts" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="NavProcess" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="NavGallery" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="NavContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="HistoryIntroTemplate" xml:space="preserve">
+    <value>{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soybean processing.</value>
+  </data>
+  <data name="HistoryParagraphOperationsTemplate" xml:space="preserve">
+    <value>The company operates from {0}, where it processes soybeans into premium soybean meal for bulk industrial customers and refined soya cooking oil as a secondary line.</value>
+  </data>
+  <data name="GalleryEyebrow" xml:space="preserve">
+    <value>Gallery</value>
+  </data>
+  <data name="GalleryTitle" xml:space="preserve">
+    <value>Production and operations view.</value>
+  </data>
+  <data name="GalleryDescription" xml:space="preserve">
+    <value>Placeholder visuals for processing lines, raw material handling, warehouse operations, and product movement.</value>
+  </data>
+  <data name="WhyChooseEyebrow" xml:space="preserve">
+    <value>Why Choose Mamia</value>
+  </data>
+  <data name="WhyChooseTitle" xml:space="preserve">
+    <value>Built for dependable quality and scale.</value>
+  </data>
+  <data name="WhyChooseDescription" xml:space="preserve">
+    <value>From sourcing to final delivery, Mamia combines local agricultural strength with disciplined manufacturing standards.</value>
+  </data>
+  <data name="IndustriesEyebrow" xml:space="preserve">
+    <value>Industries We Serve</value>
+  </data>
+  <data name="IndustriesTitle" xml:space="preserve">
+    <value>Supplying core feed-industry sectors at scale.</value>
+  </data>
+  <data name="IndustriesDescription" xml:space="preserve">
+    <value>Mamia's primary soybean meal supply serves poultry feed manufacturers, fish feed manufacturers, livestock feed producers, agricultural feed mills, and commercial animal feed companies.</value>
+  </data>
+  <data name="CompanyNumbersEyebrow" xml:space="preserve">
+    <value>Company Numbers</value>
+  </data>
+  <data name="CompanyNumbersTitle" xml:space="preserve">
+    <value>Scale backed by measurable performance.</value>
+  </data>
+  <data name="CompanyNumbersDescription" xml:space="preserve">
+    <value>Our growth reflects sustained production strength, market trust, and operational discipline.</value>
+  </data>
+  <data name="QualityEyebrow" xml:space="preserve">
+    <value>Quality Assurance</value>
+  </data>
+  <data name="QualityTitle" xml:space="preserve">
+    <value>Process control at every stage.</value>
+  </data>
+  <data name="QualityDescription" xml:space="preserve">
+    <value>Our quality team verifies each production stage to ensure the final oil remains clean, safe, and consistent.</value>
+  </data>
+  <data name="FaqEyebrow" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="FaqTitle" xml:space="preserve">
+    <value>Answers for partners and bulk buyers.</value>
+  </data>
+  <data name="TestimonialsEyebrow" xml:space="preserve">
+    <value>Testimonials</value>
+  </data>
+  <data name="TestimonialsTitle" xml:space="preserve">
+    <value>What partners say about working with Mamia.</value>
+  </data>
+  <data name="InsightsEyebrow" xml:space="preserve">
+    <value>News and Insights</value>
+  </data>
+  <data name="InsightsTitle" xml:space="preserve">
+    <value>Knowledge from our production and sourcing teams.</value>
+  </data>
+  <data name="InsightsDescription" xml:space="preserve">
+    <value>These articles are placeholders ready to be connected to your future blog or updates system.</value>
+  </data>
+  <data name="ValidationRequired" xml:space="preserve">
+    <value>This field is required.</value>
+  </data>
+  <data name="ValidationStringLength" xml:space="preserve">
+    <value>The field {0} must be a string with a maximum length of {1}.</value>
+  </data>
+  <data name="ValidationEmail" xml:space="preserve">
+    <value>Please enter a valid email address.</value>
+  </data>
+  <data name="ValidationPhone" xml:space="preserve">
+    <value>Please enter a valid phone number.</value>
+  </data>
+  <data name="ValidationNoHtml" xml:space="preserve">
+    <value>HTML tags are not allowed.</value>
+  </data>
+  <data name="ValidationFailed" xml:space="preserve">
+    <value>Validation failed.</value>
+  </data>
+  <data name="EmailDeliveryFailed" xml:space="preserve">
+    <value>We could not send your enquiry at the moment. Please try again later.</value>
+  </data>
+  <data name="ContactSuccessMessage" xml:space="preserve">
+    <value>Your enquiry has been received. Our team will contact you shortly.</value>
+  </data>
+  <data name="ContactDistributorSuccessMessage" xml:space="preserve">
+    <value>Distributor enquiry received. Sales team will reach out with next steps.</value>
+  </data>
+  <data name="NavBrandHomeAriaTemplate" xml:space="preserve">
+    <value>{0} home</value>
+  </data>
+  <data name="ResponsiveImagePlaceholderLabel" xml:space="preserve">
+    <value>Image Placeholder</value>
+  </data>
+  <data name="ResponsiveImagePlaceholderSubLabel" xml:space="preserve">
+    <value>Replace with branded media</value>
+  </data>
+  <data name="SharedErrorTitle" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SharedErrorHeading" xml:space="preserve">
+    <value>Error.</value>
+  </data>
+  <data name="SharedErrorBody" xml:space="preserve">
+    <value>An error occurred while processing your request.</value>
+  </data>
+  <data name="SharedErrorRequestId" xml:space="preserve">
+    <value>Request ID:</value>
+  </data>
+  <data name="SharedErrorDevelopmentMode" xml:space="preserve">
+    <value>Development Mode</value>
+  </data>
+  <data name="SharedErrorDevelopmentBody1" xml:space="preserve">
+    <value>Swapping to Development environment will display more detailed information about the error that occurred.</value>
+  </data>
+  <data name="SharedErrorDevelopmentBody2" xml:space="preserve">
+    <value>The Development environment should not be enabled for deployed applications. It can result in displaying sensitive information from exceptions to end users. For local debugging, enable the Development environment by setting the ASPNETCORE_ENVIRONMENT environment variable to Development and restarting the app.</value>
+  </data>
+  <data name="SeoTitle" xml:space="preserve">
+    <value>Mamia Seeds Oil Limited | Soybean Processing and Premium Soybean Meal Supply</value>
+  </data>
+  <data name="SeoDescription" xml:space="preserve">
+    <value>Mamia Seeds Oil Limited is a leading soybean processing and agricultural manufacturing company with premium soybean meal as its flagship bulk-supply product and refined soya cooking oil as a secondary product.</value>
+  </data>
+  <data name="SeoKeywords" xml:space="preserve">
+    <value>Mamia Seeds Oil, soybean processing, premium soybean meal, soybean cake, soybean shaft, feed manufacturers Nigeria, refined soya cooking oil, Kaduna</value>
+  </data>
+  <data name="FooterNewsletterSuccessFallback" xml:space="preserve">
+    <value>Subscription received.</value>
+  </data>
+  <data name="PartnershipPartnerTypesAria" xml:space="preserve">
+    <value>Partnership partner types</value>
+  </data>
+  <data name="PartnershipPillarsAria" xml:space="preserve">
+    <value>Partnership value pillars</value>
+  </data>
+  <data name="PartnershipDocumentsAria" xml:space="preserve">
+    <value>Partnership document requirements</value>
+  </data>
+  <data name="PartnershipFutureDocumentsTitle" xml:space="preserve">
+    <value>Future Document Requirements</value>
+  </data>
+  <data name="PartnershipFutureDocumentsDescription" xml:space="preserve">
+    <value>These requirements are placeholders and can be updated when your policy is finalized.</value>
+  </data>
+  <data name="PartnershipDocumentRequired" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="PartnershipDocumentOptional" xml:space="preserve">
+    <value>Optional</value>
+  </data>
+  <data name="PartnershipWhatsAppAria" xml:space="preserve">
+    <value>WhatsApp partnership contact</value>
+  </data>
+  <data name="PartnershipWhatsAppTitle" xml:space="preserve">
+    <value>Start on WhatsApp</value>
+  </data>
+  <data name="PartnershipWhatsAppDescription" xml:space="preserve">
+    <value>Need immediate conversation with our business team? Start from WhatsApp.</value>
+  </data>
+  <data name="PartnershipWhatsAppButton" xml:space="preserve">
+    <value>Open WhatsApp</value>
+  </data>
+  <data name="PartnershipWhatsAppUnavailable" xml:space="preserve">
+    <value>WhatsApp contact is currently unavailable.</value>
+  </data>
+  <data name="PartnershipFormAria" xml:space="preserve">
+    <value>Partnership application form</value>
+  </data>
+  <data name="PartnershipStepsAria" xml:space="preserve">
+    <value>Partnership application steps</value>
+  </data>
+  <data name="PartnershipStepBusinessInfo" xml:space="preserve">
+    <value>Business Information</value>
+  </data>
+  <data name="PartnershipStepContactInfo" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="PartnershipStepRequirements" xml:space="preserve">
+    <value>Business Requirements</value>
+  </data>
+  <data name="PartnershipStepReview" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="PartnershipStepSubmit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="PartnershipFieldCompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="PartnershipFieldRegistrationNumber" xml:space="preserve">
+    <value>Business Registration Number</value>
+  </data>
+  <data name="PartnershipFieldBusinessType" xml:space="preserve">
+    <value>Business Type</value>
+  </data>
+  <data name="PartnershipFieldYearsInOperation" xml:space="preserve">
+    <value>Years in Operation</value>
+  </data>
+  <data name="PartnershipFieldBusinessAddress" xml:space="preserve">
+    <value>Business Address</value>
+  </data>
+  <data name="PartnershipFieldContactPerson" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="PartnershipFieldPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PartnershipFieldPhone" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="PartnershipFieldEmail" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="PartnershipFieldCountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="PartnershipFieldState" xml:space="preserve">
+    <value>State / Region</value>
+  </data>
+  <data name="PartnershipFieldCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PartnershipFieldMonthlyEstimate" xml:space="preserve">
+    <value>Monthly Purchase Estimate</value>
+  </data>
+  <data name="PartnershipFieldPreferredProducts" xml:space="preserve">
+    <value>Preferred Products</value>
+  </data>
+  <data name="PartnershipFieldPreferredPackaging" xml:space="preserve">
+    <value>Preferred Packaging</value>
+  </data>
+  <data name="PartnershipFieldAdditionalNotes" xml:space="preserve">
+    <value>Additional Notes</value>
+  </data>
+  <data name="PartnershipSelectPlaceholder" xml:space="preserve">
+    <value>Select an option</value>
+  </data>
+  <data name="PartnershipMultiSelectHelp" xml:space="preserve">
+    <value>Use Ctrl (Windows) or Command (Mac) to choose multiple options.</value>
+  </data>
+  <data name="PartnershipAgreeTermsPrefix" xml:space="preserve">
+    <value>I confirm that this information is accurate and I agree to the</value>
+  </data>
+  <data name="PartnershipAgreeTermsLink" xml:space="preserve">
+    <value>partnership terms</value>
+  </data>
+  <data name="PartnershipSubmitDescription" xml:space="preserve">
+    <value>Submit your application to our business team for review.</value>
+  </data>
+  <data name="PartnershipBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="PartnershipNext" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="PartnershipSubmit" xml:space="preserve">
+    <value>Submit Application</value>
+  </data>
+  <data name="PartnershipReviewCompanyName" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="PartnershipReviewBusinessRegistrationNumber" xml:space="preserve">
+    <value>Business Registration Number</value>
+  </data>
+  <data name="PartnershipReviewContactPerson" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="PartnershipReviewPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="PartnershipReviewPhoneNumber" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="PartnershipReviewEmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="PartnershipReviewBusinessAddress" xml:space="preserve">
+    <value>Business Address</value>
+  </data>
+  <data name="PartnershipReviewCountry" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="PartnershipReviewState" xml:space="preserve">
+    <value>State / Region</value>
+  </data>
+  <data name="PartnershipReviewCity" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="PartnershipReviewBusinessType" xml:space="preserve">
+    <value>Business Type</value>
+  </data>
+  <data name="PartnershipReviewYearsInOperation" xml:space="preserve">
+    <value>Years in Operation</value>
+  </data>
+  <data name="PartnershipReviewMonthlyPurchaseEstimate" xml:space="preserve">
+    <value>Monthly Purchase Estimate</value>
+  </data>
+  <data name="PartnershipReviewPreferredProducts" xml:space="preserve">
+    <value>Preferred Products</value>
+  </data>
+  <data name="PartnershipReviewPreferredPackaging" xml:space="preserve">
+    <value>Preferred Packaging</value>
+  </data>
+  <data name="PartnershipReviewAdditionalNotes" xml:space="preserve">
+    <value>Additional Notes</value>
+  </data>
+  <data name="PartnershipReviewUnavailable" xml:space="preserve">
+    <value>[To Be Updated]</value>
+  </data>
+  <data name="PartnershipSpamBlocked" xml:space="preserve">
+    <value>Application blocked by security screening.</value>
+  </data>
+  <data name="PartnershipSubmitSuccess" xml:space="preserve">
+    <value>Your partnership application has been received successfully.</value>
+  </data>
+  <data name="ValidationTermsRequired" xml:space="preserve">
+    <value>You must agree to the partnership terms before submitting.</value>
+  </data>
+  <data name="HeroInfoEstablishedTitle" xml:space="preserve">
+    <value>Established</value>
+  </data>
+  <data name="AiFabLabel" xml:space="preserve">
+    <value>Let's Talk</value>
+  </data>
+  <data name="HeroInfoCompanyName" xml:space="preserve">
+    <value>Mamia Seeds Oil Limited</value>
+  </data>
+  <data name="HeroInfoLocationTitle" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="HeroInfoEstablishedValue" xml:space="preserve">
+    <value>26 July 2005</value>
+  </data>
+  <data name="HeroInfoBusinessValue" xml:space="preserve">
+    <value>Soybean Processing&lt;br /&gt;Refined Soya Cooking Oil&lt;br /&gt;Soybean Meal&lt;br /&gt;Industrial Supply</value>
+  </data>
+  <data name="HeroInfoProfileEyebrow" xml:space="preserve">
+    <value>Company Profile</value>
+  </data>
+  <data name="HeroInfoLocationValue" xml:space="preserve">
+    <value>Kutungare Village&lt;br /&gt;Airport Road&lt;br /&gt;Makarfi&lt;br /&gt;Kaduna State&lt;br /&gt;Nigeria</value>
+  </data>
+  <data name="HeroInfoCertificationsTitle" xml:space="preserve">
+    <value>Certifications</value>
+  </data>
+  <data name="HeroInfoManufacturingValue" xml:space="preserve">
+    <value>Modern Processing&lt;br /&gt;Quality Control&lt;br /&gt;Food Grade Production</value>
+  </data>
+  <data name="HeroInfoManufacturingTitle" xml:space="preserve">
+    <value>Manufacturing</value>
+  </data>
+  <data name="HeroInfoCoverageValue" xml:space="preserve">
+    <value>Nationwide Distribution&lt;br /&gt;Wholesale Supply&lt;br /&gt;Bulk Orders</value>
+  </data>
+  <data name="HeroInfoCertificationsValue" xml:space="preserve">
+    <value>NAFDAC Certified&lt;br /&gt;SON Certified</value>
+  </data>
+  <data name="HeroInfoBusinessTitle" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="HeroInfoCoverageTitle" xml:space="preserve">
+    <value>Coverage</value>
+  </data>
 </root>

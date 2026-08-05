@@ -131,7 +131,7 @@ public sealed class ContactService : IContactService
     {
         enquiry.FullName = SanitizeText(enquiry.FullName);
         enquiry.CompanyName = SanitizeText(enquiry.CompanyName);
-        enquiry.Email = SanitizeText(enquiry.Email)?.Trim().ToLowerInvariant();
+        enquiry.Email = SanitizeText(enquiry.Email).Trim().ToLowerInvariant();
         enquiry.Phone = SanitizeText(enquiry.Phone);
         enquiry.Message = SanitizeText(enquiry.Message);
     }
@@ -140,7 +140,7 @@ public sealed class ContactService : IContactService
     {
         enquiry.CompanyName = SanitizeText(enquiry.CompanyName);
         enquiry.ContactPerson = SanitizeText(enquiry.ContactPerson);
-        enquiry.Email = SanitizeText(enquiry.Email)?.Trim().ToLowerInvariant();
+        enquiry.Email = SanitizeText(enquiry.Email).Trim().ToLowerInvariant();
         enquiry.Phone = SanitizeText(enquiry.Phone);
         enquiry.Country = SanitizeText(enquiry.Country);
         enquiry.State = SanitizeText(enquiry.State);

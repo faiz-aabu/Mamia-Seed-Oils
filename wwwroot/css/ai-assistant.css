@@ -31,8 +31,9 @@
 
 .ai-fab:hover {
   transform: translateY(-3px) scale(1.01);
-  filter: saturate(1.06);
-  box-shadow: 0 30px 52px -26px rgba(27, 36, 22, 0.62);
+  background: linear-gradient(115deg, #2f6a3f, #3d7c4f);
+  color: #f5f7ec;
+  box-shadow: 0 30px 52px -26px rgba(18, 58, 31, 0.58);
 }
 
 .ai-fab-icon {
