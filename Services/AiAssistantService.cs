@@ -2,8 +2,6 @@ using MamiaSeedsOil.Web.Configuration;
 using MamiaSeedsOil.Web.DTOs.AiAssistant;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.Models.AiAssistant;
-using MamiaSeedsOil.Web.Resources;
-using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 using System.Collections.Concurrent;
 using System.Diagnostics;
@@ -17,7 +15,6 @@ public sealed class AiAssistantService : IAiAssistantService
     private static readonly TimeSpan ConversationTtl = TimeSpan.FromMinutes(45);
     private readonly IAiProviderFactory _providerFactory;
     private readonly AiAssistantOptions _options;
-    private readonly IStringLocalizer<SharedResource> _localizer;
     private readonly ILogger<AiAssistantService> _logger;
     private static readonly ConcurrentDictionary<string, ConversationState> ConversationStore = new(StringComparer.Ordinal);
     private static readonly Regex EmailRegex = new(@"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", RegexOptions.IgnoreCase | RegexOptions.Compiled);
@@ -26,12 +23,10 @@ public sealed class AiAssistantService : IAiAssistantService
     public AiAssistantService(
         IAiProviderFactory providerFactory,
         IOptions<AiAssistantOptions> options,
-        IStringLocalizer<SharedResource> localizer,
         ILogger<AiAssistantService> logger)
     {
         _providerFactory = providerFactory;
         _options = options.Value;
-        _localizer = localizer;
         _logger = logger;
     }
 
@@ -86,22 +81,9 @@ public sealed class AiAssistantService : IAiAssistantService
     public Task<AiSuggestionResponseDto> GetSuggestionsAsync(CancellationToken cancellationToken = default)
     {
         cancellationToken.ThrowIfCancellationRequested();
-
-        var suggestions = new[]
-        {
-            L("AiSuggestedDistributor", "Become a Distributor"),
-            L("AiSuggestedProducts", "View Products"),
-            L("AiSuggestedBulk", "Bulk Orders"),
-            L("AiSuggestedFactory", "Factory Location"),
-            L("AiSuggestedSales", "Contact Sales"),
-            L("AiSuggestedSoybeanMeal", "Soybean Meal"),
-            L("AiSuggestedCookingOil", "Cooking Oil"),
-            L("AiSuggestedCertifications", "Certifications")
-        };
-
         return Task.FromResult(new AiSuggestionResponseDto
         {
-            Suggestions = suggestions
+            Suggestions = _options.SuggestedQuestions
         });
     }
 
@@ -155,12 +137,6 @@ public sealed class AiAssistantService : IAiAssistantService
         value = EmailRegex.Replace(value, "[redacted-email]");
         value = LongDigitRegex.Replace(value, "[redacted-number]");
         return value.Length > 300 ? value[..300] : value;
-    }
-
-    private string L(string key, string fallback)
-    {
-        var value = _localizer[key];
-        return value.ResourceNotFound ? fallback : value.Value;
     }
 
     private sealed class ConversationState

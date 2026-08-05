@@ -2,23 +2,18 @@ using MamiaSeedsOil.Web.Configuration;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.Models.AiAssistant;
 using MamiaSeedsOil.Web.Models.KnowledgeArchitecture;
-using MamiaSeedsOil.Web.Resources;
-using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace MamiaSeedsOil.Web.Services;
 
 public sealed class AIResponseBuilder : IAIResponseBuilder
 {
+    private const string UnknownResponse = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
     private readonly AiAssistantOptions _options;
-    private readonly IStringLocalizer<SharedResource> _localizer;
 
-    public AIResponseBuilder(
-        IOptions<AiAssistantOptions> options,
-        IStringLocalizer<SharedResource> localizer)
+    public AIResponseBuilder(IOptions<AiAssistantOptions> options)
     {
         _options = options.Value;
-        _localizer = localizer;
     }
 
     public AiAnswerResult Build(AiQueryContext context, IReadOnlyList<string> suggestedQuestions)
@@ -27,7 +22,7 @@ public sealed class AIResponseBuilder : IAIResponseBuilder
         {
             return new AiAnswerResult
             {
-                Message = UnknownResponse(),
+                Message = UnknownResponse,
                 IsFallback = true,
                 Suggestions = suggestedQuestions.Take(3).ToList()
             };
@@ -37,7 +32,7 @@ public sealed class AIResponseBuilder : IAIResponseBuilder
         {
             return new AiAnswerResult
             {
-                Message = UnknownResponse(),
+                Message = UnknownResponse,
                 IsFallback = true,
                 Suggestions = suggestedQuestions.Take(4).ToList()
             };
@@ -52,16 +47,5 @@ public sealed class AIResponseBuilder : IAIResponseBuilder
                 .Take(3)
                 .ToList()
         };
-    }
-
-    private string UnknownResponse()
-    {
-        var value = _localizer["AiUnknownResponse"];
-        if (!value.ResourceNotFound)
-        {
-            return value.Value;
-        }
-
-        return "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
     }
 }
