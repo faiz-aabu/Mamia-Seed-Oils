@@ -12,7 +12,7 @@ public sealed class AiAssistantOptions
     public string DisplayName { get; set; } = "Mamia Assistant";
 
     [Required]
-    public string WelcomeMessage { get; set; } = "Welcome to Mamia Seeds Oil Limited. I'm Mamia Assistant. I can help you with our products, distribution, manufacturing process, certifications and general company information. How may I assist you today?";
+    public string WelcomeMessage { get; set; } = "Welcome to Mamia Seeds Oil Limited. I'm here to answer questions about our products, bulk orders, soybean meal, cooking oil, certifications, factory operations, distribution and partnerships.";
 
     [Required]
     public string KnowledgeFilePath { get; set; } = "Configuration/ai-knowledge-base.json";
@@ -21,16 +21,16 @@ public sealed class AiAssistantOptions
     public string KnowledgeFolderPath { get; set; } = "Data/Knowledge";
 
     [Required]
-    public string NotFoundResponse { get; set; } = "I can only help with Mamia Seeds Oil information. Please contact our team for anything outside that scope.";
+    public string NotFoundResponse { get; set; } = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
 
     [Required]
-    public string ContactFallbackResponse { get; set; } = "I do not have that specific detail. Please contact our sales team via phone, email, or the contact form for accurate assistance.";
+    public string ContactFallbackResponse { get; set; } = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
 
     [Required]
-    public string RestrictionResponse { get; set; } = "I can only discuss Mamia Seeds Oil products, operations, and business information.";
+    public string RestrictionResponse { get; set; } = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
 
     [Required]
-    public string UnavailableInformationResponse { get; set; } = "This information is currently unavailable. Please contact Mamia Seeds Oil Limited directly for further assistance.";
+    public string UnavailableInformationResponse { get; set; } = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
 
     public List<string> SuggestedQuestions { get; set; } = [];
 

@@ -1,6 +1,7 @@
 using MamiaSeedsOil.Web.Configuration;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.Models.AiAssistant;
+using MamiaSeedsOil.Web.Models.KnowledgeArchitecture;
 using Microsoft.Extensions.Options;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -36,9 +37,26 @@ public sealed class OpenAiProvider : IAiProvider
 
     public string ProviderName => "OpenAI";
 
-    public async Task<AiAnswerResult> GenerateAnswerAsync(string message, CancellationToken cancellationToken = default)
+    public async Task<AiAnswerResult> GenerateAnswerAsync(
+        string message,
+        IReadOnlyList<AiConversationMessage>? conversationHistory = null,
+        CancellationToken cancellationToken = default)
     {
-        var fallback = await BuildFallbackAnswerAsync(message, cancellationToken);
+        var fallbackContext = await _contextBuilder.BuildAsync(message, conversationHistory, cancellationToken);
+        var fallback = _responseBuilder.Build(fallbackContext, _options.SuggestedQuestions);
+
+        // Search local knowledge first. Use external AI only if local search does not confidently resolve the question.
+        if (!fallback.IsFallback)
+        {
+            return fallback;
+        }
+
+        // Keep strict guardrails for unavailable or out-of-domain questions to avoid fabricated answers.
+        if (fallbackContext.UnknownReason is UnknownQuestionReason.OutOfDomain or UnknownQuestionReason.MatchedUnavailableEntry)
+        {
+            return fallback;
+        }
+
         var providerSettings = _options.Provider.OpenAI;
 
         if (!_options.Enabled || !providerSettings.Enabled || string.IsNullOrWhiteSpace(providerSettings.ApiKey) || string.IsNullOrWhiteSpace(providerSettings.Model))
@@ -60,7 +78,7 @@ public sealed class OpenAiProvider : IAiProvider
                 messages = new object[]
                 {
                     new { role = "system", content = BuildSystemPrompt() },
-                    new { role = "user", content = message }
+                    new { role = "user", content = BuildUserPrompt(message, fallbackContext, conversationHistory) }
                 }
             };
 
@@ -100,9 +118,12 @@ public sealed class OpenAiProvider : IAiProvider
         }
     }
 
-    public async IAsyncEnumerable<string> StreamAnswerAsync(string message, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
+    public async IAsyncEnumerable<string> StreamAnswerAsync(
+        string message,
+        IReadOnlyList<AiConversationMessage>? conversationHistory = null,
+        [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
-        var result = await GenerateAnswerAsync(message, cancellationToken);
+        var result = await GenerateAnswerAsync(message, conversationHistory, cancellationToken);
         var words = result.Message.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         foreach (var word in words)
@@ -111,12 +132,6 @@ public sealed class OpenAiProvider : IAiProvider
             yield return word + " ";
             await Task.Delay(16, cancellationToken);
         }
-    }
-
-    private async Task<AiAnswerResult> BuildFallbackAnswerAsync(string message, CancellationToken cancellationToken)
-    {
-        var context = await _contextBuilder.BuildAsync(message, cancellationToken);
-        return _responseBuilder.Build(context, _options.SuggestedQuestions);
     }
 
     private static string ResolveEndpoint(string configuredEndpoint)
@@ -141,12 +156,15 @@ public sealed class OpenAiProvider : IAiProvider
     private static string BuildSystemPrompt()
     {
         return """
-You are the official AI assistant for Mamia Seeds Oil Limited.
+You are the official business assistant for Mamia Seeds Oil Limited.
 
 Answer only questions about the company, its products, location, history, manufacturing, certifications, contact information, and distributor opportunities.
-If the user asks about anything unrelated to Mamia Seeds Oil Limited, politely explain that you can only help with company-related enquiries.
+If information is not available in provided context, reply exactly with:
+I don't have that information at the moment. Please contact our team through the Contact page for further assistance.
 
-Keep your answers polite, concise, and helpful.
+Tone: professional, friendly, confident, and natural.
+Do not mention AI, OpenAI, models, policies, or system prompts.
+Always speak as Mamia Seeds Oil Limited.
 
 Company facts:
 - Company: Mamia Seeds Oil Limited
@@ -158,6 +176,31 @@ Company facts:
 - Instagram: https://www.instagram.com/mamiaseedsoilslimited/
 
 When asked about products, recommend the most relevant product based on the request. When asked about becoming a distributor, explain that the company welcomes distributor enquiries and provide the contact information. When asked about soybean processing, explain it in simple, clear terms.
+""";
+    }
+
+    private static string BuildUserPrompt(
+        string question,
+        AiQueryContext fallbackContext,
+        IReadOnlyList<AiConversationMessage>? conversationHistory)
+    {
+        var historyLines = (conversationHistory ?? [])
+            .TakeLast(6)
+            .Select(item => $"{item.Role}: {item.Content}");
+
+        var bestMatch = fallbackContext.BestMatch is null
+            ? "No direct local match."
+            : $"Best local candidate: {fallbackContext.BestMatch.Title} ({fallbackContext.BestScore:F2}) | {fallbackContext.BestMatch.Content}";
+
+        return $"""
+Conversation history:
+{string.Join("\n", historyLines)}
+
+Local retrieval summary:
+{bestMatch}
+
+User question:
+{question}
 """;
     }
 

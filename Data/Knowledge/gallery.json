@@ -1,44 +1,34 @@
 {
-  "domainKeywords": [
-    "gallery",
-    "images",
-    "photos"
-  ],
-  "category": {
-    "key": "gallery",
-    "title": "Gallery",
-    "description": "Gallery descriptions and media notes.",
-    "keywords": [
-      "gallery",
-      "images",
-      "photos"
-    ]
-  },
-  "entries": [
-    {
-      "id": "gallery-overview",
-      "title": "Gallery Overview",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "gallery",
-        "images",
-        "factory photos"
-      ],
-      "sourceType": "Json",
-      "sourcePath": "Data/Knowledge/gallery.json"
-    }
-  ],
-  "futureDocuments": [
-    {
-      "id": "gallery-image-source",
-      "title": "Factory Images",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "images",
-        "gallery"
-      ],
-      "sourceType": "Markdown",
-      "sourcePath": "Documents/gallery-notes.md"
-    }
-  ]
+    "domainKeywords":  [
+                           "gallery",
+                           "images",
+                           "photos",
+                           "factory images"
+                       ],
+    "category":  {
+                     "key":  "gallery",
+                     "title":  "Gallery",
+                     "description":  "Factory and operations gallery guidance.",
+                     "keywords":  [
+                                      "gallery",
+                                      "images",
+                                      "photos",
+                                      "factory photos"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "gallery-overview",
+                        "title":  "Gallery Overview",
+                        "content":  "Our gallery highlights factory operations, product packaging, and distribution visuals to support customer understanding of our work.",
+                        "keywords":  [
+                                         "gallery",
+                                         "images",
+                                         "factory photos",
+                                         "operations"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/gallery.json"
+                    }
+                ]
 }

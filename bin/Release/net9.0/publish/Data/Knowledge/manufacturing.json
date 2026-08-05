@@ -1,31 +1,50 @@
 {
-  "domainKeywords": [
-    "manufacturing",
-    "process",
-    "production"
-  ],
-  "category": {
-    "key": "manufacturing",
-    "title": "Manufacturing",
-    "description": "Manufacturing and production process information.",
-    "keywords": [
-      "manufacturing",
-      "process",
-      "production"
-    ]
-  },
-  "entries": [
-    {
-      "id": "manufacturing-overview",
-      "title": "Manufacturing Process",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "manufacturing process",
-        "production process",
-        "refining"
-      ],
-      "sourceType": "Json",
-      "sourcePath": "Data/Knowledge/manufacturing.json"
-    }
-  ]
+    "domainKeywords":  [
+                           "manufacturing",
+                           "production",
+                           "process",
+                           "quality control",
+                           "factory operations"
+                       ],
+    "category":  {
+                     "key":  "manufacturing",
+                     "title":  "Manufacturing",
+                     "description":  "Manufacturing process and quality control information.",
+                     "keywords":  [
+                                      "manufacturing",
+                                      "production",
+                                      "refining",
+                                      "quality control",
+                                      "factory"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "manufacturing-overview",
+                        "title":  "Manufacturing Process",
+                        "content":  "Our process includes soybean intake checks, cleaning, controlled extraction, refining stages, quality checks, and packaging before distribution.",
+                        "keywords":  [
+                                         "manufacturing process",
+                                         "production process",
+                                         "refining",
+                                         "quality"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/manufacturing.json"
+                    },
+                    {
+                        "id":  "manufacturing-quality",
+                        "title":  "Quality Control",
+                        "content":  "We maintain quality through controlled process steps, monitoring, and compliance-focused operations aligned with NAFDAC and SON expectations.",
+                        "keywords":  [
+                                         "quality control",
+                                         "quality assurance",
+                                         "nafdac",
+                                         "son",
+                                         "compliance"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/manufacturing.json"
+                    }
+                ]
 }

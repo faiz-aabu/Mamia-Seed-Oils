@@ -26,9 +26,12 @@ public sealed class RuleBasedAiProvider : IAiProvider
 
     public string ProviderName => "RuleBased";
 
-    public async Task<AiAnswerResult> GenerateAnswerAsync(string message, CancellationToken cancellationToken = default)
+    public async Task<AiAnswerResult> GenerateAnswerAsync(
+        string message,
+        IReadOnlyList<AiConversationMessage>? conversationHistory = null,
+        CancellationToken cancellationToken = default)
     {
-        var context = await _contextBuilder.BuildAsync(message, cancellationToken);
+        var context = await _contextBuilder.BuildAsync(message, conversationHistory, cancellationToken);
         var response = _responseBuilder.Build(context, _options.SuggestedQuestions);
 
         if (context.UnknownReason != Models.KnowledgeArchitecture.UnknownQuestionReason.None)
@@ -39,9 +42,12 @@ public sealed class RuleBasedAiProvider : IAiProvider
         return response;
     }
 
-    public async IAsyncEnumerable<string> StreamAnswerAsync(string message, [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
+    public async IAsyncEnumerable<string> StreamAnswerAsync(
+        string message,
+        IReadOnlyList<AiConversationMessage>? conversationHistory = null,
+        [System.Runtime.CompilerServices.EnumeratorCancellation] CancellationToken cancellationToken = default)
     {
-        var result = await GenerateAnswerAsync(message, cancellationToken);
+        var result = await GenerateAnswerAsync(message, conversationHistory, cancellationToken);
         var words = result.Message.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         foreach (var word in words)

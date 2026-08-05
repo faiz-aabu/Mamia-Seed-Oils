@@ -8,7 +8,7 @@ namespace MamiaSeedsOil.Web.Services;
 
 public sealed class AIResponseBuilder : IAIResponseBuilder
 {
-    private const string UnavailableResponse = "This information is currently unavailable. Please contact Mamia Seeds Oil Limited directly for further assistance.";
+    private const string UnknownResponse = "I don't have that information at the moment. Please contact our team through the Contact page for further assistance.";
     private readonly AiAssistantOptions _options;
 
     public AIResponseBuilder(IOptions<AiAssistantOptions> options)
@@ -22,7 +22,7 @@ public sealed class AIResponseBuilder : IAIResponseBuilder
         {
             return new AiAnswerResult
             {
-                Message = _options.RestrictionResponse,
+                Message = UnknownResponse,
                 IsFallback = true,
                 Suggestions = suggestedQuestions.Take(3).ToList()
             };
@@ -32,7 +32,7 @@ public sealed class AIResponseBuilder : IAIResponseBuilder
         {
             return new AiAnswerResult
             {
-                Message = UnavailableResponse,
+                Message = UnknownResponse,
                 IsFallback = true,
                 Suggestions = suggestedQuestions.Take(4).ToList()
             };

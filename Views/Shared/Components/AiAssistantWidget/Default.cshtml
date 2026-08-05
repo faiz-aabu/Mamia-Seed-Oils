@@ -2,19 +2,24 @@
 
 @if (Model.Enabled)
 {
-    <div class="ai-widget" data-ai-widget data-chat-endpoint="@Model.ChatEndpoint" data-suggestions-endpoint="@Model.SuggestionsEndpoint" data-fallback-error-message="I am unable to answer right now. Please contact Mamia Seeds Oil Limited directly for further assistance.">
+    <div class="ai-widget" data-ai-widget data-chat-endpoint="@Model.ChatEndpoint" data-suggestions-endpoint="@Model.SuggestionsEndpoint" data-fallback-error-message="I don't have that information at the moment. Please contact our team through the Contact page for further assistance.">
         <button type="button" class="ai-fab ripple-host" aria-label="Open Mamia Assistant" data-ai-open>
-            <span class="ai-fab-icon">AI</span>
+            <span class="ai-fab-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8A2.5 2.5 0 0 1 17.5 16H9l-4.6 3.2c-.66.46-1.4-.02-1.4-.82V5.5Zm4.2 2.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Zm3.8 0a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Zm3.8 0a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z"></path>
+                </svg>
+            </span>
+            <span class="ai-fab-label">Let's Talk</span>
         </button>
 
         <section class="ai-panel" aria-live="polite" aria-label="@Model.DisplayName">
             <header class="ai-panel-header">
                 <div>
                     <strong>@Model.DisplayName</strong>
-                    <span>Business Assistant</span>
+                    <span>Business Support</span>
                 </div>
                 <div class="ai-header-actions">
-                    <button type="button" class="ai-control" aria-label="Minimize assistant" data-ai-minimize>_</button>
+                    <button type="button" class="ai-control" aria-label="Minimize assistant" data-ai-minimize>-</button>
                     <button type="button" class="ai-control" aria-label="Close assistant" data-ai-close>x</button>
                 </div>
             </header>
@@ -34,8 +39,8 @@
             </div>
 
             <form class="ai-input-wrap" data-ai-form>
-                <input type="text" maxlength="800" required placeholder="Ask about products, distribution, manufacturing process, certifications, or company information..." data-ai-input />
-                <button type="submit" class="ai-send ripple-host">Send</button>
+                <textarea maxlength="800" required placeholder="Ask about products, bulk orders, distribution, certifications, or factory operations..." data-ai-input rows="1"></textarea>
+                <button type="submit" class="ai-send ripple-host" aria-label="Send message">Send</button>
             </form>
 
             <div class="ai-typing" data-ai-typing hidden>

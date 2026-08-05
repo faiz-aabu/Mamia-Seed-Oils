@@ -25,10 +25,26 @@ public sealed class KnowledgeService : IKnowledgeService
         "manufacturing",
         "distribution",
         "gallery",
-        "certifications"
+        "certifications",
+        "nafdac",
+        "son",
+        "factory",
+        "address",
+        "wholesale",
+        "bulk",
+        "retail",
+        "export",
+        "partnership",
+        "career",
+        "support",
+        "delivery",
+        "packaging"
     ];
 
     private readonly IKnowledgeRepository _knowledgeRepository;
+    private readonly SemaphoreSlim _cacheLock = new(1, 1);
+    private IReadOnlyList<ArchitectureKnowledgeCategory>? _cachedCategories;
+    private IReadOnlyList<KnowledgeEntry>? _cachedEntries;
 
     public KnowledgeService(IKnowledgeRepository knowledgeRepository)
     {
@@ -37,14 +53,40 @@ public sealed class KnowledgeService : IKnowledgeService
 
     public async Task<IReadOnlyList<ArchitectureKnowledgeCategory>> GetCategoriesAsync(CancellationToken cancellationToken = default)
     {
-        var model = await _knowledgeRepository.GetAsync(cancellationToken);
-        return BuildCategories(model);
+        if (_cachedCategories is not null)
+        {
+            return _cachedCategories;
+        }
+
+        await _cacheLock.WaitAsync(cancellationToken);
+        try
+        {
+            if (_cachedCategories is not null)
+            {
+                return _cachedCategories;
+            }
+
+            var model = await _knowledgeRepository.GetAsync(cancellationToken);
+            _cachedCategories = BuildCategories(model);
+            _cachedEntries = _cachedCategories.SelectMany(c => c.Entries).ToList();
+            return _cachedCategories;
+        }
+        finally
+        {
+            _cacheLock.Release();
+        }
     }
 
     public async Task<IReadOnlyList<KnowledgeEntry>> GetEntriesAsync(CancellationToken cancellationToken = default)
     {
+        if (_cachedEntries is not null)
+        {
+            return _cachedEntries;
+        }
+
         var categories = await GetCategoriesAsync(cancellationToken);
-        return categories.SelectMany(c => c.Entries).ToList();
+        _cachedEntries = categories.SelectMany(c => c.Entries).ToList();
+        return _cachedEntries;
     }
 
     public bool IsDomainQuestion(string question)

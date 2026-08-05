@@ -27,6 +27,11 @@ window.MamiaAssistant = (function () {
     let conversationId = null;
     let inFlightController = null;
 
+    function autoResizeInput() {
+      input.style.height = 'auto';
+      input.style.height = Math.min(input.scrollHeight, 132) + 'px';
+    }
+
     function nowTime() {
       const now = new Date();
       return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -47,22 +52,31 @@ window.MamiaAssistant = (function () {
       article.appendChild(bubble);
       article.appendChild(time);
       messages.appendChild(article);
-      messages.scrollTop = messages.scrollHeight;
+      requestAnimationFrame(function () {
+        messages.scrollTop = messages.scrollHeight;
+      });
     }
 
     function setTyping(isTyping) {
       typing.hidden = !isTyping;
+      widget.classList.toggle('is-thinking', isTyping);
       if (isTyping) {
-        messages.scrollTop = messages.scrollHeight;
+        requestAnimationFrame(function () {
+          messages.scrollTop = messages.scrollHeight;
+        });
       }
     }
 
     function toggleOpen(open) {
       widget.classList.toggle('is-open', open);
+      widget.classList.toggle('is-closing', !open);
       if (open) {
         widget.classList.remove('is-minimized');
-        input.focus();
-        messages.scrollTop = messages.scrollHeight;
+        setTimeout(function () {
+          input.focus();
+          autoResizeInput();
+          messages.scrollTop = messages.scrollHeight;
+        }, 140);
       }
     }
 
@@ -176,7 +190,14 @@ window.MamiaAssistant = (function () {
         event.preventDefault();
         form.requestSubmit();
       }
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        toggleOpen(false);
+      }
     });
+
+    input.addEventListener('input', autoResizeInput);
 
     form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -187,9 +208,11 @@ window.MamiaAssistant = (function () {
 
       appendMessage('user', value, nowTime());
       input.value = '';
+      autoResizeInput();
       sendMessage(value);
     });
 
+    autoResizeInput();
     loadInitialSuggestions();
   }
 
