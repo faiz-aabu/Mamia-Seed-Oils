@@ -16,7 +16,7 @@
     <value>Primary navigation</value>
   </data>
   <data name="BecomeDistributor" xml:space="preserve">
-    <value>Become a Distributor</value>
+    <value>Become Distributor</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
@@ -607,7 +607,7 @@
     <value>Contact Sales</value>
   </data>
   <data name="AiSuggestedDistributor" xml:space="preserve">
-    <value>Become a Distributor</value>
+    <value>Become Distributor</value>
   </data>
   <data name="AiSuggestedCertifications" xml:space="preserve">
     <value>Certifications</value>
@@ -625,13 +625,13 @@
     <value>Availability:</value>
   </data>
   <data name="HeroInfoManufacturingValue" xml:space="preserve">
-    <value>Large-scale soybean processing facility&lt;br /&gt;Modern production equipment&lt;br /&gt;Quality assurance throughout production</value>
+    <value>&amp;bull; Modern Production Facility&lt;br /&gt;&amp;bull; High Capacity Processing&lt;br /&gt;&amp;bull; Quality Controlled Operations</value>
   </data>
   <data name="HeroInfoCoverageTitle" xml:space="preserve">
     <value>Coverage</value>
   </data>
   <data name="HeroInfoBusinessValue" xml:space="preserve">
-    <value>Soybean Processing&lt;br /&gt;Refined Soya Cooking Oil&lt;br /&gt;Industrial Bulk Supply&lt;br /&gt;Soybean By-products</value>
+    <value>&amp;bull; Soybean Processing&lt;br /&gt;&amp;bull; Refined Soya Cooking Oil&lt;br /&gt;&amp;bull; Industrial Bulk Supply&lt;br /&gt;&amp;bull; Premium Soybean Meal</value>
   </data>
   <data name="HeroInfoCertificationsValue" xml:space="preserve">
     <value>NAFDAC Certified&lt;br /&gt;SON Certified</value>
@@ -670,13 +670,16 @@
     <value>Location</value>
   </data>
   <data name="HeroInfoCoverageValue" xml:space="preserve">
-    <value>Supplying customers across Nigeria</value>
+    <value>&amp;bull; Nationwide Distribution&lt;br /&gt;&amp;bull; Wholesale Supply&lt;br /&gt;&amp;bull; Industrial Supply&lt;br /&gt;&amp;bull; Export Ready</value>
   </data>
   <data name="HeroInfoEstablishedValue" xml:space="preserve">
     <value>26 July 2005</value>
   </data>
   <data name="HeroInfoProfileEyebrow" xml:space="preserve">
-    <value>Company Profile</value>
+    <value>COMPANY PROFILE</value>
+  </data>
+  <data name="HeroInfoPanelAria" xml:space="preserve">
+    <value>Mamia Seeds Oil Limited company profile overview</value>
   </data>
   <data name="HeroInfoEstablishedTitle" xml:space="preserve">
     <value>Established</value>
