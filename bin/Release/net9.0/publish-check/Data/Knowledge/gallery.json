@@ -1,0 +1,44 @@
+{
+  "domainKeywords": [
+    "gallery",
+    "images",
+    "photos"
+  ],
+  "category": {
+    "key": "gallery",
+    "title": "Gallery",
+    "description": "Gallery descriptions and media notes.",
+    "keywords": [
+      "gallery",
+      "images",
+      "photos"
+    ]
+  },
+  "entries": [
+    {
+      "id": "gallery-overview",
+      "title": "Gallery Overview",
+      "content": "[To Be Updated]",
+      "keywords": [
+        "gallery",
+        "images",
+        "factory photos"
+      ],
+      "sourceType": "Json",
+      "sourcePath": "Data/Knowledge/gallery.json"
+    }
+  ],
+  "futureDocuments": [
+    {
+      "id": "gallery-image-source",
+      "title": "Factory Images",
+      "content": "[To Be Updated]",
+      "keywords": [
+        "images",
+        "gallery"
+      ],
+      "sourceType": "Markdown",
+      "sourcePath": "Documents/gallery-notes.md"
+    }
+  ]
+}
