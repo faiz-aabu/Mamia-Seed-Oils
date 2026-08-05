@@ -138,3 +138,4 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compres
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\4zj9trn64h-jasqdi5txl.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\a4sj08odk2-kaizw77d3a.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5fjv4ilmte-0hz4i0slnb.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\MamiaSeedsOil.Web.sourcelink.json
