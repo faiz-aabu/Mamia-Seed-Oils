@@ -14,37 +14,60 @@
 
         <section class="ai-panel" aria-live="polite" aria-label="@Model.DisplayName">
             <header class="ai-panel-header">
-                <div>
-                    <strong>@Model.DisplayName</strong>
-                    <span>Business assistant</span>
+                <div class="ai-panel-brand">
+                    <span class="ai-panel-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <path d="M12 3c4.97 0 9 3.58 9 8 0 1.83-.69 3.52-1.86 4.89-.18.21-.27.49-.25.76l.16 2.38a.75.75 0 0 1-1.08.74l-2.62-1.3a1.16 1.16 0 0 0-.79-.08c-.83.2-1.69.31-2.56.31-4.97 0-9-3.58-9-8s4.03-8 9-8Zm-3.25 7.25a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Zm3.25 0a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Zm3.25 0a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z"></path>
+                        </svg>
+                    </span>
+                    <div class="ai-panel-copy">
+                        <strong>Mamia Seeds Assistant</strong>
+                        <span>Ask us anything about our products or business.</span>
+                    </div>
                 </div>
                 <div class="ai-header-actions">
-                    <button type="button" class="ai-control" aria-label="Minimize assistant" data-ai-minimize>-</button>
-                    <button type="button" class="ai-control" aria-label="Close assistant" data-ai-close>x</button>
+                    <button type="button" class="ai-control" aria-label="Minimize assistant" data-ai-minimize>
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M6 12.75h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="ai-control" aria-label="Close assistant" data-ai-close>
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M7 7l10 10M17 7 7 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
                 </div>
             </header>
 
-            <div class="ai-messages" data-ai-messages>
-                <article class="ai-message ai-message-assistant">
-                    <div class="ai-bubble">@Model.WelcomeMessage</div>
-                    <time class="ai-time">Now</time>
-                </article>
+            <div class="ai-panel-body">
+                <div class="ai-messages" data-ai-messages>
+                    <article class="ai-message ai-message-assistant">
+                        <div class="ai-bubble">@Model.WelcomeMessage</div>
+                        <time class="ai-time">Now</time>
+                    </article>
+                </div>
+
+                <div class="ai-typing" data-ai-typing hidden>
+                    <span></span><span></span><span></span>
+                </div>
             </div>
 
-            <div class="ai-suggestions" data-ai-suggestions>
-                @foreach (var suggestion in Model.SuggestedQuestions)
-                {
-                    <button type="button" class="ai-suggestion" data-ai-suggestion="@suggestion">@suggestion</button>
-                }
-            </div>
+            <div class="ai-composer">
+                <div class="ai-suggestions" data-ai-suggestions>
+                    @foreach (var suggestion in Model.SuggestedQuestions.Take(6))
+                    {
+                        <button type="button" class="ai-suggestion" data-ai-suggestion="@suggestion">@suggestion</button>
+                    }
+                </div>
 
-            <form class="ai-input-wrap" data-ai-form>
-                <textarea maxlength="800" required placeholder="Ask about products, bulk orders, distribution, or certifications" data-ai-input rows="1"></textarea>
-                <button type="submit" class="ai-send ripple-host" aria-label="Send">Send</button>
-            </form>
-
-            <div class="ai-typing" data-ai-typing hidden>
-                <span></span><span></span><span></span>
+                <form class="ai-input-wrap" data-ai-form>
+                    <textarea maxlength="800" required placeholder="Type your question..." data-ai-input rows="1"></textarea>
+                    <button type="submit" class="ai-send ripple-host" aria-label="Send">
+                        <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M4.75 11.25 18.2 5.66c.92-.38 1.82.53 1.43 1.44l-5.6 13.44c-.4.95-1.77.88-2.06-.11l-1.41-4.86a1 1 0 0 0-.69-.68L5 13.46c-.99-.29-1.06-1.66-.11-2.06l8.13-3.39"></path>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </section>
     </div>

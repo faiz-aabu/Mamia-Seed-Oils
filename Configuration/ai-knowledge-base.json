@@ -19,7 +19,7 @@
   ],
   "companyInformation": {
     "companyName": "Mamia Seeds Oil Limited",
-    "establishedDate": "26 July 2005",
+    "establishedDate": "16 July 2005",
     "locationLines": [
       "Kutungare Village",
       "Airport Road",
@@ -36,7 +36,7 @@
       {
         "id": "history-2005",
         "title": "Established",
-        "content": "Mamia Seeds Oil Limited was established on 26 July 2005.",
+        "content": "Mamia Seeds Oil Limited was established on 16 July 2005.",
         "keywords": ["history", "established", "founded", "2005", "timeline"],
         "sourceType": "KnowledgeBase",
         "sourcePath": "companyHistory.timeline[0]"
@@ -69,7 +69,7 @@
     },
     {
       "question": "When was Mamia Seeds Oil Limited established?",
-      "answer": "Mamia Seeds Oil Limited was established on 26 July 2005.",
+      "answer": "Mamia Seeds Oil Limited was established on 16 July 2005.",
       "keywords": ["established", "founded", "history", "date", "an kafa", "tarihi"]
     },
     {

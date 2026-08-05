@@ -52,9 +52,9 @@ window.MamiaAssistant = (function () {
       article.appendChild(bubble);
       article.appendChild(time);
       messages.appendChild(article);
-      requestAnimationFrame(function () {
+      setTimeout(function () {
         messages.scrollTop = messages.scrollHeight;
-      });
+      }, 250);
     }
 
     function setTyping(isTyping) {
@@ -75,7 +75,8 @@ window.MamiaAssistant = (function () {
         setTimeout(function () {
           input.focus();
           autoResizeInput();
-          messages.scrollTop = messages.scrollHeight;
+          const messageCount = messages.querySelectorAll('.ai-message').length;
+          messages.scrollTop = messageCount > 1 ? messages.scrollHeight : 0;
         }, 140);
       }
     }
@@ -86,7 +87,7 @@ window.MamiaAssistant = (function () {
       }
 
       suggestionsContainer.innerHTML = '';
-      suggestions.forEach(function (text) {
+      suggestions.slice(0, 6).forEach(function (text) {
         const btn = document.createElement('button');
         btn.type = 'button';
         btn.className = 'ai-suggestion';
