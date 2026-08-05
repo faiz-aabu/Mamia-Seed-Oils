@@ -66,7 +66,7 @@ public sealed class KnowledgeSearchService : IKnowledgeSearchService
     {
         var baseline = new[]
         {
-            "mamia", "mamia seeds oil", "mamia seeds oil limited", "soybean", "soya oil", "kaduna", "makarfi"
+            "mamia", "mamia seeds oil", "mamia seeds oil limited", "soyabean", "soybean", "soya oil", "kaduna", "makarfi"
         };
 
         var categoryKeywords = knowledgeBase.Categories

@@ -5,7 +5,8 @@
     "mamia",
     "mamia seeds oil",
     "mamia seeds oil limited",
-    "soybean",
+    "soyabean",
+    "soyabean",
     "soya oil",
     "kaduna",
     "makarfi",
@@ -27,8 +28,8 @@
       "Kaduna State",
       "Nigeria"
     ],
-    "businessDescription": "Manufacturer of premium soybean cooking oil.",
-    "additionalProductDescription": "Soybean processing by-products."
+    "businessDescription": "Manufacturer of premium soyabean cooking oil.",
+    "additionalProductDescription": "Soyabean processing by-products."
   },
   "companyHistory": {
     "overview": "[To Be Updated]",
@@ -45,27 +46,27 @@
   },
   "products": [
     {
-      "name": "Premium Soybean Cooking Oil",
-      "description": "Manufacturer of premium soybean cooking oil.",
+      "name": "Premium Soyabean Cooking Oil",
+      "description": "Manufacturer of premium soyabean cooking oil.",
       "packagingSizes": ["[To Be Updated]"],
       "availability": "[To Be Updated]",
       "category": "Products",
       "additionalNotes": "[To Be Updated]"
     },
     {
-      "name": "Soybean Processing By-products",
-      "description": "Soybean processing by-products.",
+      "name": "Soyabean Processing By-products",
+      "description": "Soyabean processing by-products.",
       "packagingSizes": ["[To Be Updated]"],
       "availability": "[To Be Updated]",
-      "category": "Soybean By-products",
+      "category": "Soyabean By-products",
       "additionalNotes": "[To Be Updated]"
     }
   ],
   "frequentlyAskedQuestions": [
     {
       "question": "What does Mamia Seeds Oil Limited produce?",
-      "answer": "Mamia Seeds Oil Limited is a manufacturer of premium soybean cooking oil and soybean processing by-products.",
-      "keywords": ["what do you produce", "products", "soybean", "by-products", "me kuke samarwa", "kayayyaki"]
+      "answer": "Mamia Seeds Oil Limited is a manufacturer of premium soyabean cooking oil and soyabean processing by-products.",
+      "keywords": ["what do you produce", "products", "soyabean", "soyabean", "by-products", "me kuke samarwa", "kayayyaki"]
     },
     {
       "question": "When was Mamia Seeds Oil Limited established?",
@@ -133,8 +134,8 @@
         {
           "id": "products-overview",
           "title": "Products Overview",
-          "content": "Manufacturer of premium soybean cooking oil.",
-          "keywords": ["products", "soybean cooking oil"],
+          "content": "Manufacturer of premium soyabean cooking oil.",
+          "keywords": ["products", "soyabean cooking oil", "soyabean cooking oil"],
           "sourceType": "KnowledgeBase",
           "sourcePath": "products[0]"
         }
@@ -237,16 +238,16 @@
       ]
     },
     {
-      "key": "soybean-by-products",
-      "title": "Soybean By-products",
+      "key": "soyabean-by-products",
+      "title": "Soyabean By-products",
       "description": "Information on by-product processing.",
-      "keywords": ["by-products", "soybean processing"],
+      "keywords": ["by-products", "soyabean processing"],
       "articles": [
         {
           "id": "byproducts-overview",
           "title": "By-products Overview",
-          "content": "Soybean processing by-products.",
-          "keywords": ["soybean by-products", "by-products"],
+          "content": "Soyabean processing by-products.",
+          "keywords": ["soyabean by-products", "by-products"],
           "sourceType": "KnowledgeBase",
           "sourcePath": "companyInformation.additionalProductDescription"
         }

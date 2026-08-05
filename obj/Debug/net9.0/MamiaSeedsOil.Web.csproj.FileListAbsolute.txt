@@ -48,7 +48,6 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compres
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\bfywmcz6z8-ho26vf1u0j.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\y5rrrx7et6-i4fo5bb2v2.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\c6ajchaoct-7nxg0kvntb.gz
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\45rjqqzdbz-a0p8k2gsqj.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\9koo9jb3u4-sk3qc0jgfm.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\n28mtj125d-8fdt946flc.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\4zy5eenlv5-3gwwc076zs.gz
@@ -130,5 +129,6 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\refint\
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\MamiaSeedsOil.Web.pdb
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\MamiaSeedsOil.Web.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\ref\MamiaSeedsOil.Web.dll
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5fjv4ilmte-w80peei3od.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\l4crepbcr2-7fdiv9bhm1.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5fjv4ilmte-memcntxynk.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\45rjqqzdbz-1889f63tx0.gz

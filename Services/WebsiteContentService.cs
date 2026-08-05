@@ -99,13 +99,13 @@ public sealed class WebsiteContentService : IWebsiteContentService
                 Eyebrow = home.History.Eyebrow,
                 SubEyebrow = home.History.SubEyebrow,
                 Intro = string.Format(
-                    "{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soybean processing.",
+                    "{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soyabean processing.",
                     companyProfile.CompanyName,
                     companyProfile.EstablishedDate),
                 Paragraphs =
                 [
                     string.Format(
-                        "The company operates from {0}, where it produces premium soybean cooking oil for households, retailers, wholesalers and industrial customers.",
+                        "The company operates from {0}, where it produces premium soyabean cooking oil for households, retailers, wholesalers and industrial customers.",
                         string.Join(", ", companyProfile.AddressLines)),
                     companyProfile.AdditionalProductsDescription,
                     companyProfile.BusinessDescription

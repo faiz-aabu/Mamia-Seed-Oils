@@ -20,8 +20,8 @@
                                                      "Kaduna State",
                                                      "Nigeria"
                                                  ],
-                               "businessDescription":  "Mamia Seeds Oil Limited processes soybeans into refined soya cooking oil and soybean meal for commercial, wholesale, and industrial demand.",
-                               "additionalProductDescription":  "We also supply soybean by-products for feed and related value-chain uses."
+                               "businessDescription":  "Mamia Seeds Oil Limited processes soyabeans into refined soya cooking oil and soyabean meal for commercial, wholesale, and industrial demand.",
+                               "additionalProductDescription":  "We also supply soyabean by-products for feed and related value-chain uses."
                            },
     "category":  {
                      "key":  "company",
@@ -56,7 +56,7 @@
                     {
                         "id":  "company-vision",
                         "title":  "Company Vision",
-                        "content":  "Our vision is to be a dependable Nigerian soybean processing company known for consistent quality, responsible operations, and long-term customer partnerships.",
+                        "content":  "Our vision is to be a dependable Nigerian soyabean processing company known for consistent quality, responsible operations, and long-term customer partnerships.",
                         "keywords":  [
                                          "vision",
                                          "future",
@@ -69,7 +69,7 @@
                     {
                         "id":  "company-mission",
                         "title":  "Company Mission",
-                        "content":  "Our mission is to deliver high-quality soybean oil and soybean meal through disciplined manufacturing, quality control, and reliable supply support for businesses.",
+                        "content":  "Our mission is to deliver high-quality soyabean oil and soyabean meal through disciplined manufacturing, quality control, and reliable supply support for businesses.",
                         "keywords":  [
                                          "mission",
                                          "purpose",

@@ -17,7 +17,7 @@ public sealed class AIContextBuilder : IAIContextBuilder
     private static readonly Dictionary<string, string[]> IntentSynonyms = new(StringComparer.OrdinalIgnoreCase)
     {
         ["factory-location"] = ["factory", "location", "address", "where are you", "kaduna", "makarfi", "airport road", "visit"],
-        ["products"] = ["products", "what do you sell", "what do you produce", "catalog", "cooking oil", "soybean meal", "by-products"],
+        ["products"] = ["products", "what do you sell", "what do you produce", "catalog", "cooking oil", "soyabean meal", "soybean meal", "by-products"],
         ["bulk-supply"] = ["bulk", "wholesale", "industrial", "cartons", "supermarket", "hotel", "restaurant", "government contract"],
         ["distribution"] = ["distributor", "distribution", "delivery", "nationwide", "supply network", "retail"],
         ["certifications"] = ["nafdac", "son", "certification", "quality", "compliance"],
@@ -28,7 +28,7 @@ public sealed class AIContextBuilder : IAIContextBuilder
 
     private static readonly HashSet<string> DomainAnchorWords =
     [
-        "mamia", "seed", "seeds", "oil", "soya", "soybean", "meal", "factory", "kaduna", "makarfi", "nafdac", "son",
+        "mamia", "seed", "seeds", "oil", "soya", "soyabean", "soybean", "meal", "factory", "kaduna", "makarfi", "nafdac", "son",
         "distribution", "distributor", "wholesale", "retail", "bulk", "packaging", "carton", "delivery", "product", "products",
         "partnership", "support", "contact", "email", "phone", "visit", "industrial", "livestock", "poultry", "fish", "export"
     ];

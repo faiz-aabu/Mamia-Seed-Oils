@@ -1,7 +1,8 @@
 {
     "domainKeywords":  [
                            "products",
-                           "soybean meal",
+                           "soyabean meal",
+                           "soyabean meal",
                            "cooking oil",
                            "packaging",
                            "sizes",
@@ -23,8 +24,8 @@
                          "additionalNotes":  "Bulk industrial discussions are available through the sales team."
                      },
                      {
-                         "name":  "Soybean Meal",
-                         "description":  "Premium soybean meal for feed and industrial buyers.",
+                         "name":  "Soyabean Meal",
+                         "description":  "Premium soyabean meal for feed and industrial buyers.",
                          "packagingSizes":  [
                                                 "Bulk Supply"
                                             ],
@@ -33,8 +34,8 @@
                          "additionalNotes":  "Suitable for poultry, fish, livestock, and feed mill demand planning."
                      },
                      {
-                         "name":  "Soybean By-products",
-                         "description":  "Soybean by-products for commercial and processing value chains.",
+                         "name":  "Soyabean By-products",
+                         "description":  "Soyabean by-products for commercial and processing value chains.",
                          "packagingSizes":  [
                                                 "Bulk Supply"
                                             ],
@@ -50,7 +51,8 @@
                      "keywords":  [
                                       "products",
                                       "oil",
-                                      "soybean",
+                                      "soyabean",
+                                      "soyabean",
                                       "meal",
                                       "packaging",
                                       "sizes",
@@ -61,7 +63,7 @@
                     {
                         "id":  "products-overview",
                         "title":  "Products Overview",
-                        "content":  "Mamia Seeds Oil Limited supplies refined soya cooking oil, soybean meal, and soybean by-products for wholesale, retail, and industrial demand.",
+                        "content":  "Mamia Seeds Oil Limited supplies refined soya cooking oil, soyabean meal, and soyabean by-products for wholesale, retail, and industrial demand.",
                         "keywords":  [
                                          "products",
                                          "what do you manufacture",
@@ -90,7 +92,7 @@
                     {
                         "id":  "products-feed-use",
                         "title":  "Feed Sector Relevance",
-                        "content":  "Our soybean meal supports poultry feed manufacturers, fish feed manufacturers, livestock feed producers, and agricultural feed mills.",
+                        "content":  "Our soyabean meal supports poultry feed manufacturers, fish feed manufacturers, livestock feed producers, and agricultural feed mills.",
                         "keywords":  [
                                          "animal feed",
                                          "poultry feed",

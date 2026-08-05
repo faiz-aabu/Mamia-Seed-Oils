@@ -12,7 +12,7 @@ public sealed class AiAssistantOptions
     public string DisplayName { get; set; } = "Mamia Assistant";
 
     [Required]
-    public string WelcomeMessage { get; set; } = "Welcome to Mamia Seeds Oil Limited. I'm here to answer questions about our products, bulk orders, soybean meal, cooking oil, certifications, factory operations, distribution and partnerships.";
+    public string WelcomeMessage { get; set; } = "Welcome to Mamia Seeds Oil Limited. I'm here to answer questions about our products, bulk orders, soyabean meal, cooking oil, certifications, factory operations, distribution and partnerships.";
 
     [Required]
     public string KnowledgeFilePath { get; set; } = "Configuration/ai-knowledge-base.json";

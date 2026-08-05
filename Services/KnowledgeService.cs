@@ -13,6 +13,7 @@ public sealed class KnowledgeService : IKnowledgeService
         "mamia",
         "mamia seeds oil",
         "mamia seeds oil limited",
+        "soyabean",
         "soybean",
         "soya oil",
         "kaduna",
