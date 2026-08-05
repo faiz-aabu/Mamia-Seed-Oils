@@ -3,8 +3,6 @@ using System.Text.RegularExpressions;
 using MamiaSeedsOil.Web.Helpers;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.Models;
-using MamiaSeedsOil.Web.Resources;
-using Microsoft.Extensions.Localization;
 
 namespace MamiaSeedsOil.Web.Services;
 
@@ -12,18 +10,15 @@ public sealed class ContactService : IContactService
 {
     private readonly IEnquiryStore _enquiryStore;
     private readonly IEmailNotificationService _emailNotificationService;
-    private readonly IStringLocalizer<SharedResource> _localizer;
     private readonly ILogger<ContactService> _logger;
 
     public ContactService(
         IEnquiryStore enquiryStore,
         IEmailNotificationService emailNotificationService,
-        IStringLocalizer<SharedResource> localizer,
         ILogger<ContactService> logger)
     {
         _enquiryStore = enquiryStore;
         _emailNotificationService = emailNotificationService;
-        _localizer = localizer;
         _logger = logger;
     }
 
@@ -49,7 +44,7 @@ public sealed class ContactService : IContactService
             return new ContactServiceResult
             {
                 Success = false,
-                Message = _localizer["EmailDeliveryFailed"],
+                Message = "We could not send your message right now. Please try again shortly.",
                 EnquiryId = enquiry.Id
             };
         }
@@ -63,7 +58,7 @@ public sealed class ContactService : IContactService
         return new ContactServiceResult
         {
             Success = true,
-            Message = _localizer["ContactSuccessMessage"],
+            Message = "Thank you. Your message has been received and our team will respond shortly.",
             EnquiryId = enquiry.Id
         };
     }
@@ -90,7 +85,7 @@ public sealed class ContactService : IContactService
             return new ContactServiceResult
             {
                 Success = false,
-                Message = _localizer["EmailDeliveryFailed"],
+                Message = "We could not send your distributor enquiry right now. Please try again shortly.",
                 EnquiryId = enquiry.Id
             };
         }
@@ -104,7 +99,7 @@ public sealed class ContactService : IContactService
         return new ContactServiceResult
         {
             Success = true,
-            Message = _localizer["ContactDistributorSuccessMessage"],
+            Message = "Thank you. Your distributor enquiry has been received and our team will contact you shortly.",
             EnquiryId = enquiry.Id
         };
     }
@@ -123,7 +118,7 @@ public sealed class ContactService : IContactService
         return new ContactServiceResult
         {
             Success = false,
-            Message = results.FirstOrDefault()?.ErrorMessage ?? _localizer["ValidationFailed"]
+            Message = results.FirstOrDefault()?.ErrorMessage ?? "Validation failed."
         };
     }
 

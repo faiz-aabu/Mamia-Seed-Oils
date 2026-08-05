@@ -1,5 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.HomePageViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 <footer class="footer-premium">
     <div class="wrap">
@@ -17,8 +16,8 @@
                     <span class="footer-brand">@Model.Company.Name</span>
                 </a>
                 <p class="footer-copy">@Model.Footer.Description</p>
-                <form class="footer-newsletter" data-newsletter-form data-success-message="@Model.Footer.NewsletterSuccessMessage" data-default-success-message="@T["FooterNewsletterSuccessFallback"]" aria-label="@T["FooterNewsletterAria"]">
-                    <input type="email" placeholder="@Model.Footer.NewsletterPlaceholder" aria-label="@T["FooterNewsletterEmailAria"]">
+                <form class="footer-newsletter" data-newsletter-form data-success-message="@Model.Footer.NewsletterSuccessMessage" data-default-success-message="Thanks for subscribing." aria-label="Newsletter form">
+                    <input type="email" placeholder="@Model.Footer.NewsletterPlaceholder" aria-label="Newsletter email address">
                     <button type="submit" class="ripple-host">@Model.Footer.NewsletterButtonText</button>
                 </form>
             </div>
@@ -38,7 +37,7 @@
         </div>
         <div class="footer-bottom">
             <span>@Model.Footer.Copyright</span>
-            <a class="back-top ripple-host" href="#top" aria-label="@T["FooterBackToTopAria"]">↑</a>
+            <a class="back-top ripple-host" href="#top" aria-label="Back to top">↑</a>
         </div>
     </div>
 </footer>

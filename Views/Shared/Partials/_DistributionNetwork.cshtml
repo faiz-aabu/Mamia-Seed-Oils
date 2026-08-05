@@ -1,5 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.DistributionViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 @{
     var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
@@ -15,7 +14,7 @@
             <p>@Model.Description</p>
         </div>
         <div class="distribution-grid">
-            <div class="map-placeholder-pro skeleton" aria-label="@T["DistributionMapPlaceholderAria"]">
+            <div class="map-placeholder-pro skeleton" aria-label="Distribution map placeholder">
                 <div class="map-center">
                     <svg viewBox="0 0 90 90" fill="none" aria-hidden="true"><path d="M20 22 46 12l22 8 8 26-8 28-25 6-22-12-7-22 6-24Z" stroke="#8C5A2B" stroke-width="2.2" /><circle cx="45" cy="45" r="4" fill="#8C5A2B" /></svg>
                     <strong>@Model.MapPlaceholderTitle</strong>

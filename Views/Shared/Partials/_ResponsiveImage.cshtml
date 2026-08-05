@@ -1,6 +1,5 @@
 @model MamiaSeedsOil.Web.ViewModels.ResponsiveImageViewModel
 @inject MamiaSeedsOil.Web.Interfaces.IImageUrlService ImageUrlService
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 @{
     var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
@@ -38,8 +37,8 @@ else
 {
     <div class="image-frame image-frame--placeholder" role="img" aria-label="@imageAlt" data-placeholder-key="generic">
         <div class="asset-placeholder" style="--asset-ratio:4 / 3;" data-placeholder-key="generic">
-            <span class="asset-placeholder-label">@T["ResponsiveImagePlaceholderLabel"]</span>
-            <small class="asset-placeholder-sub">@T["ResponsiveImagePlaceholderSubLabel"]</small>
+            <span class="asset-placeholder-label">Image Placeholder</span>
+            <small class="asset-placeholder-sub">Professional image coming soon</small>
         </div>
     </div>
 }

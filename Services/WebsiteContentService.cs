@@ -1,8 +1,6 @@
 using MamiaSeedsOil.Web.Configuration;
 using MamiaSeedsOil.Web.Interfaces;
-using MamiaSeedsOil.Web.Resources;
 using MamiaSeedsOil.Web.ViewModels;
-using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace MamiaSeedsOil.Web.Services;
@@ -12,18 +10,15 @@ public sealed class WebsiteContentService : IWebsiteContentService
     private readonly WebsiteContentOptions _options;
     private readonly ICompanyProfileService _companyProfileService;
     private readonly IProductCatalogService _productCatalogService;
-    private readonly IStringLocalizer<SharedResource> _localizer;
 
     public WebsiteContentService(
         IOptions<WebsiteContentOptions> options,
         ICompanyProfileService companyProfileService,
-        IProductCatalogService productCatalogService,
-        IStringLocalizer<SharedResource> localizer)
+        IProductCatalogService productCatalogService)
     {
         _options = options.Value;
         _companyProfileService = companyProfileService;
         _productCatalogService = productCatalogService;
-        _localizer = localizer;
     }
 
     public async Task<HomePageViewModel> GetHomePageContentAsync(CancellationToken cancellationToken = default)
@@ -37,9 +32,9 @@ public sealed class WebsiteContentService : IWebsiteContentService
         {
             Seo = new SeoViewModel
             {
-                Title = L("SeoTitle", _options.Seo.SiteTitle),
-                Description = L("SeoDescription", _options.Seo.Description),
-                Keywords = L("SeoKeywords", _options.Seo.Keywords),
+                Title = _options.Seo.SiteTitle,
+                Description = _options.Seo.Description,
+                Keywords = _options.Seo.Keywords,
                 CanonicalUrl = _options.Seo.CanonicalUrl,
                 OgImageUrl = _options.Seo.OgImageUrl,
                 TwitterImageUrl = _options.Seo.TwitterImageUrl,
@@ -81,11 +76,11 @@ public sealed class WebsiteContentService : IWebsiteContentService
                 StringComparer.OrdinalIgnoreCase),
             NavigationItems =
             [
-                new NavigationItemViewModel { Text = L("NavOurStory", "Our Story"), Anchor = "#history" },
-                new NavigationItemViewModel { Text = L("NavProducts", "Products"), Anchor = "#products" },
-                new NavigationItemViewModel { Text = L("NavProcess", "Process"), Anchor = "#process" },
-                new NavigationItemViewModel { Text = L("NavGallery", "Gallery"), Anchor = "#gallery" },
-                new NavigationItemViewModel { Text = L("NavContact", "Contact"), Anchor = "#contact" }
+                new NavigationItemViewModel { Text = "Our Story", Anchor = "#history" },
+                new NavigationItemViewModel { Text = "Products", Anchor = "#products" },
+                new NavigationItemViewModel { Text = "Process", Anchor = "#process" },
+                new NavigationItemViewModel { Text = "Gallery", Anchor = "#gallery" },
+                new NavigationItemViewModel { Text = "Contact", Anchor = "#contact" }
             ],
             Hero = new HeroViewModel
             {
@@ -104,13 +99,13 @@ public sealed class WebsiteContentService : IWebsiteContentService
                 Eyebrow = home.History.Eyebrow,
                 SubEyebrow = home.History.SubEyebrow,
                 Intro = string.Format(
-                    L("HistoryIntroTemplate", "{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soybean processing."),
+                    "{0} was incorporated on {1:dd MMMM yyyy} and has steadily built its operations around disciplined soybean processing.",
                     companyProfile.CompanyName,
                     companyProfile.EstablishedDate),
                 Paragraphs =
                 [
                     string.Format(
-                        L("HistoryParagraphOperationsTemplate", "The company operates from {0}, where it produces premium soybean cooking oil for households, retailers, wholesalers and industrial customers."),
+                        "The company operates from {0}, where it produces premium soybean cooking oil for households, retailers, wholesalers and industrial customers.",
                         string.Join(", ", companyProfile.AddressLines)),
                     companyProfile.AdditionalProductsDescription,
                     companyProfile.BusinessDescription
@@ -137,43 +132,43 @@ public sealed class WebsiteContentService : IWebsiteContentService
             DistributorCta = MapCta(home.DistributorCta),
             Gallery = new GalleryViewModel
             {
-                Eyebrow = L("GalleryEyebrow", "Gallery"),
-                Title = L("GalleryTitle", "Inside the factory."),
-                Description = L("GalleryDescription", "Photos of the production floor, staff, and products - add real images here."),
+                Eyebrow = "Gallery",
+                Title = "Inside the factory.",
+                Description = "Photos of the production floor, staff, and products - add real images here.",
                 Items = home.GalleryItems.Select(MapSimpleCard).ToArray()
             },
             Contact = new ContactViewModel
             {
                 Eyebrow = home.Contact.Eyebrow,
                 Title = home.Contact.Title,
-                FormSuccessMessage = L("ContactSuccessMessage", home.Contact.FormSuccessMessage)
+                FormSuccessMessage = home.Contact.FormSuccessMessage
             },
             WhyChooseUs = new WhyChooseUsViewModel
             {
-                Eyebrow = L("WhyChooseEyebrow", "Why Choose Mamia"),
-                Title = L("WhyChooseTitle", "Built for dependable quality and scale."),
-                Description = L("WhyChooseDescription", "From sourcing to final delivery, Mamia combines local agricultural strength with disciplined manufacturing standards."),
+                Eyebrow = "Why Choose Mamia",
+                Title = "Built for dependable quality and scale.",
+                Description = "From sourcing to final delivery, Mamia combines local agricultural strength with disciplined manufacturing standards.",
                 Items = home.WhyChooseUs.Select(MapSimpleCard).ToArray()
             },
             Industries = new IndustriesViewModel
             {
-                Eyebrow = L("IndustriesEyebrow", "Industries We Serve"),
-                Title = L("IndustriesTitle", "Supplying every major food and trade channel."),
-                Description = L("IndustriesDescription", "Mamia supports multiple industries with pack sizes and delivery schedules tailored to operational needs."),
+                Eyebrow = "Industries We Serve",
+                Title = "Supplying every major food and trade channel.",
+                Description = "Mamia supports multiple industries with pack sizes and delivery schedules tailored to operational needs.",
                 Items = home.Industries.Select(MapSimpleCard).ToArray()
             },
             CompanyStats = new CompanyStatsSectionViewModel
             {
-                Eyebrow = L("CompanyNumbersEyebrow", "Company Numbers"),
-                Title = L("CompanyNumbersTitle", "Scale backed by measurable performance."),
-                Description = L("CompanyNumbersDescription", "Our growth reflects sustained production strength, market trust, and operational discipline."),
+                Eyebrow = "Company Numbers",
+                Title = "Scale backed by measurable performance.",
+                Description = "Our growth reflects sustained production strength, market trust, and operational discipline.",
                 Items = home.CompanyStats.Select(MapStat).ToArray()
             },
             QualityAssurance = new QualityAssuranceViewModel
             {
-                Eyebrow = L("QualityEyebrow", "Quality Assurance"),
-                Title = L("QualityTitle", "Process control at every stage."),
-                Description = L("QualityDescription", "Our quality team verifies each production stage to ensure the final oil remains clean, safe, and consistent."),
+                Eyebrow = "Quality Assurance",
+                Title = "Process control at every stage.",
+                Description = "Our quality team verifies each production stage to ensure the final oil remains clean, safe, and consistent.",
                 Steps = home.QualityTimeline.Select(MapSimpleCard).ToArray()
             },
             Distribution = new DistributionViewModel
@@ -220,14 +215,14 @@ public sealed class WebsiteContentService : IWebsiteContentService
             },
             Faq = new FaqSectionViewModel
             {
-                Eyebrow = L("FaqEyebrow", "Frequently Asked Questions"),
-                Title = L("FaqTitle", "Answers for partners and bulk buyers."),
+                Eyebrow = "Frequently Asked Questions",
+                Title = "Answers for partners and bulk buyers.",
                 Items = home.Faqs.Select(x => new FaqViewModel { Question = x.Question, Answer = x.Answer }).ToArray()
             },
             Testimonials = new TestimonialSectionViewModel
             {
-                Eyebrow = L("TestimonialsEyebrow", "Testimonials"),
-                Title = L("TestimonialsTitle", "What partners say about working with Mamia."),
+                Eyebrow = "Testimonials",
+                Title = "What partners say about working with Mamia.",
                 Items = home.Testimonials.Select(x => new TestimonialViewModel
                 {
                     Company = x.Company,
@@ -237,9 +232,9 @@ public sealed class WebsiteContentService : IWebsiteContentService
             },
             Insights = new InsightSectionViewModel
             {
-                Eyebrow = L("InsightsEyebrow", "News and Insights"),
-                Title = L("InsightsTitle", "Knowledge from our production and sourcing teams."),
-                Description = L("InsightsDescription", "These articles are placeholders ready to be connected to your future blog or updates system."),
+                Eyebrow = "News and Insights",
+                Title = "Knowledge from our production and sourcing teams.",
+                Description = "These articles are placeholders ready to be connected to your future blog or updates system.",
                 Items = home.Insights.Select(x => new InsightViewModel
                 {
                     Category = x.Category,
@@ -293,12 +288,6 @@ public sealed class WebsiteContentService : IWebsiteContentService
         SecondaryButtonText = option.SecondaryButtonText,
         SecondaryButtonUrl = option.SecondaryButtonUrl
     };
-
-    private string L(string key, string fallback)
-    {
-        var value = _localizer[key];
-        return value.ResourceNotFound ? fallback : value.Value;
-    }
 
     private static string BuildWhatsAppUrl(string phoneNumber, string message)
     {

@@ -2,8 +2,6 @@ using System.ComponentModel.DataAnnotations;
 using MamiaSeedsOil.Web.DTOs.Partnership;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.Models;
-using MamiaSeedsOil.Web.Resources;
-using Microsoft.Extensions.Localization;
 
 namespace MamiaSeedsOil.Web.Services;
 
@@ -11,18 +9,15 @@ public sealed class PartnershipApplicationService : IPartnershipApplicationServi
 {
     private readonly IEnquiryStore _enquiryStore;
     private readonly IEmailNotificationService _emailNotificationService;
-    private readonly IStringLocalizer<SharedResource> _localizer;
     private readonly ILogger<PartnershipApplicationService> _logger;
 
     public PartnershipApplicationService(
         IEnquiryStore enquiryStore,
         IEmailNotificationService emailNotificationService,
-        IStringLocalizer<SharedResource> localizer,
         ILogger<PartnershipApplicationService> logger)
     {
         _enquiryStore = enquiryStore;
         _emailNotificationService = emailNotificationService;
-        _localizer = localizer;
         _logger = logger;
     }
 
@@ -36,7 +31,7 @@ public sealed class PartnershipApplicationService : IPartnershipApplicationServi
             return new PartnershipApplicationResponseDto
             {
                 Success = false,
-                Message = _localizer["PartnershipSpamBlocked"]
+                Message = "Your submission could not be processed. Please try again."
             };
         }
 
@@ -49,7 +44,7 @@ public sealed class PartnershipApplicationService : IPartnershipApplicationServi
                 return new PartnershipApplicationResponseDto
                 {
                     Success = false,
-                    Message = _localizer["PartnershipSpamBlocked"]
+                    Message = "Your submission could not be processed. Please try again."
                 };
             }
         }
@@ -70,7 +65,7 @@ public sealed class PartnershipApplicationService : IPartnershipApplicationServi
         return new PartnershipApplicationResponseDto
         {
             Success = true,
-            Message = _localizer["PartnershipSubmitSuccess"],
+            Message = "Thank you. Your partnership application has been submitted successfully.",
             ApplicationId = application.Id,
             Status = application.Status
         };
@@ -90,7 +85,7 @@ public sealed class PartnershipApplicationService : IPartnershipApplicationServi
         return new PartnershipApplicationResponseDto
         {
             Success = false,
-            Message = validationResults.FirstOrDefault()?.ErrorMessage ?? _localizer["ValidationFailed"]
+            Message = validationResults.FirstOrDefault()?.ErrorMessage ?? "Validation failed."
         };
     }
 

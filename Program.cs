@@ -1,5 +1,4 @@
 using MamiaSeedsOil.Web.Extensions;
-using MamiaSeedsOil.Web.Resources;
 using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,11 +14,6 @@ builder.Services
     .AddControllersWithViews(options =>
     {
         options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
-    })
-    .AddViewLocalization()
-    .AddDataAnnotationsLocalization(options =>
-    {
-        options.DataAnnotationLocalizerProvider = (_, factory) => factory.Create(typeof(SharedResource));
     });
 builder.Services.AddWebConfiguration(builder.Configuration);
 

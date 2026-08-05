@@ -5,12 +5,9 @@ using MamiaSeedsOil.Web.Middleware;
 using MamiaSeedsOil.Web.Services;
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.RateLimiting;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
-using System.Globalization;
 using System.Threading.RateLimiting;
 
 namespace MamiaSeedsOil.Web.Extensions;
@@ -40,12 +37,6 @@ public static class ServiceCollectionExtensions
         services
             .AddOptions<AiAssistantOptions>()
             .Bind(configuration.GetSection(AiAssistantOptions.SectionName))
-            .ValidateDataAnnotations()
-            .ValidateOnStart();
-
-        services
-            .AddOptions<SiteLocalizationOptions>()
-            .Bind(configuration.GetSection(SiteLocalizationOptions.SectionName))
             .ValidateDataAnnotations()
             .ValidateOnStart();
 
@@ -93,31 +84,6 @@ public static class ServiceCollectionExtensions
             .AddOptions<FileHandlingOptions>()
             .Bind(configuration.GetSection(FileHandlingOptions.SectionName))
             .ValidateOnStart();
-
-        var localizationConfig = configuration.GetSection(SiteLocalizationOptions.SectionName).Get<SiteLocalizationOptions>() ?? new SiteLocalizationOptions();
-        var supportedCultures = localizationConfig.SupportedCultures
-            .Select(culture => new CultureInfo(culture))
-            .ToArray();
-
-        services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-        services.Configure<RequestLocalizationOptions>(options =>
-        {
-            options.DefaultRequestCulture = new RequestCulture(localizationConfig.DefaultCulture);
-            options.SupportedCultures = supportedCultures;
-            options.SupportedUICultures = supportedCultures;
-            options.RequestCultureProviders =
-            [
-                new RouteDataRequestCultureProvider
-                {
-                    RouteDataStringKey = "culture",
-                    UIRouteDataStringKey = "culture"
-                },
-                new QueryStringRequestCultureProvider(),
-                new CookieRequestCultureProvider(),
-                new AcceptLanguageHeaderRequestCultureProvider()
-            ];
-        });
 
         services.AddAntiforgery(options =>
         {

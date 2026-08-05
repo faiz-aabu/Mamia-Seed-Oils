@@ -1,6 +1,4 @@
 @model IReadOnlyList<MamiaSeedsOil.Web.ViewModels.ProductViewModel>
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
-
 @{
     string ResolveProductImagePath(string key)
     {
@@ -109,9 +107,9 @@
 <section id="products" aria-labelledby="products-title">
     <div class="wrap">
         <div class="section-head">
-            <span class="eyebrow">@T["ProductsEyebrow"]</span>
-            <h2 id="products-title">@T["ProductsTitle"]</h2>
-            <p>@T["ProductsDescription"]</p>
+            <span class="eyebrow">Products</span>
+            <h2 id="products-title">Products</h2>
+            <p>Explore our current product range for households, distributors, and industrial buyers.</p>
         </div>
         <div class="products-grid" role="list">
             @foreach (var product in displayedProducts)

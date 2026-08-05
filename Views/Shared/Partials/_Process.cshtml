@@ -1,12 +1,11 @@
 @model IReadOnlyList<MamiaSeedsOil.Web.ViewModels.SimpleCardViewModel>
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 <section class="process" id="process" aria-labelledby="process-title">
     <div class="wrap">
         <div class="section-head">
-            <span class="eyebrow">@T["ProcessEyebrow"]</span>
-            <h2 id="process-title">@T["ProcessTitle"]</h2>
-            <p>@T["ProcessDescription"]</p>
+            <span class="eyebrow">Process</span>
+            <h2 id="process-title">Process</h2>
+            <p>From sourcing to refined output, our production process is built for consistency and traceability.</p>
         </div>
         <div class="process-strip">
             @for (var i = 0; i < Model.Count; i++)

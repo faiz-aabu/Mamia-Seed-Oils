@@ -3,7 +3,6 @@ using System.Text.Json;
 using System.Xml.Linq;
 using MamiaSeedsOil.Web.Interfaces;
 using MamiaSeedsOil.Web.ViewModels;
-using System.Globalization;
 
 namespace MamiaSeedsOil.Web.Services;
 
@@ -38,24 +37,7 @@ public sealed class SeoService : ISeoService
         return list;
     }
 
-    public IReadOnlyList<KeyValuePair<string, string>> BuildHreflangLinks(string baseUrl, string currentPath, IReadOnlyList<string> supportedCultures, string defaultCulture)
-    {
-        var list = new List<KeyValuePair<string, string>>();
-        var normalizedPath = NormalizePathWithoutCulturePrefix(currentPath, supportedCultures);
-
-        foreach (var culture in supportedCultures)
-        {
-            var href = BuildLocalizedUrl(baseUrl, normalizedPath, culture, defaultCulture);
-            list.Add(new KeyValuePair<string, string>(culture, href));
-        }
-
-        var xDefault = BuildLocalizedUrl(baseUrl, normalizedPath, defaultCulture, defaultCulture);
-        list.Add(new KeyValuePair<string, string>("x-default", xDefault));
-
-        return list;
-    }
-
-    public string BuildSitemapXml(string baseUrl, HomePageViewModel model, IReadOnlyList<string> supportedCultures, string defaultCulture)
+    public string BuildSitemapXml(string baseUrl, HomePageViewModel model)
     {
         var now = DateTime.UtcNow.ToString("yyyy-MM-dd");
         var basePaths = new List<string>
@@ -72,25 +54,9 @@ public sealed class SeoService : ISeoService
             .Where(p => !string.IsNullOrWhiteSpace(p.SeoUrl))
             .Select(p => $"/products/{p.SeoUrl}"));
 
-        var urls = new List<string>();
-        foreach (var basePath in basePaths.Distinct(StringComparer.OrdinalIgnoreCase))
-        {
-            foreach (var culture in supportedCultures)
-            {
-                urls.Add(BuildLocalizedUrl(baseUrl, basePath, culture, defaultCulture));
-
-                if (string.Equals(culture, defaultCulture, StringComparison.OrdinalIgnoreCase))
-                {
-                    var normalizedPath = string.IsNullOrWhiteSpace(basePath) ? "/" : basePath;
-                    if (!normalizedPath.StartsWith('/'))
-                    {
-                        normalizedPath = "/" + normalizedPath;
-                    }
-
-                    urls.Add($"{baseUrl.TrimEnd('/')}/{culture}{normalizedPath}");
-                }
-            }
-        }
+        var urls = basePaths
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .Select(basePath => BuildUrl(baseUrl, basePath));
 
         XNamespace ns = "http://www.sitemaps.org/schemas/sitemap/0.9";
         var doc = new XDocument(
@@ -118,14 +84,12 @@ public sealed class SeoService : ISeoService
 
     private static object BuildOrganizationSchema(HomePageViewModel model)
     {
-        var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
         return new
         {
             @context = "https://schema.org",
             @type = "Organization",
             name = model.Company.Name,
-            inLanguage = language,
+            inLanguage = "en",
             url = model.Seo.CanonicalUrl,
             logo = model.Seo.SchemaLogoUrl,
             description = model.Seo.Description,
@@ -151,14 +115,12 @@ public sealed class SeoService : ISeoService
 
     private static object BuildLocalBusinessSchema(HomePageViewModel model)
     {
-        var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
         return new
         {
             @context = "https://schema.org",
             @type = "LocalBusiness",
             name = model.Company.Name,
-            inLanguage = language,
+            inLanguage = "en",
             image = model.Seo.OgImageUrl,
             url = model.Seo.CanonicalUrl,
             telephone = model.Company.Phone,
@@ -178,13 +140,11 @@ public sealed class SeoService : ISeoService
 
     private static object BuildProductItemListSchema(HomePageViewModel model)
     {
-        var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
         return new
         {
             @context = "https://schema.org",
             @type = "ItemList",
-            inLanguage = language,
+            inLanguage = "en",
             itemListElement = model.Products.Select((product, index) => new
             {
                 @type = "ListItem",
@@ -209,13 +169,11 @@ public sealed class SeoService : ISeoService
 
     private static object BuildFaqSchema(HomePageViewModel model)
     {
-        var language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
         return new
         {
             @context = "https://schema.org",
             @type = "FAQPage",
-            inLanguage = language,
+            inLanguage = "en",
             mainEntity = model.Faq.Items.Select(faq => new
             {
                 @type = "Question",
@@ -229,46 +187,14 @@ public sealed class SeoService : ISeoService
         };
     }
 
-    private static string NormalizePathWithoutCulturePrefix(string path, IReadOnlyList<string> supportedCultures)
+    private static string BuildUrl(string baseUrl, string path)
     {
-        var normalized = string.IsNullOrWhiteSpace(path) ? "/" : path;
-        if (!normalized.StartsWith('/'))
-        {
-            normalized = "/" + normalized;
-        }
-
-        var segments = normalized.Split('/', StringSplitOptions.RemoveEmptyEntries);
-        if (segments.Length == 0)
-        {
-            return "/";
-        }
-
-        var first = segments[0];
-        if (supportedCultures.Any(c => string.Equals(c, first, StringComparison.OrdinalIgnoreCase)))
-        {
-            if (segments.Length == 1)
-            {
-                return "/";
-            }
-
-            return "/" + string.Join('/', segments.Skip(1));
-        }
-
-        return normalized;
-    }
-
-    private static string BuildLocalizedUrl(string baseUrl, string normalizedPath, string culture, string defaultCulture)
-    {
-        var path = string.IsNullOrWhiteSpace(normalizedPath) ? "/" : normalizedPath;
+        path = string.IsNullOrWhiteSpace(path) ? "/" : path;
         if (!path.StartsWith('/'))
         {
             path = "/" + path;
         }
 
-        var localizedPath = string.Equals(culture, defaultCulture, StringComparison.OrdinalIgnoreCase)
-            ? path
-            : $"/{culture}{path}";
-
-        return $"{baseUrl.TrimEnd('/')}{localizedPath}";
+        return $"{baseUrl.TrimEnd('/')}{path}";
     }
 }

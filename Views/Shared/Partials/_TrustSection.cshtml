@@ -1,7 +1,6 @@
 @model IReadOnlyList<MamiaSeedsOil.Web.ViewModels.SimpleCardViewModel>
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
-<div class="trust-bar" aria-label="@T["TrustBarAria"]">
+<div class="trust-bar" aria-label="Trust indicators">
     <div class="wrap trust-row">
         @foreach (var badge in Model)
         {

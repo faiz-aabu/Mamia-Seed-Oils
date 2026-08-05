@@ -3,12 +3,10 @@
 @{
     var antiForgeryToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
     var analytics = AnalyticsOptions.Value;
-    var currentLanguage = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-    var hreflangLinks = ViewData["HreflangLinks"] as IReadOnlyList<KeyValuePair<string, string>>;
 }
 
 <!DOCTYPE html>
-<html lang="@currentLanguage">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +18,7 @@
     <link rel="icon" type="image/png" href="~/images/logo/Logo.png" asp-append-version="true" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="@(currentLanguage == "ha" ? "ha_NG" : "en_NG")" />
+    <meta property="og:locale" content="en_NG" />
     <meta property="og:title" content="@ViewData["Title"]" />
     <meta property="og:description" content="@ViewData["SeoDescription"]" />
     <meta property="og:url" content="@ViewData["CanonicalUrl"]" />
@@ -31,14 +29,6 @@
     <meta name="twitter:description" content="@ViewData["SeoDescription"]" />
     <meta name="twitter:image" content="@ViewData["TwitterImageUrl"]" />
     <meta name="csrf-token" content="@antiForgeryToken" />
-
-    @if (hreflangLinks is not null)
-    {
-        foreach (var entry in hreflangLinks)
-        {
-            <link rel="alternate" hreflang="@entry.Key" href="@entry.Value" />
-        }
-    }
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

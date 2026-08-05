@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Options;
 using System.Text.Json;
 
 namespace MamiaSeedsOil.Web.Extensions;
@@ -9,9 +8,6 @@ public static class ApplicationBuilderExtensions
 {
     public static WebApplication UseWebPipeline(this WebApplication app)
     {
-        var localizationOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
-        app.UseRequestLocalization(localizationOptions);
-
         app.UseResponseCompression();
         app.UseCookiePolicy();
         app.UseMiddleware<MamiaSeedsOil.Web.Middleware.SecurityHeadersMiddleware>();
@@ -52,10 +48,6 @@ public static class ApplicationBuilderExtensions
     public static WebApplication MapWebRoutes(this WebApplication app)
     {
         app.MapControllers();
-
-        app.MapControllerRoute(
-            name: "localized-default",
-            pattern: "{culture:regex(^en|ha$)}/{controller=Home}/{action=Index}/{id?}");
 
         app.MapControllerRoute(
             name: "default",

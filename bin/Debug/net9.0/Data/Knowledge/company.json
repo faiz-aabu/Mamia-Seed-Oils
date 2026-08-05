@@ -1,50 +1,82 @@
 {
-  "domainKeywords": [
-    "mamia",
-    "mamia seeds oil",
-    "mamia seeds oil limited",
-    "company",
-    "about"
-  ],
-  "companyInformation": {
-    "companyName": "Mamia Seeds Oil Limited",
-    "establishedDate": "26 July 2005",
-    "locationLines": [
-      "Kutungare Village",
-      "Airport Road",
-      "Makarfi",
-      "Kaduna State",
-      "Nigeria"
-    ],
-    "businessDescription": "Manufacturer of premium soybean cooking oil.",
-    "additionalProductDescription": "Soybean processing by-products."
-  },
-  "category": {
-    "key": "company",
-    "title": "Company",
-    "description": "Verified company profile and identity.",
-    "keywords": [
-      "company",
-      "name",
-      "established",
-      "location",
-      "profile"
-    ]
-  },
-  "entries": [
-    {
-      "id": "company-profile",
-      "title": "Company Profile",
-      "content": "Mamia Seeds Oil Limited was established on 26 July 2005 and is located at Kutungare Village, Airport Road, Makarfi, Kaduna State, Nigeria.",
-      "keywords": [
-        "company",
-        "profile",
-        "established",
-        "location",
-        "address"
-      ],
-      "sourceType": "Json",
-      "sourcePath": "Data/Knowledge/company.json"
-    }
-  ]
+    "domainKeywords":  [
+                           "mamia",
+                           "mamia seeds oil",
+                           "mamia seeds oil limited",
+                           "company",
+                           "about",
+                           "vision",
+                           "mission",
+                           "factory",
+                           "kaduna"
+                       ],
+    "companyInformation":  {
+                               "companyName":  "Mamia Seeds Oil Limited",
+                               "establishedDate":  "26 July 2005",
+                               "locationLines":  [
+                                                     "Kutungare Village",
+                                                     "Airport Road",
+                                                     "Makarfi",
+                                                     "Kaduna State",
+                                                     "Nigeria"
+                                                 ],
+                               "businessDescription":  "Mamia Seeds Oil Limited processes soybeans into refined soya cooking oil and soybean meal for commercial, wholesale, and industrial demand.",
+                               "additionalProductDescription":  "We also supply soybean by-products for feed and related value-chain uses."
+                           },
+    "category":  {
+                     "key":  "company",
+                     "title":  "Company",
+                     "description":  "Verified company profile, identity, vision, and mission.",
+                     "keywords":  [
+                                      "company",
+                                      "name",
+                                      "established",
+                                      "location",
+                                      "profile",
+                                      "vision",
+                                      "mission"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "company-profile",
+                        "title":  "Company Profile",
+                        "content":  "Mamia Seeds Oil Limited was established on 26 July 2005 and is located at Kutungare Village, Airport Road, Makarfi, Kaduna State, Nigeria.",
+                        "keywords":  [
+                                         "company",
+                                         "profile",
+                                         "established",
+                                         "location",
+                                         "address",
+                                         "about mamia"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/company.json"
+                    },
+                    {
+                        "id":  "company-vision",
+                        "title":  "Company Vision",
+                        "content":  "Our vision is to be a dependable Nigerian soybean processing company known for consistent quality, responsible operations, and long-term customer partnerships.",
+                        "keywords":  [
+                                         "vision",
+                                         "future",
+                                         "long term",
+                                         "company vision"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/company.json"
+                    },
+                    {
+                        "id":  "company-mission",
+                        "title":  "Company Mission",
+                        "content":  "Our mission is to deliver high-quality soybean oil and soybean meal through disciplined manufacturing, quality control, and reliable supply support for businesses.",
+                        "keywords":  [
+                                         "mission",
+                                         "purpose",
+                                         "what drives you"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/company.json"
+                    }
+                ]
 }

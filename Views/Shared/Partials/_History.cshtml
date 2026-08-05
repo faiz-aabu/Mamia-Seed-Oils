@@ -1,15 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.HistoryViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
-
-@{
-    var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
-    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? founderStory = null;
-    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? mission = null;
-    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? vision = null;
-    placeholders?.TryGetValue("founderStory", out founderStory);
-    placeholders?.TryGetValue("mission", out mission);
-    placeholders?.TryGetValue("vision", out vision);
-}
 
 <section class="history" id="history" aria-labelledby="history-title">
     <div class="wrap history-grid">

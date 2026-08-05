@@ -1,5 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.HeroViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 @{
     var headingParts = Model.Heading.Split(Model.HighlightText, StringSplitOptions.None);
@@ -10,7 +9,7 @@
     placeholders?.TryGetValue("awards", out awardsPlaceholder);
 }
 
-<section class="hero" aria-label="@T["HeroIntroductionAria"]">
+<section class="hero" aria-label="Company introduction">
     <div class="hero-grid">
         <div>
             <span class="eyebrow" data-hero="1">@Model.Eyebrow</span>
@@ -20,16 +19,16 @@
                 <a class="btn-primary ripple-host" href="@Model.PrimaryButtonUrl">@Model.PrimaryButtonText</a>
                 <a class="btn-ghost ripple-host" href="@Model.SecondaryButtonUrl">@Model.SecondaryButtonText</a>
             </div>
-            <div class="hero-trust" aria-label="@T["HeroTrustIndicatorsAria"]" data-hero="5">
-                <span><strong>@T["HeroQualityLabel"]</strong> @(certificatePlaceholder?.Label ?? T["HeroCertificatesPlaceholder"])</span>
-                <span><strong>@T["HeroRecognitionLabel"]</strong> @(awardsPlaceholder?.Label ?? T["HeroAwardsPlaceholder"])</span>
+            <div class="hero-trust" aria-label="Trust indicators" data-hero="5">
+                <span><strong>Quality:</strong> @(certificatePlaceholder?.Label ?? "Certifications")</span>
+                <span><strong>Recognition:</strong> @(awardsPlaceholder?.Label ?? "Awards")</span>
             </div>
         </div>
-        <div class="hero-visual" data-hero="6" aria-label="@T["HeroInfoCompanyName"] company profile overview">
+        <div class="hero-visual" data-hero="6" aria-label="Company profile overview">
             <div class="hero-info-panel" role="presentation">
                 <div class="hero-info-panel__header">
-                    <span class="hero-info-panel__eyebrow">@T["HeroInfoProfileEyebrow"]</span>
-                    <h2>@T["HeroInfoCompanyName"]</h2>
+                    <span class="hero-info-panel__eyebrow">Company Profile</span>
+                    <h2>Company Profile</h2>
                 </div>
 
                 <div class="hero-info-panel__grid">
@@ -42,8 +41,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoEstablishedTitle"]</h3>
-                            <p>@T["HeroInfoEstablishedValue"]</p>
+                            <h3>Established</h3>
+                            <p>2021</p>
                         </div>
                     </article>
 
@@ -57,8 +56,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoLocationTitle"]</h3>
-                            <p>@Html.Raw(T["HeroInfoLocationValue"])</p>
+                            <h3>Location</h3>
+                            <p>Kano State, Nigeria</p>
                         </div>
                     </article>
 
@@ -71,8 +70,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoBusinessTitle"]</h3>
-                            <p>@Html.Raw(T["HeroInfoBusinessValue"])</p>
+                            <h3>Business</h3>
+                            <p>Soybean processing and edible oil production.</p>
                         </div>
                     </article>
 
@@ -85,8 +84,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoCertificationsTitle"]</h3>
-                            <p>@Html.Raw(T["HeroInfoCertificationsValue"])</p>
+                            <h3>Certifications</h3>
+                            <p>Quality-focused manufacturing and compliance standards.</p>
                         </div>
                     </article>
 
@@ -99,8 +98,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoCoverageTitle"]</h3>
-                            <p>@Html.Raw(T["HeroInfoCoverageValue"])</p>
+                            <h3>Coverage</h3>
+                            <p>Serving retail, wholesale, and industrial customers across Nigeria.</p>
                         </div>
                     </article>
 
@@ -114,15 +113,15 @@
                             </svg>
                         </div>
                         <div>
-                            <h3>@T["HeroInfoManufacturingTitle"]</h3>
-                            <p>@Html.Raw(T["HeroInfoManufacturingValue"])</p>
+                            <h3>Manufacturing</h3>
+                            <p>Disciplined processing built for consistent supply.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </div>
     </div>
-    <div class="stat-strip" role="list" aria-label="@T["HeroCompanyHighlightsAria"]">
+    <div class="stat-strip" role="list" aria-label="Company highlights">
         @foreach (var stat in Model.StatStrip)
         {
             <div role="listitem">
@@ -131,8 +130,8 @@
             </div>
         }
     </div>
-    <a class="hero-scroll-cue" href="#history" aria-label="@T["HeroScrollStoryAria"]">
-        <span>@T["HeroScrollStory"]</span>
+    <a class="hero-scroll-cue" href="#history" aria-label="Scroll to our story">
+        <span>Our Story</span>
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v12m0 0-5-5m5 5 5-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
     </a>
 </section>

@@ -1,7 +1,5 @@
 using MamiaSeedsOil.Web.Interfaces;
-using MamiaSeedsOil.Web.Configuration;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace MamiaSeedsOil.Web.Controllers;
 
@@ -10,13 +8,11 @@ public sealed class SeoController : ControllerBase
 {
     private readonly IWebsiteContentService _contentService;
     private readonly ISeoService _seoService;
-    private readonly SiteLocalizationOptions _localizationOptions;
 
-    public SeoController(IWebsiteContentService contentService, ISeoService seoService, IOptions<SiteLocalizationOptions> localizationOptions)
+    public SeoController(IWebsiteContentService contentService, ISeoService seoService)
     {
         _contentService = contentService;
         _seoService = seoService;
-        _localizationOptions = localizationOptions.Value;
     }
 
     [HttpGet("sitemap.xml")]
@@ -25,7 +21,7 @@ public sealed class SeoController : ControllerBase
     {
         var model = await _contentService.GetHomePageContentAsync(cancellationToken);
         var baseUrl = $"{Request.Scheme}://{Request.Host}";
-        var xml = _seoService.BuildSitemapXml(baseUrl, model, _localizationOptions.SupportedCultures, _localizationOptions.DefaultCulture);
+        var xml = _seoService.BuildSitemapXml(baseUrl, model);
         return Content(xml, "application/xml");
     }
 

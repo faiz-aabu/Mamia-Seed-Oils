@@ -1,56 +1,85 @@
 {
-  "domainKeywords": [
-    "distribution",
-    "distributors",
-    "supply"
-  ],
-  "category": {
-    "key": "distribution",
-    "title": "Distribution",
-    "description": "Distribution and partner network information.",
-    "keywords": [
-      "distribution",
-      "distributor",
-      "wholesale",
-      "supply"
-    ]
-  },
-  "entries": [
-    {
-      "id": "distribution-overview",
-      "title": "Distribution Information",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "distribution",
-        "distributor",
-        "partner network"
-      ],
-      "sourceType": "Json",
-      "sourcePath": "Data/Knowledge/distribution.json"
-    }
-  ],
-  "futureDocuments": [
-    {
-      "id": "distribution-guide",
-      "title": "Distribution Guide",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "distribution",
-        "guide"
-      ],
-      "sourceType": "Docx",
-      "sourcePath": "Documents/distribution-guide.docx"
-    },
-    {
-      "id": "distribution-policy",
-      "title": "Distribution Policy",
-      "content": "[To Be Updated]",
-      "keywords": [
-        "policy",
-        "distribution"
-      ],
-      "sourceType": "Txt",
-      "sourcePath": "Documents/distribution-policy.txt"
-    }
-  ]
+    "domainKeywords":  [
+                           "distribution",
+                           "distributor",
+                           "bulk",
+                           "wholesale",
+                           "retail",
+                           "delivery",
+                           "industrial supply",
+                           "orders"
+                       ],
+    "category":  {
+                     "key":  "distribution",
+                     "title":  "Distribution",
+                     "description":  "Distribution, bulk supply, and partner onboarding details.",
+                     "keywords":  [
+                                      "distribution",
+                                      "distributor",
+                                      "wholesale",
+                                      "bulk",
+                                      "retail",
+                                      "delivery",
+                                      "industrial"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "distribution-overview",
+                        "title":  "Distribution Information",
+                        "content":  "We support structured distribution for wholesale, retail, and industrial buyers across Nigeria, with volume planning and logistics coordination handled by our commercial team.",
+                        "keywords":  [
+                                         "distribution",
+                                         "network",
+                                         "nationwide",
+                                         "supply"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/distribution.json"
+                    },
+                    {
+                        "id":  "distribution-distributor",
+                        "title":  "Become a Distributor",
+                        "content":  "To become a distributor, contact our sales team with your business profile, target region, and expected monthly volume so we can guide onboarding steps.",
+                        "keywords":  [
+                                         "become distributor",
+                                         "distributor application",
+                                         "partnership",
+                                         "wholesale"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/distribution.json"
+                    },
+                    {
+                        "id":  "distribution-bulk-order",
+                        "title":  "Bulk and Industrial Orders",
+                        "content":  "For bulk and industrial orders, share your required volumes, preferred delivery region, and timeline with our sales team for tailored support.",
+                        "keywords":  [
+                                         "bulk order",
+                                         "industrial supply",
+                                         "500 cartons",
+                                         "supermarket",
+                                         "hotel",
+                                         "restaurant",
+                                         "government contract",
+                                         "school"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/distribution.json"
+                    }
+                ],
+    "futureDocuments":  [
+                            {
+                                "id":  "distribution-guide",
+                                "title":  "Distribution Guide",
+                                "content":  "Distribution guide availability is handled by the commercial team during onboarding discussions.",
+                                "keywords":  [
+                                                 "distribution guide",
+                                                 "policy",
+                                                 "onboarding"
+                                             ],
+                                "sourceType":  "Docx",
+                                "sourcePath":  "Documents/distribution-guide.docx"
+                            }
+                        ]
 }

@@ -1,5 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.InsightSectionViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 <section class="surface-paper" id="insights" aria-labelledby="insights-title">
     <div class="wrap">
@@ -14,7 +13,7 @@
                 <article class="insight-card">
                     @await Html.PartialAsync("Partials/_ResponsiveImage", new MamiaSeedsOil.Web.ViewModels.ResponsiveImageViewModel
                     {
-                        Alt = string.Format(T["InsightsImagePlaceholderTemplate"], item.Title),
+                        Alt = $"{item.Title} placeholder image",
                         Width = 1200,
                         Height = 675,
                         Sizes = "(max-width: 900px) 100vw, 33vw",

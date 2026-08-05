@@ -1,5 +1,4 @@
 @model MamiaSeedsOil.Web.ViewModels.TestimonialSectionViewModel
-@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
 
 @{
     var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
@@ -23,9 +22,9 @@
                             @await Html.PartialAsync("Partials/_AssetPlaceholder", new MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel
                             {
                                 Key = testimonialPlaceholder.Key,
-                                Label = T["TestimonialsPartnerLogo"],
+                                Label = "Partner Logo",
                                 SubLabel = testimonialPlaceholder.SubLabel,
-                                AltText = string.Format(T["TestimonialsLogoPlaceholderTemplate"], item.Company),
+                                AltText = $"{item.Company} logo placeholder",
                                 AspectRatio = "1 / 1"
                             })
                         }

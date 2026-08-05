@@ -117,20 +117,13 @@ Forwarded headers are enabled for X-Forwarded-For and X-Forwarded-Proto.
 ### AI Configuration
 - Display name, welcome text, fallbacks, suggestions, provider toggles, streaming, and rate limits are all configuration-driven.
 
-## 7. Localization System
-### Supported Languages
-- English (en)
-- Hausa (ha)
+## 7. Language Experience
+### Supported Language
+- English only
 
-### Localization Components
-- SharedResource resx files for localized text
-- Route + query + cookie + accept-language request culture providers
-- Localized validation messages through DataAnnotations localization
-- Language switch endpoint writes culture cookie with secure settings
-
-### Fallback Behavior
-When localized keys are absent, fallback behavior relies on standard localization fallback conventions.
-AI assistant remains English-only by policy.
+### Content Behavior
+- UI text, forms, navigation, and AI assistant messages are rendered in English only.
+- No runtime language switching or resource-based localization is enabled.
 
 ## 8. Security Controls
 ### Implemented Controls
@@ -164,7 +157,6 @@ No stack traces are exposed in production responses.
 - Canonical URL assignment per request
 - Open Graph and Twitter metadata in layout
 - JSON-LD structured data generation via SEO service
-- hreflang alternate links for localization
 - sitemap.xml and robots.txt endpoints
 - Response caching on SEO endpoints for efficiency
 

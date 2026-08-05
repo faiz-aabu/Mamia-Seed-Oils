@@ -9,11 +9,6 @@
       "MamiaSeedsOil.Web/1.0.0": {
         "runtime": {
           "MamiaSeedsOil.Web.dll": {}
-        },
-        "resources": {
-          "ha/MamiaSeedsOil.Web.resources.dll": {
-            "locale": "ha"
-          }
         }
       }
     }
