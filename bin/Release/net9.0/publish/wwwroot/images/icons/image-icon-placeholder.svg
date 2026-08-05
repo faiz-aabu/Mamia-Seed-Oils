@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Image placeholder icon</title>
+  <desc id="desc">A simple icon used as a placeholder representation for image assets.</desc>
+  <rect width="120" height="120" rx="24" fill="#F8EFE0"/>
+  <rect x="24" y="28" width="72" height="64" rx="12" fill="#FFFDF8" stroke="#D8C59D" stroke-width="2"/>
+  <circle cx="46" cy="52" r="12" fill="#E3A93C"/>
+  <path d="M36 76l18-16 16 16 12-14 12 14" stroke="#41522F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
