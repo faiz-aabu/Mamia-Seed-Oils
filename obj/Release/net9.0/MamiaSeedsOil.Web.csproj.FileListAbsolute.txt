@@ -136,5 +136,5 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\refin
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\MamiaSeedsOil.Web.pdb
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\MamiaSeedsOil.Web.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\ref\MamiaSeedsOil.Web.dll
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\compressed\l4crepbcr2-ddvr8qlcvq.gz
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\compressed\5fjv4ilmte-3ccq0e6qv2.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\compressed\l4crepbcr2-9bp7tlpipw.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Release\net9.0\compressed\5fjv4ilmte-nsk39o03xx.gz

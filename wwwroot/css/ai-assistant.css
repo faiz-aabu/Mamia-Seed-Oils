@@ -58,14 +58,14 @@
   right: 0;
   bottom: 74px;
   width: min(420px, calc(100vw - 24px));
-  max-height: min(80vh, 680px);
+  height: min(80vh, 680px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.76), rgba(255, 252, 243, 0.8));
   backdrop-filter: blur(8px);
   box-shadow: var(--ai-shadow);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
   overflow: hidden;
   transform: translateY(20px) scale(0.95);
   opacity: 0;
@@ -80,6 +80,9 @@
 }
 
 .ai-panel-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   background: linear-gradient(145deg, var(--ai-olive-900), var(--ai-olive-800));
   color: #f6f2e7;
   padding: 16px 16px 14px;
@@ -122,20 +125,24 @@
 }
 
 .ai-messages {
-  padding: 16px;
-  min-height: 340px;
-  max-height: 49vh;
-  overflow: auto;
+  padding: 16px 16px 18px;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--ai-cream-50);
   scroll-behavior: smooth;
 }
 
 .ai-message {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: flex;
   flex-direction: column;
   max-width: 88%;
   animation: aiMessageIn 200ms ease;
+}
+
+.ai-message:last-of-type {
+  margin-bottom: 18px;
 }
 
 .ai-message-user {
@@ -178,6 +185,10 @@
   flex-wrap: wrap;
   gap: 8px;
   padding: 12px 14px;
+  align-content: flex-start;
+  max-height: 118px;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-top: 1px solid var(--ai-line);
   background: linear-gradient(180deg, rgba(255, 249, 232, 0.65), rgba(255, 255, 255, 0.94));
 }
@@ -202,8 +213,12 @@
 
 .ai-input-wrap {
   display: flex;
+  align-items: flex-end;
   gap: 10px;
   padding: 12px;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
   border-top: 1px solid var(--ai-line);
   background: rgba(255, 255, 255, 0.84);
 }
@@ -248,8 +263,11 @@
 
 .ai-typing {
   display: flex;
+  align-items: center;
   gap: 6px;
-  padding: 0 16px 12px;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  padding: 0 2px;
 }
 
 .ai-typing span {
@@ -258,6 +276,11 @@
   background: #bea24d;
   border-radius: 50%;
   animation: aiTyping 1s infinite;
+}
+
+.ai-typing small {
+  font-size: 11px;
+  color: #6f6a5b;
 }
 
 .ai-typing span:nth-child(2) {
@@ -319,12 +342,11 @@
     width: calc(100vw - 20px);
     right: 0;
     bottom: 66px;
-    max-height: 74vh;
+    height: min(74vh, 620px);
   }
 
   .ai-messages {
-    min-height: 280px;
-    max-height: 42vh;
+    padding: 14px 14px 16px;
   }
 }
 

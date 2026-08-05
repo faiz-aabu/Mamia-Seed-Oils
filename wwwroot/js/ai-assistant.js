@@ -23,6 +23,8 @@ window.MamiaAssistant = (function () {
     const chatEndpoint = widget.getAttribute('data-chat-endpoint');
     const suggestionsEndpoint = widget.getAttribute('data-suggestions-endpoint');
     const fallbackErrorMessage = widget.getAttribute('data-fallback-error-message') || 'I am unable to answer right now.';
+    const nowLabel = widget.getAttribute('data-now-label') || 'Now';
+    const typingLabel = widget.getAttribute('data-typing-label') || 'Typing...';
 
     let conversationId = null;
     let inFlightController = null;
@@ -37,6 +39,12 @@ window.MamiaAssistant = (function () {
       return now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     }
 
+    function scrollMessagesToBottom() {
+      requestAnimationFrame(function () {
+        messages.scrollTop = messages.scrollHeight;
+      });
+    }
+
     function appendMessage(role, text, timestamp) {
       const article = document.createElement('article');
       article.className = role === 'user' ? 'ai-message ai-message-user' : 'ai-message ai-message-assistant';
@@ -47,23 +55,25 @@ window.MamiaAssistant = (function () {
 
       const time = document.createElement('time');
       time.className = 'ai-time';
-      time.textContent = timestamp || nowTime();
+      time.textContent = timestamp || nowLabel;
 
       article.appendChild(bubble);
       article.appendChild(time);
       messages.appendChild(article);
-      requestAnimationFrame(function () {
-        messages.scrollTop = messages.scrollHeight;
-      });
+      scrollMessagesToBottom();
     }
 
     function setTyping(isTyping) {
       typing.hidden = !isTyping;
       widget.classList.toggle('is-thinking', isTyping);
+
+      const typingText = typing.querySelector('small');
+      if (typingText) {
+        typingText.textContent = typingLabel;
+      }
+
       if (isTyping) {
-        requestAnimationFrame(function () {
-          messages.scrollTop = messages.scrollHeight;
-        });
+        scrollMessagesToBottom();
       }
     }
 
@@ -75,7 +85,7 @@ window.MamiaAssistant = (function () {
         setTimeout(function () {
           input.focus();
           autoResizeInput();
-          messages.scrollTop = messages.scrollHeight;
+          scrollMessagesToBottom();
         }, 140);
       }
     }
@@ -213,6 +223,7 @@ window.MamiaAssistant = (function () {
     });
 
     autoResizeInput();
+    scrollMessagesToBottom();
     loadInitialSuggestions();
   }
 

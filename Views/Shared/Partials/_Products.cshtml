@@ -119,7 +119,7 @@
                 var productImagePath = string.IsNullOrWhiteSpace(product.Image)
                     ? "/images/products/1l-bottle-placeholder.svg"
                     : product.Image;
-                var productAltText = string.IsNullOrWhiteSpace(product.Name) ? "Mamia Seeds Oil product image" : $"{product.Name} product image";
+                var productAltText = string.IsNullOrWhiteSpace(product.Name) ? T["ProductsImageAltFallback"].Value : string.Format(T["ProductsImageAltTemplate"].Value, product.Name);
 
                 <article class="product-card" aria-label="@product.Name" role="listitem">
                     <div class="product-thumb">
@@ -135,14 +135,14 @@
                         })
                     </div>
                     <div class="product-body">
-                        <span class="product-tag">@(string.IsNullOrWhiteSpace(product.Category) ? "Mamia Seeds Oil" : product.Category)</span>
+                        <span class="product-tag">@(string.IsNullOrWhiteSpace(product.Category) ? T["ProductsTagFallback"] : product.Category)</span>
                         <h3>@product.Name</h3>
-                        <p>@(string.IsNullOrWhiteSpace(product.Description) ? "Premium product offering from Mamia Seeds Oil." : product.Description)</p>
+                        <p>@(string.IsNullOrWhiteSpace(product.Description) ? T["ProductsDescriptionFallback"] : product.Description)</p>
                         <div class="product-meta">
-                            <span>Packaging: @(string.IsNullOrWhiteSpace(product.PackagingSize) ? "[To Be Updated]" : product.PackagingSize)</span>
-                            <span>Availability: @(string.IsNullOrWhiteSpace(product.Availability) ? "[To Be Updated]" : product.Availability)</span>
+                            <span>@T["ProductsPackagingLabel"] @(string.IsNullOrWhiteSpace(product.PackagingSize) ? T["ProductsUnavailableValue"] : product.PackagingSize)</span>
+                            <span>@T["ProductsAvailabilityLabel"] @(string.IsNullOrWhiteSpace(product.Availability) ? T["ProductsUnavailableValue"] : product.Availability)</span>
                         </div>
-                        <a class="btn-primary product-card-cta" href="#contact">Request Details</a>
+                        <a class="btn-primary product-card-cta" href="#contact">@T["ProductsRequestDetails"]</a>
                     </div>
                 </article>
             }
