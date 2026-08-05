@@ -601,10 +601,10 @@
     <value>Manyan Oda</value>
   </data>
   <data name="AiUnknownResponse" xml:space="preserve">
-    <value>Ba ni da wannan bayanin a yanzu. Da fatan a tuntubi tawagarmu ta shafin tuntuba domin karin taimako.</value>
+    <value>Ba ni da wannan bayanin a yanzu. Da fatan a tuntubi tawagarmu ta shafin TuntuÉ“a domin Æ™arin taimako.</value>
   </data>
   <data name="AiSuggestedSales" xml:space="preserve">
-    <value>Tuntubi Siyarwa</value>
+    <value>TuntuÉ“i Siyarwa</value>
   </data>
   <data name="AiSuggestedDistributor" xml:space="preserve">
     <value>Zama Mai Rarrabawa</value>
@@ -625,13 +625,14 @@
     <value>Samuwa:</value>
   </data>
   <data name="HeroInfoManufacturingValue" xml:space="preserve">
-    <value>&amp;bull; Cibiyar samarwa ta zamani&lt;br /&gt;&amp;bull; Babban karfin sarrafawa&lt;br /&gt;&amp;bull; Ayyuka masu cikakken kula da inganci</value>
+    <value>Babbar masana'antar sarrafa waken soya&lt;br /&gt;Kayan aiki na zamani
+&lt;br /&gt;Tabbacin inganci a duk matakan samarwa</value>
   </data>
   <data name="HeroInfoCoverageTitle" xml:space="preserve">
     <value>Yankin Rufe Bukata</value>
   </data>
   <data name="HeroInfoBusinessValue" xml:space="preserve">
-    <value>&amp;bull; Sarrafa Waken Soya&lt;br /&gt;&amp;bull; Man Girkin Soya Mai Tacewa&lt;br /&gt;&amp;bull; Manyan Kayayyakin Masana'antu&lt;br /&gt;&amp;bull; Garin Waken Soya Mai Inganci</value>
+    <value>Sarrafa Waken Soya&lt;br /&gt;Man Girkin Soya Mai Tacewa&lt;br /&gt;Manyan Kayayyakin Masana'antu&lt;br /&gt;Kayayyakin Sauran Waken Soya</value>
   </data>
   <data name="HeroInfoCertificationsValue" xml:space="preserve">
     <value>NAFDAC Tabbatacce&lt;br /&gt;SON Tabbatacce</value>
@@ -670,16 +671,13 @@
     <value>Wuri</value>
   </data>
   <data name="HeroInfoCoverageValue" xml:space="preserve">
-    <value>&amp;bull; Rarrabawa a fadin kasa&lt;br /&gt;&amp;bull; Samarwa ga dillalai&lt;br /&gt;&amp;bull; Samarwa ga masana'antu&lt;br /&gt;&amp;bull; Shirye don fitarwa kasashen waje</value>
+    <value>Muna samarwa ga kwastomomi a fadin Najeriya</value>
   </data>
   <data name="HeroInfoEstablishedValue" xml:space="preserve">
     <value>26 Yuli 2005</value>
   </data>
   <data name="HeroInfoProfileEyebrow" xml:space="preserve">
-    <value>BAYANAN KAMFANI</value>
-  </data>
-  <data name="HeroInfoPanelAria" xml:space="preserve">
-    <value>Bayanin kamfanin Mamia Seeds Oil Limited</value>
+    <value>Bayanan Kamfani</value>
   </data>
   <data name="HeroInfoEstablishedTitle" xml:space="preserve">
     <value>An Kafa</value>
