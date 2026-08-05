@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav Primary" xml:space="preserve"><value>Navigeshan na asali</value></data>
+  <data name="BecomeDistributor" xml:space="preserve"><value>Zama Mai Rarrabawa</value></data>
+  <data name="Language" xml:space="preserve"><value>Harshe</value></data>
+  <data name="NavOpenMenu" xml:space="preserve"><value>Bude menu</value></data>
+  <data name="NavCloseMenu" xml:space="preserve"><value>Rufe menu</value></data>
+  <data name="NavLanguageEnglish" xml:space="preserve"><value>Turanci</value></data>
+  <data name="NavLanguageHausa" xml:space="preserve"><value>Hausa</value></data>
+  <data name="NavLanguageSelector" xml:space="preserve"><value>Mai zaben harshe</value></data>
+  <data name="ProductsEyebrow" xml:space="preserve"><value>Kayayyaki</value></data>
+  <data name="ProductsTitle" xml:space="preserve"><value>An yi su don kowane kicin, a kowane ma'auni.</value></data>
+  <data name="ProductsDescription" xml:space="preserve"><value>Daga kwalabe guda zuwa manyan kaya don gidajen abinci da masu rarrabawa.</value></data>
+  <data name="ProcessEyebrow" xml:space="preserve"><value>Daga Wake zuwa Kwalba</value></data>
+  <data name="ProcessTitle" xml:space="preserve"><value>Daga wake zuwa shelf, kowane mataki na da muhimmanci.</value></data>
+  <data name="ProcessDescription" xml:space="preserve"><value>Akwai matakai biyar daga danyen wake zuwa kwalbar mai ta Mamia, domin tsafta da daidaito.</value></data>
+  <data name="DistributionMapPlaceholderAria" xml:space="preserve"><value>Wurin taswirar rarrabawa a Najeriya</value></data>
+  <data name="HeroScrollStory" xml:space="preserve"><value>Gangara</value></data>
+  <data name="Hero Scroll Story Aria" xml:space="preserve"><value>Gangaro zuwa sashin tarihinmu</value></data>
+  <data name="Contact Address" xml:space="preserve"><value>Adireshi</value></data>
+  <data name="Contact Phone Whatsapp" xml:space="preserve"><value>Waya / WhatsApp</value></data>
+  <data name="Contact Email" xml:space="preserve"><value>Imel</value></data>
+  <data name="Contact Business Hours" xml:space="preserve"><value>Lokutan Aiki</value></data>
+  <data name="Contact Form Area" xml:space="preserve"><value>Fom din tuntuba</value></data>
+  <data name="Contact FullName" xml:space="preserve"><value>Cikakken suna</value></data>
+  <data name="Contact Company" xml:space="preserve"><value>Kamfani / Kungiya</value></data>
+  <data name="Contact EmailAddress" xml:space="preserve"><value>Adireshin imel</value></data>
+  <data name="Contact PhoneNumber" xml:space="preserve"><value>Lambar waya</value></data>
+  <data name="Contact Requirements" xml:space="preserve"><value>Fada mana bukatunku - kasuwa, manyan kaya, rarrabawa...</value></data>
+  <data name="Contact Send Message" xml:space="preserve"><value>Tuntuba</value></data>
+  <data name="Contact Submitting" xml:space="preserve"><value>Ana tura bukatarku...</value></data>
+  <data name="Contact SubmitFailed" xml:space="preserve"><value>Ba a iya tura bukatar yanzu ba.</value></data>
+  <data name="Ai Open Assistant" xml:space="preserve"><value>Bude mataimakin AI</value></data>
+  <data name="Ai Business Assistant" xml:space="preserve"><value>Mataimakin Kasuwanci</value></data>
+  <data name="Ai Minimize Assistant" xml:space="preserve"><value>Rage taga mataimaki</value></data>
+  <data name="Ai Close Assistant" xml:space="preserve"><value>Rufe mataimaki</value></data>
+  <data name="Ai Now" xml:space="preserve"><value>Yanzu</value></data>
+  <data name="Ai Input Placeholder" xml:space="preserve"><value>Tambayi game da kaya, rarrabawa, inganci...</value></data>
+  <data name="Ai Send" xml:space="preserve"><value>Aika</value></data>
+  <data name="Ai Fallback Error" xml:space="preserve"><value>Ba zan iya bada amsa yanzu ba. Don karin bayani, a tuntubi Mamia Seeds Oil Limited kai tsaye.</value></data>
+  <data name="Ai Restriction Response" xml:space="preserve"><value>Zan iya tattauna bayanan Mamia Seeds Oil Limited kawai.</value></data>
+  <data name="Ai Unavailable Info Response" xml:space="preserve"><value>Wannan bayanin ba ya samuwa a yanzu. Don karin bayani, a tuntubi Mamia Seeds Oil Limited kai tsaye.</value></data>
+  <data name="Ai Known Info Prefix Hausa" xml:space="preserve"><value>Ga bayanin da ake da shi:</value></data>
+  <data name="Error403Title" xml:space="preserve"><value>An takaita shiga</value></data>
+  <data name="Error403Body" xml:space="preserve"><value>Ba ku da izinin ganin wannan shafi.</value></data>
+  <data name="Error500Title" xml:space="preserve"><value>Kuskuren uwar garken</value></data>
+  <data name="Error500Body" xml:space="preserve"><value>Akwai matsala. A sake gwadawa nan gaba kadan.</value></data>
+  <data name="Error404Title" xml:space="preserve"><value>Ba a samu shafin ba</value></data>
+  <data name="Error404Body" xml:space="preserve"><value>Ba a sami shafin da kuka nema ba.</value></data>
+  <data name="Error Maintenance Title" xml:space="preserve"><value>Yanayin gyaran tsari</value></data>
+  <data name="Error Maintenance Body" xml:space="preserve"><value>Ana aikin gyare-gyare a yanzu. A dawo daga baya.</value></data>
+  <data name="Error BackHome" xml:space="preserve"><value>Koma Gida</value></data>
+  <data name="Skip To MainContent" xml:space="preserve"><value>Tsallaka zuwa babban abun ciki</value></data>
+  <data name="Hero Introduction Aria" xml:space="preserve"><value>Gabatarwa</value></data>
+  <data name="Hero Trust IndicatorsAria" xml:space="preserve"><value>Alamomin amana</value></data>
+  <data name="Hero Quality Label" xml:space="preserve"><value>Inganci:</value></data>
+  <data name="Hero Recognition Label" xml:space="preserve"><value>Yabo:</value></data>
+  <data name="Hero Certificates Placeholder" xml:space="preserve"><value>Wurin Takardun Shaida</value></data>
+  <data name="Hero Awards Placeholder" xml:space="preserve"><value>Wurin Lambobin Yabo</value></data>
+  <data name="Hero Company HighlightsAria" xml:space="preserve"><value>Manyan bayanan kamfani</value></data>
+  <data name="HistoryCorporateNarrativeAria" xml:space="preserve"><value>Wuraren bayanin tarihin kamfani</value></data>
+  <data name="TrustBarAria" xml:space="preserve"><value>Takardun shaida da amana</value></data>
+  <data name="CtaDistributorAria" xml:space="preserve"><value>Kira ga masu rarrabawa</value></data>
+  <data name="FooterNewsletterAria" xml:space="preserve"><value>Wurin rajistar wasiqar labarai</value></data>
+  <data name="FooterNewsletterEmailAria" xml:space="preserve"><value>Adireshin imel na kasuwanci</value></data>
+  <data name="FooterBackToTopAria" xml:space="preserve"><value>Koma sama</value></data>
+  <data name="TestimonialsPartnerLogo" xml:space="preserve"><value>Tambarin Abokin Hulda</value></data>
+  <data name="TestimonialsLogoPlaceholderTemplate" xml:space="preserve"><value>Wurin tambarin {0}</value></data>
+  <data name="InsightsImagePlaceholderTemplate" xml:space="preserve"><value>Wurin hoton bayani na {0}</value></data>
+  <data name="ContactCallCompanyAriaTemplate" xml:space="preserve"><value>Kira {0}</value></data>
+  <data name="ContactEmailCompanyAriaTemplate" xml:space="preserve"><value>Aika imel zuwa {0}</value></data>
+  <data name="Error404Eyebrow" xml:space="preserve"><value>Kuskure 404</value></data>
+  <data name="Error500Eyebrow" xml:space="preserve"><value>Kuskure 500</value></data>
+  <data name="ErrorMaintenanceEyebrow" xml:space="preserve"><value>Sanarwar Sabis</value></data>
+  <data name="Error403Eyebrow" xml:space="preserve"><value>Kuskure 403</value></data>
+  <data name="PrivacyTitle" xml:space="preserve"><value>Manufar Sirri</value></data>
+  <data name="PrivacyBody" xml:space="preserve"><value>Yi amfani da wannan shafi don bayanin manufar sirrin shafinku.</value></data>
+  <data name="NavOurStory" xml:space="preserve"><value>Tarihinmu</value></data>
+  <data name="NavProducts" xml:space="preserve"><value>Kayayyaki</value></data>
+  <data name="NavProcess" xml:space="preserve"><value>Tsari</value></data>
+  <data name="NavGallery" xml:space="preserve"><value>Hotuna</value></data>
+  <data name="NavContact" xml:space="preserve"><value>Tuntuba</value></data>
+  <data name="HistoryIntroTemplate" xml:space="preserve"><value>An kafa {0} a ranar {1:dd MMMM yyyy}, kuma ta ci gaba da gina ayyukanta a kan ingantaccen sarrafa waken soya.</value></data>
+  <data name="HistoryParagraphOperationsTemplate" xml:space="preserve"><value>Kamfanin yana aiki daga {0}, inda yake samar da man girkin waken soya mai inganci ga gidaje, 'yan kasuwa, masu sayar da kaya da kuma masana'antu.</value></data>
+  <data name="GalleryEyebrow" xml:space="preserve"><value>Hotuna</value></data>
+  <data name="GalleryTitle" xml:space="preserve"><value>Cikin masana'antar.</value></data>
+  <data name="GalleryDescription" xml:space="preserve"><value>Hotunan dakin samarwa, ma'aikata, da kayayyaki - a saka hotuna na gaske a nan.</value></data>
+  <data name="WhyChooseEyebrow" xml:space="preserve"><value>Me yasa Mamia</value></data>
+  <data name="WhyChooseTitle" xml:space="preserve"><value>An gina don amintaccen inganci da sikeli.</value></data>
+  <data name="WhyChooseDescription" xml:space="preserve"><value>Daga samar da albarkatu zuwa isarwa ta karshe, Mamia na hada karfin noma na gida da ka'idojin masana'antu masu tsari.</value></data>
+  <data name="IndustriesEyebrow" xml:space="preserve"><value>Masana'antun da muke yi wa hidima</value></data>
+  <data name="IndustriesTitle" xml:space="preserve"><value>Muna samar da kayayyaki ga manyan hanyoyin abinci da kasuwanci.</value></data>
+  <data name="IndustriesDescription" xml:space="preserve"><value>Mamia na tallafawa masana'antu daban-daban da girman kunshi da jadawalin isarwa da suka dace da bukatar aiki.</value></data>
+  <data name="CompanyNumbersEyebrow" xml:space="preserve"><value>Lambobin Kamfani</value></data>
+  <data name="CompanyNumbersTitle" xml:space="preserve"><value>Sikeli mai tabbacin sakamako.</value></data>
+  <data name="CompanyNumbersDescription" xml:space="preserve"><value>Ci gabanmu na nuna karfin samarwa, amincewar kasuwa da daidaiton aiki.</value></data>
+  <data name="QualityEyebrow" xml:space="preserve"><value>Tabbacin Inganci</value></data>
+  <data name="QualityTitle" xml:space="preserve"><value>Ikon sarrafa tsari a kowane mataki.</value></data>
+  <data name="QualityDescription" xml:space="preserve"><value>Tawagar ingancinmu na tantance kowane matakin samarwa don tabbatar da mai ya kasance mai tsafta, lafiya da daidaito.</value></data>
+  <data name="FaqEyebrow" xml:space="preserve"><value>Tambayoyi da Amsoshi</value></data>
+  <data name="FaqTitle" xml:space="preserve"><value>Amsoshi ga abokan hulda da masu sayen manyan kaya.</value></data>
+  <data name="TestimonialsEyebrow" xml:space="preserve"><value>Shaidu</value></data>
+  <data name="TestimonialsTitle" xml:space="preserve"><value>Abin da abokan hulda ke cewa game da aiki da Mamia.</value></data>
+  <data name="InsightsEyebrow" xml:space="preserve"><value>Labarai da Bayanan Ilimi</value></data>
+  <data name="InsightsTitle" xml:space="preserve"><value>Ilimi daga tawagar samarwa da samar da albarkatunmu.</value></data>
+  <data name="InsightsDescription" xml:space="preserve"><value>Wadannan rubuce-rubucen wuraren cike ne da za a hada su da tsarin blog ko sabuntawa a gaba.</value></data>
+  <data name="ValidationRequired" xml:space="preserve"><value>Wannan fili wajibi ne.</value></data>
+  <data name="ValidationStringLength" xml:space="preserve"><value>Filin {0} dole ya zama rubutu mai matsakaicin tsawon {1}.</value></data>
+  <data name="ValidationEmail" xml:space="preserve"><value>Da fatan a shigar da ingantaccen adireshin imel.</value></data>
+  <data name="ValidationPhone" xml:space="preserve"><value>Da fatan a shigar da ingantacciyar lambar waya.</value></data>
+  <data name="ValidationNoHtml" xml:space="preserve"><value>Ba a yarda da alamomin HTML ba.</value></data>
+  <data name="ValidationFailed" xml:space="preserve"><value>Tantancewa ta gaza.</value></data>
+  <data name="EmailDeliveryFailed" xml:space="preserve"><value>Ba za mu iya aika bukatarku a wannan lokaci ba. Da fatan a sake gwadawa daga baya.</value></data>
+  <data name="ContactSuccessMessage" xml:space="preserve"><value>An karbi bukatarku. Tawagarmu za ta tuntube ku nan ba da jimawa ba.</value></data>
+  <data name="ContactDistributorSuccessMessage" xml:space="preserve"><value>An karbi bukatar mai rarrabawa. Tawagar tallace-tallace za ta tuntube ku da matakan gaba.</value></data>
+  <data name="NavBrandHomeAriaTemplate" xml:space="preserve"><value>Gidan {0}</value></data>
+  <data name="ResponsiveImagePlaceholderLabel" xml:space="preserve"><value>Wurin Hoto</value></data>
+  <data name="ResponsiveImagePlaceholderSubLabel" xml:space="preserve"><value>A maye gurbin da hoton kamfani</value></data>
+  <data name="SharedErrorTitle" xml:space="preserve"><value>Kuskure</value></data>
+  <data name="SharedErrorHeading" xml:space="preserve"><value>Kuskure.</value></data>
+  <data name="SharedErrorBody" xml:space="preserve"><value>An samu kuskure yayin aiwatar da bukatarku.</value></data>
+  <data name="SharedErrorRequestId" xml:space="preserve"><value>ID na Bukata:</value></data>
+  <data name="SharedErrorDevelopmentMode" xml:space="preserve"><value>Yanayin Ci-gaba</value></data>
+  <data name="SharedErrorDevelopmentBody1" xml:space="preserve"><value>Canzawa zuwa yanayin Development zai nuna karin bayani game da kuskuren da ya faru.</value></data>
+  <data name="SharedErrorDevelopmentBody2" xml:space="preserve"><value>Bai kamata a kunna yanayin Development a aikace-aikacen da aka wallafa ba. Zai iya nuna bayanai masu sirri daga kuskure ga masu amfani. Don gyaran gida, kunna yanayin Development ta saita ASPNETCORE_ENVIRONMENT zuwa Development sannan ka sake kunna manhajar.</value></data>
+  <data name="SeoTitle" xml:space="preserve"><value>Mamia Seeds Oil Limited | Mai Kera Man Waken Soya Mai Inganci</value></data>
+  <data name="SeoDescription" xml:space="preserve"><value>Mamia Seeds Oil Limited kamfani ne amintacce na kera man girkin waken soya mai inganci da kayayyakin by-products a Kaduna, Najeriya.</value></data>
+  <data name="SeoKeywords" xml:space="preserve"><value>Mamia Seeds Oil, man waken soya Najeriya, mai kera man girki, kayan by-products, man waken soya Kaduna</value></data>
+  <data name="FooterNewsletterSuccessFallback" xml:space="preserve"><value>An karbi rajista.</value></data>
+  <data name="PartnershipPartnerTypesAria" xml:space="preserve"><value>Nau'ukan abokan huldar hadin gwiwa</value></data>
+  <data name="PartnershipPillarsAria" xml:space="preserve"><value>Ginshiqan darajar hadin gwiwa</value></data>
+  <data name="PartnershipDocumentsAria" xml:space="preserve"><value>Takardun bukatun hadin gwiwa</value></data>
+  <data name="PartnershipFutureDocumentsTitle" xml:space="preserve"><value>Bukatun Takardu na Gaba</value></data>
+  <data name="PartnershipFutureDocumentsDescription" xml:space="preserve"><value>Wadannan bukatu na wucin gadi ne kuma za a iya sabunta su idan an kammala manufofinku.</value></data>
+  <data name="PartnershipDocumentRequired" xml:space="preserve"><value>Wajibi</value></data>
+  <data name="PartnershipDocumentOptional" xml:space="preserve"><value>Na zabi</value></data>
+  <data name="PartnershipWhatsAppAria" xml:space="preserve"><value>Tuntubar hadin gwiwa ta WhatsApp</value></data>
+  <data name="PartnershipWhatsAppTitle" xml:space="preserve"><value>Fara ta WhatsApp</value></data>
+  <data name="PartnershipWhatsAppDescription" xml:space="preserve"><value>Idan kuna bukatar tattaunawa nan take da tawagar kasuwanci, fara ta WhatsApp.</value></data>
+  <data name="PartnershipWhatsAppButton" xml:space="preserve"><value>Bude WhatsApp</value></data>
+  <data name="PartnershipWhatsAppUnavailable" xml:space="preserve"><value>Tuntubar WhatsApp ba ta samuwa yanzu.</value></data>
+  <data name="PartnershipFormAria" xml:space="preserve"><value>Fom din neman hadin gwiwa</value></data>
+  <data name="PartnershipStepsAria" xml:space="preserve"><value>Matakan neman hadin gwiwa</value></data>
+  <data name="PartnershipStepBusinessInfo" xml:space="preserve"><value>Bayanin Kasuwanci</value></data>
+  <data name="PartnershipStepContactInfo" xml:space="preserve"><value>Bayanin Tuntuba</value></data>
+  <data name="PartnershipStepRequirements" xml:space="preserve"><value>Bukatun Kasuwanci</value></data>
+  <data name="PartnershipStepReview" xml:space="preserve"><value>Bita</value></data>
+  <data name="PartnershipStepSubmit" xml:space="preserve"><value>Mika Bukata</value></data>
+  <data name="PartnershipFieldCompanyName" xml:space="preserve"><value>Sunan Kamfani</value></data>
+  <data name="PartnershipFieldRegistrationNumber" xml:space="preserve"><value>Lambar Rajistar Kasuwanci</value></data>
+  <data name="PartnershipFieldBusinessType" xml:space="preserve"><value>Nau'in Kasuwanci</value></data>
+  <data name="PartnershipFieldYearsInOperation" xml:space="preserve"><value>Shekarun Aiki</value></data>
+  <data name="PartnershipFieldBusinessAddress" xml:space="preserve"><value>Adireshin Kasuwanci</value></data>
+  <data name="PartnershipFieldContactPerson" xml:space="preserve"><value>Wanda Za a Tuntuba</value></data>
+  <data name="PartnershipFieldPosition" xml:space="preserve"><value>Matsayi</value></data>
+  <data name="PartnershipFieldPhone" xml:space="preserve"><value>Lambar Waya</value></data>
+  <data name="PartnershipFieldEmail" xml:space="preserve"><value>Adireshin Imel</value></data>
+  <data name="PartnershipFieldCountry" xml:space="preserve"><value>Kasa</value></data>
+  <data name="PartnershipFieldState" xml:space="preserve"><value>Jiha / Yanki</value></data>
+  <data name="PartnershipFieldCity" xml:space="preserve"><value>Birni</value></data>
+  <data name="PartnershipFieldMonthlyEstimate" xml:space="preserve"><value>Kimar Sayen Wata-wata</value></data>
+  <data name="PartnershipFieldPreferredProducts" xml:space="preserve"><value>Kayayyakin da Aka Fi So</value></data>
+  <data name="PartnershipFieldPreferredPackaging" xml:space="preserve"><value>Marufin da Aka Fi So</value></data>
+  <data name="PartnershipFieldAdditionalNotes" xml:space="preserve"><value>Karin Bayani</value></data>
+  <data name="PartnershipSelectPlaceholder" xml:space="preserve"><value>Zabi wani zabi</value></data>
+  <data name="PartnershipMultiSelectHelp" xml:space="preserve"><value>Yi amfani da Ctrl (Windows) ko Command (Mac) don zabar fiye da daya.</value></data>
+  <data name="PartnershipAgreeTermsPrefix" xml:space="preserve"><value>Na tabbatar bayanin da ke nan daidai ne kuma na yarda da</value></data>
+  <data name="PartnershipAgreeTermsLink" xml:space="preserve"><value>sharuddan hadin gwiwa</value></data>
+  <data name="PartnershipSubmitDescription" xml:space="preserve"><value>Mika bukatarku ga tawagar kasuwanci domin bita.</value></data>
+  <data name="PartnershipBack" xml:space="preserve"><value>Koma Baya</value></data>
+  <data name="PartnershipNext" xml:space="preserve"><value>Na Gaba</value></data>
+  <data name="PartnershipSubmit" xml:space="preserve"><value>Mika Bukatar Hadin Gwiwa</value></data>
+  <data name="PartnershipReviewCompanyName" xml:space="preserve"><value>Sunan Kamfani</value></data>
+  <data name="PartnershipReviewBusinessRegistrationNumber" xml:space="preserve"><value>Lambar Rajistar Kasuwanci</value></data>
+  <data name="PartnershipReviewContactPerson" xml:space="preserve"><value>Wanda Za a Tuntuba</value></data>
+  <data name="PartnershipReviewPosition" xml:space="preserve"><value>Matsayi</value></data>
+  <data name="PartnershipReviewPhoneNumber" xml:space="preserve"><value>Lambar Waya</value></data>
+  <data name="PartnershipReviewEmailAddress" xml:space="preserve"><value>Adireshin Imel</value></data>
+  <data name="PartnershipReviewBusinessAddress" xml:space="preserve"><value>Adireshin Kasuwanci</value></data>
+  <data name="PartnershipReviewCountry" xml:space="preserve"><value>Kasa</value></data>
+  <data name="PartnershipReviewState" xml:space="preserve"><value>Jiha / Yanki</value></data>
+  <data name="PartnershipReviewCity" xml:space="preserve"><value>Birni</value></data>
+  <data name="PartnershipReviewBusinessType" xml:space="preserve"><value>Nau'in Kasuwanci</value></data>
+  <data name="PartnershipReviewYearsInOperation" xml:space="preserve"><value>Shekarun Aiki</value></data>
+  <data name="PartnershipReviewMonthlyPurchaseEstimate" xml:space="preserve"><value>Kimar Sayen Wata-wata</value></data>
+  <data name="PartnershipReviewPreferredProducts" xml:space="preserve"><value>Kayayyakin da Aka Fi So</value></data>
+  <data name="PartnershipReviewPreferredPackaging" xml:space="preserve"><value>Marufin da Aka Fi So</value></data>
+  <data name="PartnershipReviewAdditionalNotes" xml:space="preserve"><value>Karin Bayani</value></data>
+  <data name="PartnershipReviewUnavailable" xml:space="preserve"><value>[To Be Updated]</value></data>
+  <data name="PartnershipSpamBlocked" xml:space="preserve"><value>An toshe bukatar saboda tantancewar tsaro.</value></data>
+  <data name="PartnershipSubmitSuccess" xml:space="preserve"><value>An karbi bukatar hadin gwiwarku cikin nasara.</value></data>
+  <data name="ValidationTermsRequired" xml:space="preserve"><value>Dole ne ku yarda da sharuddan hadin gwiwa kafin mikawa.</value></data>
+</root>

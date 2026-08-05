@@ -1,0 +1,44 @@
+@model MamiaSeedsOil.Web.ViewModels.TestimonialSectionViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
+
+@{
+    var placeholders = ViewData["AssetPlaceholders"] as System.Collections.Generic.IReadOnlyDictionary<string, MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel>;
+    MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel? testimonialPlaceholder = null;
+    placeholders?.TryGetValue("customerTestimonials", out testimonialPlaceholder);
+}
+
+<section class="surface-cream" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="wrap">
+        <div class="section-head">
+            <span class="eyebrow">@Model.Eyebrow</span>
+            <h2 id="testimonials-title">@Model.Title</h2>
+        </div>
+        <div class="cards-grid-3">
+            @foreach (var item in Model.Items)
+            {
+                <article class="testimonial-card">
+                    <div class="testimonial-head">
+                        @if (testimonialPlaceholder is not null)
+                        {
+                            @await Html.PartialAsync("Partials/_AssetPlaceholder", new MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel
+                            {
+                                Key = testimonialPlaceholder.Key,
+                                Label = T["TestimonialsPartnerLogo"],
+                                SubLabel = testimonialPlaceholder.SubLabel,
+                                AltText = string.Format(T["TestimonialsLogoPlaceholderTemplate"], item.Company),
+                                AspectRatio = "1 / 1"
+                            })
+                        }
+                        else
+                        {
+                            <div class="logo-skeleton" aria-hidden="true"></div>
+                        }
+                        <div class="testimonial-meta"><b>@item.Company</b><span>@item.Position</span></div>
+                    </div>
+                    <div class="quote-mark">"</div>
+                    <p>@item.Quote</p>
+                </article>
+            }
+        </div>
+    </div>
+</section>

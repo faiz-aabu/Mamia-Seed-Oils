@@ -1,0 +1,48 @@
+{
+  "domainKeywords": [
+    "history",
+    "timeline",
+    "founded"
+  ],
+  "companyHistory": {
+    "overview": "[To Be Updated]",
+    "timeline": [
+      {
+        "id": "history-established",
+        "title": "Established",
+        "content": "Mamia Seeds Oil Limited was established on 26 July 2005.",
+        "keywords": [
+          "established",
+          "founded",
+          "history",
+          "2005"
+        ],
+        "sourceType": "Json",
+        "sourcePath": "Data/Knowledge/history.json"
+      }
+    ]
+  },
+  "category": {
+    "key": "history",
+    "title": "History",
+    "description": "Company history and timeline.",
+    "keywords": [
+      "history",
+      "timeline",
+      "established"
+    ]
+  },
+  "entries": [
+    {
+      "id": "history-overview",
+      "title": "History Overview",
+      "content": "[To Be Updated]",
+      "keywords": [
+        "history",
+        "overview"
+      ],
+      "sourceType": "Json",
+      "sourcePath": "Data/Knowledge/history.json"
+    }
+  ]
+}

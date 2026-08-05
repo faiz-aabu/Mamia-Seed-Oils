@@ -1,0 +1,11 @@
+@model MamiaSeedsOil.Web.ViewModels.PlaceholderAssetViewModel
+
+<div class="asset-placeholder" role="img" aria-label="@Model.AltText" style="--asset-ratio:@Model.AspectRatio;" data-placeholder-key="@Model.Key">
+    <svg class="asset-placeholder-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#8A8367" stroke-width="1.5" />
+        <circle cx="9" cy="9" r="2" stroke="#8A8367" stroke-width="1.5" />
+        <path d="M21 15l-5-5-4 4-3-3-6 6" stroke="#8A8367" stroke-width="1.5" />
+    </svg>
+    <span class="asset-placeholder-label">@Model.Label</span>
+    <small class="asset-placeholder-sub">@Model.SubLabel</small>
+</div>

@@ -1,0 +1,77 @@
+@model MamiaSeedsOil.Web.ViewModels.HomePageViewModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<MamiaSeedsOil.Web.Resources.SharedResource> T
+
+@{
+    Model.Placeholders.TryGetValue("companyLogo", out var logoPlaceholder);
+    var returnUrl = $"{Context.Request.Path}{Context.Request.QueryString}";
+    var currentCulture = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var isHausa = string.Equals(currentCulture, "ha", StringComparison.OrdinalIgnoreCase);
+}
+
+<nav aria-label="@T["NavPrimary"]">
+    <a class="brand" href="#top" aria-label="@string.Format(T["NavBrandHomeAriaTemplate"], Model.Company.Name)">
+        <img class="brand-mark"
+             src="~/images/logo/Logo.png"
+             alt=""
+             width="40"
+             height="40"
+             loading="eager"
+             decoding="async"
+             asp-append-version="true" />
+        <span class="brand-text">@Model.Company.Name</span>
+    </a>
+    @if (logoPlaceholder is not null)
+    {
+        <span class="sr-only">@logoPlaceholder.SubLabel</span>
+    }
+
+    <ul class="nav-links" id="primary-menu">
+        @foreach (var item in Model.NavigationItems)
+        {
+            <li><a href="@item.Anchor">@item.Text</a></li>
+        }
+    </ul>
+
+    <div class="language-switcher" aria-label="@T["NavLanguageSelector"]" data-language-switcher>
+        <button type="button"
+                class="language-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="language-menu"
+                aria-label="@T["NavLanguageSelector"]"
+                data-language-toggle>
+            <span class="language-flag" aria-hidden="true">@(isHausa ? "🇳🇬" : "🇬🇧")</span>
+            <span class="language-name">@T["Language"]</span>
+            <span class="language-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul id="language-menu" class="language-menu" role="menu" hidden data-language-menu>
+            <li role="none">
+                <a role="menuitem"
+                   href="/localization/set?culture=en&amp;returnUrl=@Uri.EscapeDataString(returnUrl)"
+                   lang="en"
+                   hreflang="en"
+                   class="language-option@(isHausa ? string.Empty : " is-active")"
+                   aria-current="@(!isHausa ? "true" : "false")">
+                    <span class="language-flag" aria-hidden="true">🇬🇧</span>
+                    <span>@T["NavLanguageEnglish"]</span>
+                </a>
+            </li>
+            <li role="none">
+                <a role="menuitem"
+                   href="/localization/set?culture=ha&amp;returnUrl=@Uri.EscapeDataString(returnUrl)"
+                   lang="ha"
+                   hreflang="ha"
+                   class="language-option@(isHausa ? " is-active" : string.Empty)"
+                   aria-current="@(isHausa ? "true" : "false")">
+                    <span class="language-flag" aria-hidden="true">🇳🇬</span>
+                    <span>@T["NavLanguageHausa"]</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <a class="nav-cta" href="#contact">@T["BecomeDistributor"]</a>
+    <button class="menu-btn" type="button" aria-label="@T["NavOpenMenu"]" data-open-label="@T["NavOpenMenu"]" data-close-label="@T["NavCloseMenu"]" aria-expanded="false" aria-controls="primary-menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>

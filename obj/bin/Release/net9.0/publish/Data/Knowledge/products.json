@@ -1,0 +1,105 @@
+{
+    "domainKeywords":  [
+                           "products",
+                           "soybean meal",
+                           "cooking oil",
+                           "packaging",
+                           "sizes",
+                           "industrial supply",
+                           "bulk"
+                       ],
+    "products":  [
+                     {
+                         "name":  "Refined Soya Cooking Oil",
+                         "description":  "A refined cooking oil supplied for retail, wholesale, and business channels.",
+                         "packagingSizes":  [
+                                                "4L Bottle",
+                                                "4L Jerry Can",
+                                                "10L Jerry Can",
+                                                "20L Jerry Can"
+                                            ],
+                         "availability":  "In stock",
+                         "category":  "Products",
+                         "additionalNotes":  "Bulk industrial discussions are available through the sales team."
+                     },
+                     {
+                         "name":  "Soybean Meal",
+                         "description":  "Premium soybean meal for feed and industrial buyers.",
+                         "packagingSizes":  [
+                                                "Bulk Supply"
+                                            ],
+                         "availability":  "Available on request",
+                         "category":  "Feed Input",
+                         "additionalNotes":  "Suitable for poultry, fish, livestock, and feed mill demand planning."
+                     },
+                     {
+                         "name":  "Soybean By-products",
+                         "description":  "Soybean by-products for commercial and processing value chains.",
+                         "packagingSizes":  [
+                                                "Bulk Supply"
+                                            ],
+                         "availability":  "Available on request",
+                         "category":  "By-products",
+                         "additionalNotes":  "Supply terms are aligned with volume and logistics plans."
+                     }
+                 ],
+    "category":  {
+                     "key":  "products",
+                     "title":  "Products",
+                     "description":  "Product information and packaging options.",
+                     "keywords":  [
+                                      "products",
+                                      "oil",
+                                      "soybean",
+                                      "meal",
+                                      "packaging",
+                                      "sizes",
+                                      "bulk"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "products-overview",
+                        "title":  "Products Overview",
+                        "content":  "Mamia Seeds Oil Limited supplies refined soya cooking oil, soybean meal, and soybean by-products for wholesale, retail, and industrial demand.",
+                        "keywords":  [
+                                         "products",
+                                         "what do you manufacture",
+                                         "what do you produce",
+                                         "what can i buy"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/products.json"
+                    },
+                    {
+                        "id":  "products-packaging",
+                        "title":  "Packaging Sizes",
+                        "content":  "Current packaging highlights include 4L Bottle, 4L Jerry Can, 10L Jerry Can, and 20L Jerry Can. Bulk industrial supply is handled through commercial discussions.",
+                        "keywords":  [
+                                         "packaging",
+                                         "sizes",
+                                         "4l",
+                                         "10l",
+                                         "20l",
+                                         "jerry can",
+                                         "bottle"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/products.json"
+                    },
+                    {
+                        "id":  "products-feed-use",
+                        "title":  "Feed Sector Relevance",
+                        "content":  "Our soybean meal supports poultry feed manufacturers, fish feed manufacturers, livestock feed producers, and agricultural feed mills.",
+                        "keywords":  [
+                                         "animal feed",
+                                         "poultry feed",
+                                         "fish feed",
+                                         "livestock feed",
+                                         "feed mills"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/products.json"
+                    }
+                ]
+}

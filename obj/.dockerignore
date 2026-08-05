@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Source control / IDE
+.git/
+.vs/
+
+# Frontend deps
+node_modules/
+
+# User-specific files
+*.user
+*.suo

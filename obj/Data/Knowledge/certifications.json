@@ -1,0 +1,50 @@
+{
+    "domainKeywords":  [
+                           "certifications",
+                           "compliance",
+                           "quality",
+                           "nafdac",
+                           "son"
+                       ],
+    "category":  {
+                     "key":  "certifications",
+                     "title":  "Certifications",
+                     "description":  "Regulatory and quality certifications.",
+                     "keywords":  [
+                                      "certifications",
+                                      "nafdac",
+                                      "son",
+                                      "compliance",
+                                      "quality"
+                                  ]
+                 },
+    "entries":  [
+                    {
+                        "id":  "certifications-overview",
+                        "title":  "Certification Details",
+                        "content":  "Mamia Seeds Oil Limited operates with compliance awareness and references NAFDAC registration and SON certification in its quality communication.",
+                        "keywords":  [
+                                         "certifications",
+                                         "nafdac",
+                                         "son",
+                                         "compliance"
+                                     ],
+                        "sourceType":  "Json",
+                        "sourcePath":  "Data/Knowledge/certifications.json"
+                    }
+                ],
+    "futureDocuments":  [
+                            {
+                                "id":  "certification-pdf",
+                                "title":  "Certification Records",
+                                "content":  "For document-level certification records, please request verification through our Contact page.",
+                                "keywords":  [
+                                                 "certificate",
+                                                 "document",
+                                                 "verification"
+                                             ],
+                                "sourceType":  "Pdf",
+                                "sourcePath":  "Documents/certification.pdf"
+                            }
+                        ]
+}

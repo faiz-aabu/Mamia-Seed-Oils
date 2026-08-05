@@ -1,0 +1,8 @@
+@model IReadOnlyDictionary<string, string>
+
+<ul>
+@foreach (var item in Model)
+{
+    <li><a href="@item.Value" asp-external="true">@item.Key</a></li>
+}
+</ul>

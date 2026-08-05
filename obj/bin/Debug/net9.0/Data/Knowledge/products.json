@@ -1,0 +1,67 @@
+{
+  "domainKeywords": [
+    "products",
+    "soybean oil",
+    "by-products"
+  ],
+  "products": [
+    {
+      "name": "Premium Soybean Cooking Oil",
+      "description": "Manufacturer of premium soybean cooking oil.",
+      "packagingSizes": [
+        "[To Be Updated]"
+      ],
+      "availability": "[To Be Updated]",
+      "category": "Products",
+      "additionalNotes": "[To Be Updated]"
+    },
+    {
+      "name": "Soybean Processing By-products",
+      "description": "Soybean processing by-products.",
+      "packagingSizes": [
+        "[To Be Updated]"
+      ],
+      "availability": "[To Be Updated]",
+      "category": "Soybean By-products",
+      "additionalNotes": "[To Be Updated]"
+    }
+  ],
+  "category": {
+    "key": "products",
+    "title": "Products",
+    "description": "Product information.",
+    "keywords": [
+      "products",
+      "oil",
+      "soybean",
+      "by-products"
+    ]
+  },
+  "entries": [
+    {
+      "id": "products-overview",
+      "title": "Products Overview",
+      "content": "Mamia Seeds Oil Limited manufactures premium soybean cooking oil and soybean processing by-products.",
+      "keywords": [
+        "products",
+        "what do you produce",
+        "soybean",
+        "by-products"
+      ],
+      "sourceType": "Json",
+      "sourcePath": "Data/Knowledge/products.json"
+    },
+    {
+      "id": "products-packaging",
+      "title": "Packaging Sizes",
+      "content": "[To Be Updated]",
+      "keywords": [
+        "packaging",
+        "sizes",
+        "available sizes"
+      ],
+      "sourceType": "Json",
+      "sourcePath": "Data/Knowledge/products.json"
+    }
+  ]
+}
