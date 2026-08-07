@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Application Submitted Successfully";
+}
+
+@await Html.PartialAsync("Partials/_Header", (MamiaSeedsOil.Web.ViewModels.HomePageViewModel)ViewData["HomePageModel"]!)
+
+<section class="surface-cream distributor-success" aria-labelledby="success-title">
+    <div class="wrap">
+        <div class="distributor-success__card">
+            <div class="distributor-success__icon" aria-hidden="true">✔</div>
+            <h1 id="success-title">Application Submitted Successfully</h1>
+            <p>Thank you for your interest in becoming an authorized distributor of Mamia Seeds Oil Limited.</p>
+            <p>Our business development team will review your application and contact you shortly.</p>
+            <div class="distributor-success__actions">
+                <a class="btn-primary" href="/">Return Home</a>
+                <a class="btn-ghost" href="/#products">View Products</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@await Html.PartialAsync("Partials/_Footer", (MamiaSeedsOil.Web.ViewModels.HomePageViewModel)ViewData["HomePageModel"]!)

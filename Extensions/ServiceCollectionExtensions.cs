@@ -135,6 +135,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IProductCatalogService, ProductCatalogService>();
         services.AddScoped<IContactService, ContactService>();
         services.AddScoped<IPartnershipApplicationService, PartnershipApplicationService>();
+        services.AddScoped<IDistributorApplicationService, DistributorApplicationService>();
         services.AddScoped<ISeoService, SeoService>();
         services.AddSingleton<IImageUrlService, ImageUrlService>();
         services.AddScoped<IAiAssistantService, AiAssistantService>();

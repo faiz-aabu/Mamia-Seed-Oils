@@ -99,6 +99,49 @@ public sealed class SmtpPlaceholderEmailNotificationService : IEmailNotification
         _logger.LogInformation("Sent partnership application notification to {Recipient} for {EmailMasked}", GetRecipientEmail(), PrivacyMasker.MaskEmail(application.EmailAddress));
     }
 
+    public async Task SendDistributorApplicationNotificationAsync(DistributorApplication application, CancellationToken cancellationToken = default)
+    {
+        cancellationToken.ThrowIfCancellationRequested();
+
+        if (!IsConfigured())
+        {
+            _logger.LogWarning("SMTP delivery is not configured for distributor application. Skipping send for {EmailMasked}", PrivacyMasker.MaskEmail(application.EmailAddress));
+            return;
+        }
+
+        var subject = $"New Distributor Application - {WebUtility.HtmlEncode(application.BusinessName)}";
+        var fields = new List<(string Label, string? Value)>
+        {
+            ("Full Name", application.FullName),
+            ("Business Name", application.BusinessName),
+            ("Email Address", application.EmailAddress),
+            ("Phone Number", application.PhoneNumber),
+            ("WhatsApp Number", application.WhatsAppNumber),
+            ("State", application.State),
+            ("City", application.City),
+            ("Business Address", application.BusinessAddress),
+            ("Country", application.Country),
+            ("Business Type", application.BusinessType),
+            ("Expected Monthly Order Quantity", application.ExpectedMonthlyOrderQuantity),
+            ("Preferred Products", string.Join(", ", application.PreferredProducts)),
+            ("Warehouse Available", application.WarehouseAvailable.HasValue ? (application.WarehouseAvailable.Value ? "Yes" : "No") : string.Empty),
+            ("Can Handle Bulk Orders", application.CanHandleBulkOrders.HasValue ? (application.CanHandleBulkOrders.Value ? "Yes" : "No") : string.Empty),
+            ("Areas You Can Supply", application.AreasYouCanSupply),
+            ("Agreement", application.AgreedToTerms ? "Yes" : "No")
+        };
+
+        if (string.Equals(application.BusinessType, "Distributor", StringComparison.OrdinalIgnoreCase))
+        {
+            fields.Add(("Vehicle Type", application.VehicleType));
+            fields.Add(("Number of Vehicles", application.NumberOfVehicles));
+        }
+
+        var body = BuildHtmlBody("New Distributor Application", fields);
+
+        await SendMailAsync(subject, body, application.EmailAddress, cancellationToken);
+        _logger.LogInformation("Sent distributor application notification to {Recipient} for {EmailMasked}", GetRecipientEmail(), PrivacyMasker.MaskEmail(application.EmailAddress));
+    }
+
     private async Task SendMailAsync(string subject, string body, string senderEmail, CancellationToken cancellationToken)
     {
         var smtpOptions = _options.Smtp;

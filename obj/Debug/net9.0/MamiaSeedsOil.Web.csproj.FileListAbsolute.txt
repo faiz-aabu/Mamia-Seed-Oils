@@ -35,12 +35,9 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\scopedc
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\scopedcss\bundle\MamiaSeedsOil.Web.styles.css
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\scopedcss\projectbundle\MamiaSeedsOil.Web.bundle.scp.css
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\6xzo4ht1j7-zpeyldnnyo.gz
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5ol89quzn7-ald07ynred.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\a4sj08odk2-kaizw77d3a.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\arsyhyhe9l-jadookb3qw.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\n46hugvsjm-fogqomfnx4.gz
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\ss1yznqyq5-94v11kfdzq.gz
-C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\bxj3waf0b7-ey3wibsu7q.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\u469kc9dan-61n19gt1b8.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\56kgnqcuvh-iv59u3421q.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\z658kjd665-8agpdc616g.gz
@@ -132,3 +129,6 @@ C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\ref\Mam
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\l4crepbcr2-7fdiv9bhm1.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5fjv4ilmte-memcntxynk.gz
 C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\45rjqqzdbz-1889f63tx0.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\5ol89quzn7-7iul2zd2z8.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\ss1yznqyq5-taad6e5cgo.gz
+C:\Users\DELL\Desktop\Mamia Seed Oils\MamiaSeedsOil.Web\obj\Debug\net9.0\compressed\bxj3waf0b7-1tustwu0v9.gz

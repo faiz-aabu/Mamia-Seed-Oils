@@ -1,0 +1,208 @@
+@model MamiaSeedsOil.Web.DTOs.DistributorApplicationRequestDto
+
+@{
+    ViewData["Title"] = "Become an Authorized Distributor";
+}
+
+@await Html.PartialAsync("Partials/_Header", (MamiaSeedsOil.Web.ViewModels.HomePageViewModel)ViewData["HomePageModel"]!)
+
+<section class="surface-cream distributor-page" aria-labelledby="distributor-title">
+    <div class="wrap">
+        <div class="distributor-hero">
+            <div class="distributor-hero__content">
+                <span class="eyebrow">Distributor Opportunities</span>
+                <h1 id="distributor-title">Become an Authorized Distributor</h1>
+                <p class="lede">Partner with Mamia Seeds Oil Limited and distribute premium soybean products across Nigeria.</p>
+                <p>Join a trusted brand with a strong reputation for quality, reliability, and long-term business growth. Our distributor partners gain access to premium products, dependable supply support, and the opportunity to serve growing markets across the country.</p>
+            </div>
+            <div class="distributor-hero__media" aria-hidden="true">
+                <div class="asset-placeholder" style="--asset-ratio: 4 / 3;">
+                    <svg class="asset-placeholder-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="14" width="44" height="36" rx="6" stroke="currentColor" stroke-width="2" />
+                        <path d="M18 28H46" stroke="currentColor" stroke-width="2" />
+                        <path d="M22 22V36" stroke="currentColor" stroke-width="2" />
+                        <path d="M42 22V36" stroke="currentColor" stroke-width="2" />
+                        <circle cx="22" cy="42" r="2" fill="currentColor" />
+                        <circle cx="42" cy="42" r="2" fill="currentColor" />
+                    </svg>
+                    <span class="asset-placeholder-label">Distribution Support</span>
+                    <span class="asset-placeholder-sub">Premium supply partnerships</span>
+                </div>
+            </div>
+        </div>
+
+        <form class="partnership-form distributor-form" asp-action="Index" method="post" novalidate>
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="form-status" data-state="error"></div>
+
+            <div class="distributor-grid">
+                <div class="form-column">
+                    <label asp-for="FullName">Full Name *</label>
+                    <input asp-for="FullName" />
+                    <span asp-validation-for="FullName" class="field-validation"></span>
+
+                    <label asp-for="BusinessName">Business Name *</label>
+                    <input asp-for="BusinessName" />
+                    <span asp-validation-for="BusinessName" class="field-validation"></span>
+
+                    <label asp-for="EmailAddress">Email Address *</label>
+                    <input asp-for="EmailAddress" type="email" />
+                    <span asp-validation-for="EmailAddress" class="field-validation"></span>
+
+                    <label asp-for="PhoneNumber">Phone Number *</label>
+                    <input asp-for="PhoneNumber" />
+                    <span asp-validation-for="PhoneNumber" class="field-validation"></span>
+
+                    <label asp-for="WhatsAppNumber">WhatsApp Number *</label>
+                    <input asp-for="WhatsAppNumber" />
+                    <span asp-validation-for="WhatsAppNumber" class="field-validation"></span>
+                </div>
+
+                <div class="form-column">
+                    <label asp-for="State">State *</label>
+                    <input asp-for="State" />
+                    <span asp-validation-for="State" class="field-validation"></span>
+
+                    <label asp-for="City">City *</label>
+                    <input asp-for="City" />
+                    <span asp-validation-for="City" class="field-validation"></span>
+
+                    <label asp-for="BusinessAddress">Business Address *</label>
+                    <textarea asp-for="BusinessAddress" rows="3"></textarea>
+                    <span asp-validation-for="BusinessAddress" class="field-validation"></span>
+
+                    <label asp-for="Country">Country</label>
+                    <input asp-for="Country" />
+                    <span asp-validation-for="Country" class="field-validation"></span>
+
+                    <label asp-for="BusinessType">Business Type *</label>
+                    <select asp-for="BusinessType" class="business-type-select">
+                        <option value="">Select one</option>
+                        <option value="Retailer">Retailer</option>
+                        <option value="Wholesaler">Wholesaler</option>
+                        <option value="Distributor">Distributor</option>
+                        <option value="Supermarket">Supermarket</option>
+                        <option value="Food Manufacturer">Food Manufacturer</option>
+                        <option value="Restaurant">Restaurant</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="BusinessType" class="field-validation"></span>
+                </div>
+            </div>
+
+            <div class="vehicle-section" id="vehicle-section" data-distributor-vehicle-section hidden>
+                <div class="vehicle-section__inner">
+                    <label asp-for="VehicleType">Vehicle Type *</label>
+                    <select asp-for="VehicleType">
+                        <option value="">Select vehicle type</option>
+                        <option value="Motorcycle">Motorcycle</option>
+                        <option value="Tricycle">Tricycle</option>
+                        <option value="Mini Van">Mini Van</option>
+                        <option value="Pickup">Pickup</option>
+                        <option value="3 Ton Truck">3 Ton Truck</option>
+                        <option value="5 Ton Truck">5 Ton Truck</option>
+                        <option value="10 Ton Truck">10 Ton Truck</option>
+                        <option value="Trailer">Trailer</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="VehicleType" class="field-validation"></span>
+
+                    <label asp-for="NumberOfVehicles">Number of Vehicles</label>
+                    <input asp-for="NumberOfVehicles" />
+                    <span asp-validation-for="NumberOfVehicles" class="field-validation"></span>
+                </div>
+            </div>
+
+            <div class="distributor-grid distributor-grid--secondary">
+                <div class="form-column">
+                    <label asp-for="ExpectedMonthlyOrderQuantity">Expected Monthly Order Quantity *</label>
+                    <input asp-for="ExpectedMonthlyOrderQuantity" />
+                    <span asp-validation-for="ExpectedMonthlyOrderQuantity" class="field-validation"></span>
+
+                    <label>Preferred Products</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" name="PreferredProducts" value="Refined Soya Cooking Oil" /> Refined Soya Cooking Oil</label>
+                        <label><input type="checkbox" name="PreferredProducts" value="Premium Soybean Meal" /> Premium Soybean Meal</label>
+                        <label><input type="checkbox" name="PreferredProducts" value="Industrial Supply" /> Industrial Supply</label>
+                        <label><input type="checkbox" name="PreferredProducts" value="Other" /> Other</label>
+                    </div>
+                </div>
+
+                <div class="form-column">
+                    <label>Warehouse Available?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="WarehouseAvailable" value="true" /> Yes</label>
+                        <label><input type="radio" name="WarehouseAvailable" value="false" /> No</label>
+                    </div>
+
+                    <label>Can You Handle Bulk Orders?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="CanHandleBulkOrders" value="true" /> Yes</label>
+                        <label><input type="radio" name="CanHandleBulkOrders" value="false" /> No</label>
+                    </div>
+
+                    <label asp-for="AreasYouCanSupply">Areas You Can Supply</label>
+                    <textarea asp-for="AreasYouCanSupply" rows="3"></textarea>
+                    <span asp-validation-for="AreasYouCanSupply" class="field-validation"></span>
+                </div>
+            </div>
+
+            <div class="partnership-terms">
+                <input asp-for="AgreedToTerms" />
+                <label asp-for="AgreedToTerms">I agree to be contacted by Mamia Seeds Oil Limited.</label>
+            </div>
+            <span asp-validation-for="AgreedToTerms" class="field-validation"></span>
+
+            <input asp-for="SpamTrap" class="sr-only" tabindex="-1" autocomplete="off" />
+            <input name="FormStartedAtUtc" type="hidden" value="@DateTimeOffset.UtcNow.ToString("O")" />
+
+            <button type="submit" class="btn-primary">Apply to Become a Distributor</button>
+        </form>
+    </div>
+</section>
+
+@await Html.PartialAsync("Partials/_Footer", (MamiaSeedsOil.Web.ViewModels.HomePageViewModel)ViewData["HomePageModel"]!)
+
+@section Scripts {
+    <partial name="~/Views/Shared/_ValidationScriptsPartial.cshtml" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const select = document.querySelector('.business-type-select');
+            const vehicleSection = document.getElementById('vehicle-section');
+            const vehicleSelect = document.querySelector('#VehicleType');
+            const vehicleInput = document.querySelector('#NumberOfVehicles');
+
+            function toggleVehicleSection() {
+                const isDistributor = select && select.value === 'Distributor';
+                if (!vehicleSection) {
+                    return;
+                }
+
+                if (isDistributor) {
+                    vehicleSection.hidden = false;
+                    vehicleSection.classList.add('is-visible');
+                    if (vehicleSelect) {
+                        vehicleSelect.setAttribute('required', 'required');
+                    }
+                } else {
+                    vehicleSection.hidden = true;
+                    vehicleSection.classList.remove('is-visible');
+                    if (vehicleSelect) {
+                        vehicleSelect.removeAttribute('required');
+                    }
+                    if (vehicleInput) {
+                        vehicleInput.value = '';
+                    }
+                    if (vehicleSelect) {
+                        vehicleSelect.value = '';
+                    }
+                }
+            }
+
+            if (select) {
+                select.addEventListener('change', toggleVehicleSection);
+                toggleVehicleSection();
+            }
+        });
+    </script>
+}
