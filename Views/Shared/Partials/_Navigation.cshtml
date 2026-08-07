@@ -5,7 +5,7 @@
 }
 
 <nav aria-label="Primary navigation">
-    <a class="brand" href="#top" aria-label="@($"{Model.Company.Name} home")">
+    <a class="brand" href="/" aria-label="@($"{Model.Company.Name} home")">
         <img class="brand-mark"
              src="~/images/logo/Logo.png"
              alt=""
@@ -24,7 +24,8 @@
     <ul class="nav-links" id="primary-menu">
         @foreach (var item in Model.NavigationItems)
         {
-            <li><a href="@item.Anchor">@item.Text</a></li>
+            var href = item.Anchor.StartsWith("#", StringComparison.Ordinal) ? $"/{item.Anchor}" : item.Anchor;
+            <li><a href="@href">@item.Text</a></li>
         }
     </ul>
 

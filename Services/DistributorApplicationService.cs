@@ -44,6 +44,8 @@ public sealed class DistributorApplicationService : IDistributorApplicationServi
             }
         }
 
+        _logger.LogInformation("✔ Distributor form received for {BusinessName}", request.BusinessName);
+
         var normalizedKey = BuildSubmissionKey(request);
         if (_recentSubmissions.TryGetValue(normalizedKey, out var lastSubmitted) && DateTimeOffset.UtcNow - lastSubmitted < TimeSpan.FromHours(24))
         {
@@ -55,24 +57,26 @@ public sealed class DistributorApplicationService : IDistributorApplicationServi
         var validation = Validate(application);
         if (!validation.Success)
         {
+            _logger.LogWarning("✘ Distributor application validation failed. Message={Message}", validation.Message);
             return validation;
         }
 
+        _logger.LogInformation("✔ Model validation passed");
         Sanitize(application);
         await _enquiryStore.StoreDistributorApplicationAsync(application, cancellationToken);
 
+        _logger.LogInformation("✔ Email service started");
         try
         {
             await _emailNotificationService.SendDistributorApplicationNotificationAsync(application, cancellationToken);
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Email delivery failed for distributor application {ApplicationId}", application.Id);
-            return new DistributorApplicationResponseDto { Success = false, Message = "We could not send your application right now. Please try again shortly." };
+            _logger.LogError(ex, "Email delivery failed for distributor application {ApplicationId}; the application was still stored and the user was redirected to success.", application.Id);
         }
 
         _recentSubmissions[normalizedKey] = DateTimeOffset.UtcNow;
-        _logger.LogInformation("Distributor application submitted. ApplicationId={ApplicationId}; BusinessName={BusinessName}", application.Id, application.BusinessName);
+        _logger.LogInformation("✔ Application accepted for follow-up. ApplicationId={ApplicationId}; BusinessName={BusinessName}", application.Id, application.BusinessName);
 
         return new DistributorApplicationResponseDto
         {

@@ -2,8 +2,16 @@ window.MamiaNav = (function () {
   function initNavigation() {
     const header = document.querySelector('header');
     const menuBtn = document.querySelector('.menu-btn');
-    const navAnchors = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
-    const sections = navAnchors.map((anchor) => document.querySelector(anchor.getAttribute('href'))).filter(Boolean);
+    const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+    const sections = navAnchors
+      .map((anchor) => {
+        const href = anchor.getAttribute('href') || '';
+        if (!href.startsWith('#')) {
+          return null;
+        }
+        return document.querySelector(href);
+      })
+      .filter(Boolean);
 
     if (!header || !menuBtn) {
       return;
@@ -61,7 +69,9 @@ window.MamiaNav = (function () {
 
           const id = entry.target.id;
           navAnchors.forEach(function (anchor) {
-            const isActive = anchor.getAttribute('href') === '#' + id;
+            const href = anchor.getAttribute('href') || '';
+            const targetHash = href.includes('#') ? href.split('#').pop() : '';
+            const isActive = targetHash === id;
             anchor.classList.toggle('is-active', isActive);
             if (isActive) {
               anchor.setAttribute('aria-current', 'page');

@@ -4,7 +4,7 @@ public sealed class EmailDeliveryOptions
 {
     public const string SectionName = "EmailDelivery";
 
-    public string Provider { get; set; } = "[To Be Updated]";
+    public string Provider { get; set; } = "Smtp";
     public string Host { get; set; } = string.Empty;
     public int Port { get; set; } = 587;
     public string Username { get; set; } = string.Empty;
