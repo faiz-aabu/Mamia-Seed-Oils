@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MamiaSeedsOil.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+296f48b542aa3e4ed1ef6c9fdc5a84fcb64701dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+997e2cc5bb86c23f3056ac740b0e38fc6a1f6e6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MamiaSeedsOil.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MamiaSeedsOil.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

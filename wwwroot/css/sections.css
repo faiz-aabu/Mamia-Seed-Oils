@@ -206,9 +206,12 @@ form.contact-form button[disabled]{opacity:0.7;cursor:not-allowed;}
 .distributor-form input,.distributor-form select,.distributor-form textarea{font-family:var(--body-font); padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius-sm); font-size:14px; background:var(--white); color:var(--charcoal); min-height:48px; width:100%; box-sizing:border-box;}
 .distributor-form input:focus,.distributor-form select:focus,.distributor-form textarea:focus{border-color:rgba(140,90,43,0.6); outline:none; box-shadow:var(--ring);} 
 .distributor-form textarea{min-height:110px; resize:vertical;}
-.checkbox-grid{display:grid; gap:10px; padding:10px 0 4px;}
-.checkbox-grid label,.radio-group label{display:flex; align-items:center; gap:8px; font-size:14px; color:#4F4738; font-weight:500;}
-.radio-group{display:flex; flex-wrap:wrap; gap:16px; padding:4px 0 8px;}
+.distributor-form .checkbox-grid{display:grid; grid-template-columns:repeat(2, minmax(220px, auto)); gap:12px 20px; align-items:center; padding:10px 0 6px;}
+.distributor-form .checkbox-grid label{display:inline-flex; align-items:center; gap:10px; min-height:24px; font-size:14px; color:#4F4738; font-weight:500; margin:0; line-height:1.35;}
+.distributor-form .checkbox-grid label input[type="checkbox"]{width:16px; height:16px; min-height:auto; min-width:16px; margin:0; padding:0; flex:0 0 auto; accent-color:var(--sage-green, #496a2a);}
+.distributor-form .radio-group label{display:flex; align-items:center; gap:8px; font-size:14px; color:#4F4738; font-weight:500;}
+.distributor-form .radio-group{display:flex; flex-wrap:wrap; gap:16px; padding:4px 0 8px;}
+.distributor-form .radio-group input[type="radio"]{width:16px; height:16px; min-height:auto; min-width:16px; margin:0; padding:0; flex:0 0 auto; accent-color:var(--sage-green, #496a2a);}
 .field-validation{display:block; margin-top:-4px; color:#8b2d1f; font-size:12px; min-height:14px;}
 .vehicle-section{margin-top:18px; overflow:hidden; max-height:0; opacity:0; transition:max-height 280ms var(--easing), opacity 280ms var(--easing), margin-top 280ms var(--easing);}
 .vehicle-section.is-visible{max-height:300px; opacity:1; margin-top:18px;}

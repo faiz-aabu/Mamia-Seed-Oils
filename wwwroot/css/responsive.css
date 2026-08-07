@@ -36,6 +36,7 @@
   .hero-ctas{width:100%;} .gallery-grid{gap:14px; grid-template-columns:1fr;} .cards-grid-4,.numbers-grid,.qa-timeline,.products-grid{grid-template-columns:1fr;}
   .asset-placeholder{padding:10px;}
   .partnership-actions{flex-direction:column;}
+  .distributor-form .checkbox-grid{grid-template-columns:1fr; gap:10px;}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none !important; animation:none !important; scroll-behavior:auto !important;}
